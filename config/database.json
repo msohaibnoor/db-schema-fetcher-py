@@ -1,0 +1,52 @@
+{
+  "connection": {
+    "host": "localhost",
+    "port": 3306,
+    "charset": "utf8mb4",
+    "pool_settings": {
+      "pool_size": 10,
+      "max_overflow": 20,
+      "pool_timeout": 30,
+      "pool_recycle": 3600
+    }
+  },
+  "extraction_settings": {
+    "include_sample_data": true,
+    "sample_rows_limit": 5,
+    "include_foreign_keys": true,
+    "include_indexes": true,
+    "include_table_comments": true,
+    "include_column_comments": true
+  },
+  "table_filters": {
+    "exclude_system_tables": [
+      "information_schema.*",
+      "performance_schema.*",
+      "mysql.*",
+      "sys.*"
+    ],
+    "exclude_table_patterns": [
+      "temp_*",
+      "backup_*",
+      "*_old",
+      "*_archive"
+    ],
+    "include_only_tables": []
+  },
+  "column_filters": {
+    "exclude_column_patterns": [
+      "password*",
+      "*_hash",
+      "secret_*"
+    ],
+    "sensitive_data_handling": {
+      "mask_sample_data": true,
+      "excluded_columns": [
+        "password",
+        "ssn",
+        "credit_card",
+        "api_key"
+      ]
+    }
+  }
+}

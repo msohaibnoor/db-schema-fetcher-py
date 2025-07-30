@@ -1,0 +1,390 @@
+================================================================================
+DATABASE SCHEMA EXTRACTION REPORT
+================================================================================
+
+Database: uat_latest_june
+Host: localhost:3306
+Extraction Date: 2025-07-30T15:24:53.575984
+
+OVERALL STATISTICS:
+  Total Tables: 317
+  Total Columns: 4884
+  Extraction Duration: 2.84 seconds
+
+DATA TYPE DISTRIBUTION:
+  INTEGER: 1313 (26.9%)
+  TINYINT: 830 (17.0%)
+  DATETIME: 732 (15.0%)
+  BIGINT: 611 (12.5%)
+  VARCHAR(255): 519 (10.6%)
+  JSON: 266 (5.4%)
+  DECIMAL(10, 6): 146 (3.0%)
+  VARCHAR(128): 113 (2.3%)
+  TEXT: 77 (1.6%)
+  VARCHAR(125): 49 (1.0%)
+  TIMESTAMP: 40 (0.8%)
+  FLOAT: 26 (0.5%)
+  VARCHAR(50): 23 (0.5%)
+  ENUM: 23 (0.5%)
+  VARCHAR(45): 18 (0.4%)
+  VARCHAR(24): 11 (0.2%)
+  VARCHAR(100): 10 (0.2%)
+  TIME: 8 (0.2%)
+  VARCHAR(10): 7 (0.1%)
+  VARCHAR(32): 6 (0.1%)
+  VARCHAR(255) COLLATE "utf8mb4_unicode_ci": 6 (0.1%)
+  VARCHAR(64): 6 (0.1%)
+  VARCHAR(45) COLLATE "utf8mb4_0900_ai_ci": 6 (0.1%)
+  SMALLINT: 6 (0.1%)
+  DATE: 5 (0.1%)
+  VARCHAR(30): 4 (0.1%)
+  TEXT COLLATE "utf8mb4_unicode_ci": 4 (0.1%)
+  VARCHAR(256): 3 (0.1%)
+  DOUBLE: 3 (0.1%)
+  DECIMAL(38, 20): 2 (0.0%)
+  VARCHAR(50) COLLATE "utf8mb4_unicode_ci": 2 (0.0%)
+  VARCHAR(15): 1 (0.0%)
+  VARCHAR(120): 1 (0.0%)
+  DECIMAL(12, 8): 1 (0.0%)
+  DECIMAL(13, 8): 1 (0.0%)
+  VARCHAR(1024) COLLATE "utf8mb4_unicode_ci": 1 (0.0%)
+  VARCHAR(3000): 1 (0.0%)
+  VARCHAR(25): 1 (0.0%)
+  MEDIUMTEXT: 1 (0.0%)
+  VARCHAR(2000): 1 (0.0%)
+
+MOST COMMON COLUMN NAMES:
+  id: 315 occurrences
+  createdAt: 313 occurrences
+  updatedAt: 312 occurrences
+  is_deleted: 295 occurrences
+  program_id: 164 occurrences
+  is_active: 157 occurrences
+  old_id: 148 occurrences
+  title: 111 occurrences
+  created_by: 72 occurrences
+  old_program_id: 71 occurrences
+
+TABLE DETAILS:
+--------------------------------------------------------------------------------
+Table Name                     Columns  Rows         PKs  FKs  Indexes
+--------------------------------------------------------------------------------
+maintenance_request            71       14           1    0    12     
+maintenance_request_dec        69       Unknown      1    0    11     
+work                           65       20           1    1    22     
+work_new                       64       Unknown      1    1    21     
+work_test1                     64       Unknown      1    0    21     
+work_test2                     64       Unknown      1    0    21     
+incidents                      61       Unknown      2    0    11     
+incidents_backup               61       Unknown      1    0    11     
+incidents_clone_jjuly_17       61       Unknown      2    0    11     
+person_interaction             46       Unknown      1    0    9      
+person_interaction_clone_july_19 46       Unknown      1    0    9      
+person                         45       Unknown      2    0    7      
+person_backup                  45       Unknown      1    0    7      
+program                        45       3            1    0    5      
+program_Aug_12                 45       Unknown      1    0    5      
+program_clone_july             45       Unknown      1    0    5      
+program_july_16                45       Unknown      1    0    5      
+test_program                   45       Unknown      1    0    5      
+equipments                     37       Unknown      1    0    0      
+equipments_dec_11              37       Unknown      1    0    0      
+report_filters                 37       6,001        1    0    3      
+test_work                      37       Unknown      1    2    7      
+user                           35       26           1    0    3      
+user_aug_23                    35       Unknown      1    0    3      
+user_aug_28                    35       Unknown      1    0    3      
+user_clone_july1               35       Unknown      1    0    3      
+user_dec_9                     35       Unknown      1    0    3      
+user_july_29                   35       Unknown      1    0    3      
+user_oct_9                     35       Unknown      1    0    3      
+report_builder_container       34       164          1    0    1      
+business                       31       Unknown      1    0    7      
+user_session                   30       169          1    0    6      
+business_clone_july_16         29       Unknown      1    0    7      
+geolocation                    29       Unknown      1    0    1      
+maintenance_comments           29       5            1    0    11     
+sub_task                       28       7            1    0    11     
+user_session_old               28       Unknown      1    0    0      
+geolocation_1                  27       Unknown      1    0    7      
+geolocation_clone_sept_12_backup_clone 27       Unknown      1    0    7      
+geolocation_clone_sept_new     27       Unknown      1    0    7      
+geolocationtest                27       Unknown      1    0    7      
+observation_report             27       Unknown      2    0    10     
+observation_report_backup      27       Unknown      1    0    10     
+rvp_question                   27       Unknown      1    0    4      
+rvp_question_aug_12            27       Unknown      1    0    4      
+sub_task_assignment            27       11           1    1    9      
+sub_task_assignment_Aug_23     27       Unknown      1    0    9      
+sub_task_assignment_dec_9      27       Unknown      1    0    9      
+sub_task_july_14               27       Unknown      1    0    11     
+media_library                  24       89           2    0    13     
+media_library_test             24       Unknown      2    0    13     
+rvp_question_dump              23       Unknown      1    0    0      
+shift                          22       25           2    0    6      
+shift_backup                   22       Unknown      1    0    5      
+submit_a_bug                   22       Unknown      1    0    0      
+outreach                       21       Unknown      1    0    0      
+fixtures                       20       Unknown      1    0    4      
+fixtures_clone_july_16         20       Unknown      1    0    4      
+fixtures_dec                   20       Unknown      1    0    4      
+fixtures_july_15               20       Unknown      1    0    4      
+person_add_new_update          20       Unknown      1    0    0      
+web_form                       20       12           1    0    1      
+fixtures_test                  19       Unknown      1    0    1      
+maintenance_department         19       2            1    0    1      
+rvp_answer                     19       Unknown      2    0    6      
+rvp_answer_backup              19       Unknown      1    0    5      
+equipment_checkin_checkout     18       Unknown      1    0    0      
+properties                     18       Unknown      1    0    0      
+properties_clone_july_19       18       Unknown      1    0    0      
+shift_Test                     18       Unknown      1    0    5      
+equipment_upkeep               17       Unknown      1    0    1      
+maintenance_type_assignment    17       6            1    0    5      
+role_permission_mapping        17       4,295        1    0    2      
+incident_type_assignment       16       Unknown      1    0    5      
+incident_type_assignment_aug_20 16       Unknown      1    0    5      
+incidents_types                16       Unknown      1    0    3      
+incidents_types_july_29        16       Unknown      1    0    3      
+permission_types               16       74           1    0    1      
+report_filter_cron             16       Unknown      1    0    7      
+rvp_notes_data                 16       Unknown      1    0    6      
+rvp_site_report                16       Unknown      1    0    5      
+task                           16       4            1    0    3      
+variance_report                16       Unknown      1    0    0      
+inspections                    15       12           1    4    5      
+role_permission_mapping_old    15       Unknown      1    0    0      
+user_program_mapping           15       26           1    0    5      
+user_program_mapping_dec_9     15       Unknown      1    0    5      
+user_program_mapping_jan_28    15       Unknown      1    0    5      
+user_program_mapping_oct_8     15       Unknown      1    0    5      
+zone                           15       10           1    0    2      
+zone_backup_dec                15       Unknown      1    0    2      
+admin_activity                 14       Unknown      1    0    0      
+badges                         14       Unknown      1    0    1      
+badges_July_15                 14       Unknown      1    0    1      
+fixture_type_assignment        14       Unknown      1    0    0      
+fixture_type_assignment_clone_july_17 14       Unknown      1    0    0      
+fixture_type_assignment_dec    14       Unknown      1    0    0      
+incidents_parties              14       Unknown      1    0    0      
+maintenance_type               14       4            1    0    1      
+maintenance_type_clone_july_17 14       Unknown      1    0    1      
+observation_report_question    14       7            1    0    1      
+user_feedback                  14       7            1    0    1      
+admin_activity_audit           13       11           1    0    0      
+block_audit                    13       Unknown      1    0    0      
+business_audit                 13       Unknown      1    0    0      
+city_audit                     13       18           1    0    0      
+fixtures_audit                 13       Unknown      1    0    0      
+fixtures_type_audit            13       Unknown      1    0    0      
+fixtures_types                 13       Unknown      1    0    0      
+fixtures_types_dec             13       Unknown      1    0    0      
+incident_comments              13       Unknown      1    0    1      
+job_titles                     13       674          1    0    1      
+maintenance_department_audit   13       2            1    0    0      
+notification                   13       42           1    0    0      
+observation_report_audit       13       Unknown      1    0    2      
+person_contact_details         13       Unknown      1    0    0      
+person_interaction_type_audit  13       Unknown      1    0    0      
+person_type_audit              13       Unknown      1    0    0      
+properties_audit               13       Unknown      1    0    0      
+property_contacts              13       Unknown      1    0    0      
+report_builder_page            13       3            1    0    1      
+service_message                13       Unknown      1    0    2      
+shift_audit                    13       Unknown      1    0    0      
+shift_brief_notification       13       1            1    0    1      
+shift_notification             13       Unknown      1    0    0      
+user_points_mapping            13       3            1    0    5      
+work_audit                     13       Unknown      1    0    0      
+badges_task                    12       Unknown      1    0    2      
+block                          12       Unknown      1    0    0      
+bug_report_app                 12       Unknown      1    0    0      
+business_contacts              12       Unknown      1    0    0      
+city                           12       12           1    0    4      
+equipment_activity             12       Unknown      1    1    1      
+incidents_vehicles             12       Unknown      1    0    0      
+inspection_form_line_item_values 12       62           1    3    3      
+interaction_type               12       Unknown      1    0    0      
+interaction_type_assignment    12       Unknown      1    0    0      
+region_audit                   12       1            1    0    0      
+reward                         12       Unknown      1    0    4      
+reward_task                    12       Unknown      1    0    5      
+audit_questions_data           11       Unknown      1    0    0      
+business_types                 11       Unknown      1    0    0      
+equipment_image                11       Unknown      1    1    1      
+incident_type_audit            11       Unknown      1    0    0      
+incidents_audit                11       Unknown      1    0    0      
+maintenance_request_audit      11       15           1    0    0      
+maintenance_type_audit         11       19           1    0    0      
+menu                           11       72           1    0    0      
+observation_report_answer      11       Unknown      2    0    3      
+observation_report_answer_backup 11       Unknown      1    0    3      
+observation_report_answer_test 11       Unknown      1    0    3      
+person_audit                   11       Unknown      1    0    0      
+person_interaction_audit       11       Unknown      1    0    0      
+person_type                    11       Unknown      1    0    3      
+report_builder                 11       9            1    0    1      
+rvp_file                       11       Unknown      1    0    5      
+security_roles_audit           11       46           1    0    0      
+stats_daily_notes              11       Unknown      1    0    4      
+template                       11       1            1    0    1      
+template_clone_sept_12         11       Unknown      1    0    1      
+user_audit                     11       146          1    0    0      
+badges_audit                   10       Unknown      1    0    1      
+division_audit                 10       1            1    0    0      
+equipment_activity_audit       10       Unknown      1    1    1      
+equipment_activity_image       10       Unknown      1    1    1      
+equipment_audit                10       Unknown      1    0    0      
+equipment_category_audit       10       Unknown      1    1    1      
+equipment_define               10       Unknown      1    0    0      
+equipment_define_audit         10       Unknown      1    0    0      
+equipment_type_audit           10       Unknown      1    1    1      
+equipment_upkeep_audit         10       Unknown      1    0    0      
+equipment_upkeep_image         10       Unknown      1    0    1      
+equipment_upkeep_type_audit    10       1            1    0    0      
+fixture_image                  10       Unknown      1    0    0      
+incident_image                 10       Unknown      1    0    0      
+incidents_locations            10       Unknown      1    0    0      
+inspection_form_line_items     10       37           1    2    3      
+interaction_type_audit         10       Unknown      1    0    0      
+maintenance_scheduler          10       Unknown      1    0    0      
+maintenance_scheduler_audit    10       Unknown      1    0    0      
+menu_july_15                   10       Unknown      1    0    0      
+merge_audits                   10       Unknown      1    0    0      
+message                        10       Unknown      1    0    1      
+message_audit                  10       Unknown      1    0    1      
+my_report_audit                10       Unknown      1    0    5      
+outcome_audit                  10       Unknown      1    0    0      
+outreach_audit                 10       Unknown      1    0    0      
+outreach_image                 10       Unknown      1    0    0      
+person_file                    10       Unknown      1    0    0      
+person_interaction_file        10       Unknown      1    0    0      
+person_interaction_type_assignment 10       Unknown      1    0    0      
+program_audit                  10       39           1    0    5      
+ratings                        10       7            1    0    3      
+report_cron_logs               10       Unknown      1    0    3      
+report_filters_map             10       22           1    0    0      
+reward_audit                   10       Unknown      1    0    1      
+rvp_audit                      10       Unknown      1    0    0      
+security_roles                 10       50           1    0    4      
+service_message_audit          10       Unknown      1    0    1      
+shift_breif_notification       10       Unknown      1    0    5      
+audit_case                     9        Unknown      1    0    0      
+basic_contacts                 9        Unknown      1    0    0      
+equipment_upkeep_type          9        1            1    0    0      
+maintenance_department_contacts 9        2            1    0    0      
+media_library_favourite        9        Unknown      1    0    0      
+person_interaction_type        9        Unknown      1    0    1      
+person_options_gender          9        Unknown      1    0    0      
+priority_email_cron            9        9            0    0    7      
+report_builder_color           9        Unknown      1    0    1      
+report_builder_date            9        Unknown      1    0    1      
+report_builder_task            9        Unknown      1    0    1      
+user_subtask_points            9        Unknown      1    0    0      
+work_options_action            9        Unknown      1    0    0      
+work_options_age               9        Unknown      1    0    0      
+work_options_any_of_the_following 9        Unknown      1    0    0      
+work_options_are_you_a         9        Unknown      1    0    0      
+work_options_biohazard_type    9        Unknown      1    0    0      
+work_options_check_type        9        Unknown      1    0    0      
+work_options_chemicals_used    9        Unknown      1    0    0      
+work_options_cleaning_type     9        Unknown      1    0    0      
+work_options_color             9        Unknown      1    0    0      
+work_options_condition         9        Unknown      1    0    0      
+work_options_country           9        Unknown      1    0    0      
+work_options_courtesy_tap      9        Unknown      1    0    0      
+work_options_covid_or_residential_party_size 9        Unknown      1    0    0      
+work_options_disposition       9        Unknown      1    0    0      
+work_options_elevator          9        Unknown      1    0    0      
+work_options_elevator_unit_id  9        Unknown      1    0    0      
+work_options_encounter_type    9        Unknown      1    0    0      
+work_options_follow_up_action  9        Unknown      1    0    0      
+work_options_got_to_wv_by      9        Unknown      1    0    0      
+work_options_how_did_you_get_here 9        Unknown      1    0    0      
+work_options_how_often_in_district 9        Unknown      1    0    0      
+work_options_information_requested 9        Unknown      1    0    0      
+work_options_items_purchased_or_redeemed 9        Unknown      1    0    0      
+work_options_load_size         9        Unknown      1    0    0      
+work_options_non_operable_and_out_of_service 9        Unknown      1    0    0      
+work_options_odor              9        Unknown      1    0    0      
+work_options_prizes            9        Unknown      1    0    0      
+work_options_project_types     9        Unknown      1    0    0      
+work_options_reason_for_visit  9        Unknown      1    0    0      
+work_options_referral_type     9        Unknown      1    0    0      
+work_options_response          9        Unknown      1    0    0      
+work_options_restrooms         9        Unknown      1    0    0      
+work_options_scooter_type      9        Unknown      1    0    0      
+work_options_soil_condition    9        Unknown      1    0    0      
+work_options_status            9        Unknown      1    0    0      
+work_options_stress_level      9        Unknown      1    0    0      
+work_options_sub_category      9        Unknown      1    0    0      
+work_options_trash_bag_category 9        Unknown      1    0    0      
+work_options_trash_truck       9        Unknown      1    0    0      
+work_options_type              9        Unknown      1    0    0      
+work_options_type_of_alarm     9        Unknown      1    0    0      
+work_options_type_of_call      9        Unknown      1    0    0      
+work_options_type_of_caller    9        Unknown      1    0    0      
+work_options_type_of_project   9        Unknown      1    0    0      
+work_options_type_of_response  9        Unknown      1    0    0      
+work_options_type_of_service   9        Unknown      1    0    0      
+work_options_type_of_work      9        Unknown      1    0    0      
+work_options_visit_how_often   9        Unknown      1    0    0      
+work_options_visiting_from     9        Unknown      1    0    0      
+work_options_what_brings_you_here 9        Unknown      1    0    0      
+admin_activity_image           8        Unknown      1    0    0      
+business_disposition           8        Unknown      1    0    0      
+incident_party_type            8        Unknown      1    0    0      
+person_interaction_violation   8        Unknown      1    0    0      
+person_options_age             8        Unknown      1    0    0      
+person_options_disposition     8        Unknown      1    0    0      
+person_options_height          8        Unknown      1    0    0      
+person_options_race            8        Unknown      1    0    0      
+person_options_weight          8        Unknown      1    0    0      
+rating_options                 8        9            1    1    4      
+report_builder_map             8        Unknown      1    0    1      
+rvp_group                      8        Unknown      1    0    2      
+shift_types                    8        6            1    0    1      
+sub_category                   8        79           1    0    3      
+submit_a_bug_image             8        Unknown      1    0    0      
+ticket_task                    8        6            1    2    4      
+userDashboard                  8        Unknown      1    0    0      
+add_notes                      7        Unknown      1    0    0      
+app_version                    7        Unknown      1    0    0      
+badges_user_mapping            7        Unknown      1    0    0      
+dashboard                      7        9            1    0    0      
+equipment_activity_abnormalities 7        Unknown      1    0    0      
+equipment_activity_type        7        Unknown      1    0    0      
+equipment_disposal             7        Unknown      1    1    1      
+equipment_make                 7        Unknown      1    0    0      
+equipment_model                7        Unknown      1    0    0      
+equipment_type                 7        Unknown      1    1    1      
+gamification                   7        Unknown      1    0    0      
+inspection_images              7        15           1    2    2      
+message_category               7        Unknown      1    0    0      
+otp                            7        Unknown      1    0    1      
+priority                       7        Unknown      1    0    0      
+region                         7        7            1    0    0      
+region_test                    7        Unknown      1    0    0      
+rvp_sub_group                  7        Unknown      1    0    4      
+terms_and_conditions           7        1            1    0    0      
+token                          7        Unknown      1    0    0      
+division                       6        7            1    0    0      
+equipment_category             6        Unknown      1    0    0      
+equipment_incident_mapping     6        Unknown      1    0    0      
+inspection_form_sections       6        19           1    1    2      
+inspection_forms               6        8            1    0    3      
+outcome                        6        Unknown      1    0    1      
+outcome_july_29                6        Unknown      1    0    1      
+permissions                    6        17           1    0    0      
+shift_notification_user        6        Unknown      1    0    0      
+state                          6        59           1    0    1      
+variance_check                 6        Unknown      1    0    0      
+web_constants                  6        38           1    0    2      
+media_library_file_category    5        1            1    0    0      
+rvp_question_type              5        Unknown      1    0    0      
+works_program_count            5        Unknown      1    0    0      
+inspection_form_areas          3        7            2    2    2      
+walkpath_enabled               3        Unknown      0    0    1      
+inspection_form_programs       2        8            2    2    1      
+
+================================================================================

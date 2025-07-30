@@ -1,0 +1,83 @@
+================================================================================
+SCHEMA MAPPING SUMMARY
+================================================================================
+
+MAPPING STATISTICS:
+  Total Tables: 317
+  Total Column Mappings: 4884
+  Business Terms: 9
+  Query Patterns: 6
+  Creation Time: 0.07 seconds
+
+TABLE MAPPINGS SAMPLE:
+----------------------------------------
+Table: add_notes
+  Aliases: add_notes, add_noteses, add_note
+  Purpose: unknown
+
+Table: admin_activity
+  Aliases: admin_activity, admin_activitys, admin_activities
+  Purpose: unknown
+
+Table: admin_activity_audit
+  Aliases: admin_activity_audit, admin activity audit, audit
+  Business Terms: audit trail, activities
+  Purpose: audit_logging
+
+Table: admin_activity_image
+  Aliases: admin_activity_image, admin, activity
+  Purpose: unknown
+
+Table: app_version
+  Aliases: app_version, version, app version
+  Purpose: unknown
+
+... and 312 more tables
+
+BUSINESS TERM MAPPINGS SAMPLE:
+----------------------------------------
+Term: 'customers'
+  Tables: users, customers, clients
+  Meaning: customer_data
+
+Term: 'orders'
+  Tables: orders, purchases, transactions
+  Meaning: transaction_data
+
+Term: 'products'
+  Tables: products, items, inventory
+  Meaning: catalog_data
+
+Term: 'sales'
+  Tables: orders, sales, transactions
+  Meaning: sales_data
+
+Term: 'revenue'
+  Meaning: financial_amount
+
+... and 4 more business terms
+
+QUERY PATTERNS SAMPLE:
+----------------------------------------
+Pattern: show me all {table}
+  Description: Retrieve all records from a table
+  SQL Template: SELECT * FROM {table}
+
+Pattern: how many {table} are there
+  Description: Count total records in a table
+  SQL Template: SELECT COUNT(*) FROM {table}
+
+Pattern: show me {table} where {column} is {value}
+  Description: Filter records by specific column value
+  SQL Template: SELECT * FROM {table} WHERE {column} = '{value}'
+
+... and 3 more query patterns
+
+FUZZY MATCHING CONFIGURATION:
+----------------------------------------
+Similarity Threshold: 0.6
+Total Table Names: 317
+Total Column Names: 4884
+Total Business Terms: 0
+
+================================================================================

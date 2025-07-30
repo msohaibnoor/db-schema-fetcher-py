@@ -1,0 +1,39 @@
+====================================================================================================
+MYSQL SCHEMA FETCHER - COMPLETE ANALYSIS REPORT
+====================================================================================================
+Generated on: 2025-07-30 15:24:56
+Database: uat_latest_june
+Host: localhost:3306
+
+CONFIGURATION SUMMARY:
+--------------------------------------------------
+Output Directory: output
+Include Sample Data: True
+Sample Rows Limit: 5
+Include Foreign Keys: True
+Include Indexes: True
+
+FILES GENERATED:
+--------------------------------------------------
+  📄 schema_mappings.json (3,797,078 bytes)
+  📄 schema_extraction.log (79,239 bytes)
+  📄 mapping_summary.txt (2,168 bytes)
+  📄 processed_schema.json (1,983,863 bytes)
+  📄 raw_schema.json (1,466,994 bytes)
+  📄 extraction_report.txt (24,730 bytes)
+
+PROCESSING SUMMARY:
+--------------------------------------------------
+✅ Raw schema extraction completed
+✅ Schema processing completed
+✅ Natural language mapping completed
+
+NEXT STEPS / RECOMMENDATIONS:
+--------------------------------------------------
+1. ✅ All processing steps completed!
+2. Use processed_schema.json for LLM/AI applications
+3. Use schema_mappings.json for natural language query processing
+4. Integrate with your chatbot/LLM pipeline
+
+For more information, see individual report files and documentation.
+====================================================================================================

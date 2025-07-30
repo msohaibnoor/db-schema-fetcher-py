@@ -1,0 +1,15 @@
+// {
+//     "python.pythonPath": "./venv/bin/python",
+//     "python.defaultInterpreterPath": "./venv/bin/python",
+//     "python.linting.enabled": true,
+//     "python.linting.pylintEnabled": false,
+//     "python.linting.flake8Enabled": true,
+//     "python.formatting.provider": "black",
+//     "python.analysis.typeCheckingMode": "basic",
+//     "python.analysis.autoSearchPaths": true,
+//     "python.analysis.extraPaths": ["./src"],
+//     "files.exclude": {
+//         "**/__pycache__": true,
+//         "**/*.pyc": true
+//     }
+// }

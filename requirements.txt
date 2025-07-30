@@ -1,0 +1,61 @@
+# # Core Database Libraries
+# sqlalchemy==2.0.23
+# pymysql==1.1.0
+# mysql-connector-python==8.2.0
+
+# # Data Processing
+# pandas==2.1.4
+# numpy==1.26.4
+
+# # Configuration & Environment
+# python-dotenv==1.0.0
+# pydantic==2.5.2
+# pydantic-settings==2.1.0
+
+# # Logging & Utilities
+# loguru==0.7.2
+# rich==13.7.0
+# click==8.1.7
+
+# # JSON Processing
+# orjson==3.9.10
+
+# # Development & Testing
+# pytest==7.4.3
+# pytest-cov==4.1.0
+# black==23.11.0
+# flake8==6.1.0
+
+# # Documentation
+# sphinx==7.2.6
+
+# Core Database Libraries
+sqlalchemy
+pymysql
+mysql-connector-python
+
+# Data Processing
+pandas
+numpy
+
+# Configuration & Environment
+python-dotenv
+pydantic
+pydantic-settings
+
+# Logging & Utilities
+loguru
+rich
+click
+
+# JSON Processing
+orjson
+
+# Development & Testing
+pytest
+pytest-cov
+black
+flake8
+
+# Documentation
+sphinx

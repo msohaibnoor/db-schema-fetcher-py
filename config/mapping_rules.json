@@ -1,0 +1,191 @@
+{
+  "business_domain_mappings": {
+    "user_management": {
+      "tables": ["users", "customers", "clients", "members", "accounts"],
+      "keywords": ["user", "customer", "client", "member", "account", "person", "profile"],
+      "common_columns": ["id", "email", "name", "created_at", "status", "active"]
+    },
+    "order_management": {
+      "tables": ["orders", "purchases", "transactions", "sales"],
+      "keywords": ["order", "purchase", "transaction", "sale", "buy", "checkout"],
+      "common_columns": ["order_id", "customer_id", "amount", "status", "order_date"]
+    },
+    "product_catalog": {
+      "tables": ["products", "items", "inventory", "catalog"],
+      "keywords": ["product", "item", "inventory", "catalog", "merchandise", "goods"],
+      "common_columns": ["product_id", "name", "price", "category", "stock_quantity"]
+    },
+    "financial": {
+      "tables": ["payments", "invoices", "billing", "revenue"],
+      "keywords": ["payment", "invoice", "bill", "revenue", "cost", "price", "amount"],
+      "common_columns": ["amount", "currency", "payment_date", "status"]
+    }
+  },
+  "column_meaning_patterns": {
+    "identifiers": {
+      "patterns": ["*_id", "id", "*_key", "*_code"],
+      "business_meaning": "identifier",
+      "natural_language": ["ID", "identifier", "key", "code", "number"]
+    },
+    "temporal": {
+      "patterns": ["*_at", "*_date", "*_time", "created*", "updated*", "modified*"],
+      "business_meaning": "temporal",
+      "natural_language": ["date", "time", "when", "created", "updated", "modified"]
+    },
+    "status_flags": {
+      "patterns": ["status", "state", "*_flag", "active", "enabled", "is_*"],
+      "business_meaning": "status_indicator",
+      "natural_language": ["status", "state", "condition", "flag", "active", "enabled"]
+    },
+    "contact_info": {
+      "patterns": ["email*", "phone*", "*_email", "*_phone", "contact*"],
+      "business_meaning": "contact_information",
+      "natural_language": ["email", "phone", "contact", "address"]
+    },
+    "measurements": {
+      "patterns": ["*_count", "*_total", "*_amount", "quantity", "price", "cost"],
+      "business_meaning": "numeric_measure",
+      "natural_language": ["count", "total", "amount", "quantity", "price", "cost", "how many", "how much"]
+    },
+    "descriptive": {
+      "patterns": ["description", "comment*", "note*", "*_text", "remarks"],
+      "business_meaning": "descriptive_text",
+      "natural_language": ["description", "comment", "note", "text", "remarks", "details"]
+    },
+    "names": {
+      "patterns": ["name", "*_name", "title", "label"],
+      "business_meaning": "name_reference",
+      "natural_language": ["name", "title", "label", "called", "what is"]
+    }
+  },
+  "query_intent_patterns": {
+    "count_queries": {
+      "patterns": [
+        "how many * are there",
+        "count of *",
+        "total number of *",
+        "* count"
+      ],
+      "sql_template": "SELECT COUNT(*) FROM {table}",
+      "confidence": 0.9
+    },
+    "list_queries": {
+      "patterns": [
+        "show me all *",
+        "list all *",
+        "get all *",
+        "display *"
+      ],
+      "sql_template": "SELECT * FROM {table}",
+      "confidence": 0.8
+    },
+    "filter_queries": {
+      "patterns": [
+        "* where * is *",
+        "find * with *",
+        "get * that have *",
+        "show me * where *"
+      ],
+      "sql_template": "SELECT * FROM {table} WHERE {column} = '{value}'",
+      "confidence": 0.7
+    },
+    "recent_queries": {
+      "patterns": [
+        "recent *",
+        "latest *",
+        "newest *",
+        "* from today",
+        "* from this week"
+      ],
+      "sql_template": "SELECT * FROM {table} ORDER BY {date_column} DESC LIMIT 10",
+      "confidence": 0.8
+    },
+    "date_range_queries": {
+      "patterns": [
+        "* between * and *",
+        "* from * to *",
+        "* in *",
+        "* during *"
+      ],
+      "sql_template": "SELECT * FROM {table} WHERE {date_column} BETWEEN '{start_date}' AND '{end_date}'",
+      "confidence": 0.7
+    }
+  },
+  "synonyms": {
+    "table_synonyms": {
+      "users": ["customers", "clients", "members", "people", "accounts"],
+      "orders": ["purchases", "transactions", "sales"],
+      "products": ["items", "merchandise", "goods", "catalog"],
+      "payments": ["transactions", "billing", "charges"]
+    },
+    "column_synonyms": {
+      "id": ["identifier", "key", "number", "code"],
+      "name": ["title", "label", "description"],
+      "email": ["email_address", "e-mail"],
+      "phone": ["telephone", "phone_number"],
+      "created_at": ["creation_date", "date_created", "created_on"],
+      "updated_at": ["modification_date", "last_modified", "updated_on"],
+      "status": ["state", "condition"],
+      "active": ["enabled", "live", "status"]
+    },
+    "value_synonyms": {
+      "status_values": {
+        "active": ["enabled", "live", "on", "yes", "true", "1"],
+        "inactive": ["disabled", "off", "no", "false", "0"],
+        "pending": ["waiting", "in_progress", "processing"],
+        "completed": ["done", "finished", "success", "successful"],
+        "cancelled": ["canceled", "aborted", "terminated"]
+      },
+      "boolean_values": {
+        "true": ["yes", "on", "enabled", "active", "1"],
+        "false": ["no", "off", "disabled", "inactive", "0"]
+      }
+    }
+  },
+  "fuzzy_matching": {
+    "similarity_threshold": 0.6,
+    "max_suggestions": 10,
+    "boost_exact_matches": true,
+    "case_sensitive": false,
+    "include_partial_matches": true
+  },
+  "natural_language_processing": {
+    "common_stop_words": [
+      "show", "me", "get", "find", "list", "display", "give", "tell",
+      "what", "where", "when", "how", "which", "who", "why",
+      "the", "a", "an", "and", "or", "but", "in", "on", "at", "by",
+      "for", "with", "from", "to", "of", "is", "are", "was", "were"
+    ],
+    "question_indicators": [
+      "what", "where", "when", "how", "which", "who", "why"
+    ],
+    "action_verbs": [
+      "show", "display", "list", "get", "find", "search", "filter",
+      "count", "sum", "calculate", "aggregate", "group", "sort", "order"
+    ],
+    "comparison_operators": {
+      "equals": ["is", "equals", "=", "=="],
+      "not_equals": ["is not", "not equals", "!=", "<>"],
+      "greater_than": ["greater than", "more than", "above", ">"],
+      "less_than": ["less than", "below", "under", "<"],
+      "greater_equal": ["greater than or equal", "at least", ">="],
+      "less_equal": ["less than or equal", "at most", "<="],
+      "like": ["contains", "includes", "has", "like", "similar to"],
+      "in": ["in", "among", "within", "one of"]
+    }
+  },
+  "data_type_mappings": {
+    "string_indicators": [
+      "name", "description", "comment", "text", "address", "email", "phone"
+    ],
+    "numeric_indicators": [
+      "id", "count", "total", "amount", "price", "cost", "quantity", "number"
+    ],
+    "date_indicators": [
+      "date", "time", "created", "updated", "modified", "timestamp"
+    ],
+    "boolean_indicators": [
+      "active", "enabled", "flag", "is_", "has_", "can_", "should_"
+    ]
+  }
+}
