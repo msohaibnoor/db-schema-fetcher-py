@@ -1,2 +1,12 @@
 .env*
 .env
+# Ignore virtual environments
+venv/
+venv
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.sqlite3
