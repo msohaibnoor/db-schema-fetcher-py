@@ -1,0 +1,3893 @@
+{
+  "database_info": {
+    "database_name": "uat_latest_june",
+    "host": "localhost",
+    "port": 3306,
+    "charset": "utf8mb4",
+    "extraction_timestamp": "2025-07-31T15:59:38.758440",
+    "total_tables": 15,
+    "tables": [
+      "incidents",
+      "incidents_types",
+      "incident_comments",
+      "fixtures",
+      "business",
+      "media_library",
+      "media_library_file_category",
+      "incidents_locations",
+      "incidents_parties",
+      "incidents_vehicles",
+      "program",
+      "web_constants",
+      "user",
+      "job_titles",
+      "user_program_mapping"
+    ],
+    "table_filter_applied": true,
+    "filtered_from_total": 317,
+    "missing_tables": []
+  },
+  "report_type": "incident_details",
+  "table_filter": [
+    "incidents",
+    "incidents_types",
+    "incident_comments",
+    "fixtures",
+    "business",
+    "media_library",
+    "media_library_file_category",
+    "incidents_locations",
+    "incidents_parties",
+    "incidents_vehicles",
+    "program",
+    "web_constants",
+    "user",
+    "job_titles",
+    "user_program_mapping"
+  ],
+  "tables": {
+    "incidents": {
+      "name": "incidents",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null,
+          "autoincrement": true,
+          "comment": null
+        },
+        {
+          "name": "old_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "incident_type",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_incident_type",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "outcome_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "zone_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_zone_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "ambassador_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_user_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "priority",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": "'Low'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "data_and_time_of_incident",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "police_response",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "fire_response",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "ems_response",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "client_contacted",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "business_location",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_business_location",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "fixtures_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_fixtures_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "summary",
+          "type": "TEXT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "narrative",
+          "type": "TEXT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "report_completion_status",
+          "type": "ENUM",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "supervisor_reviewed_status",
+          "type": "ENUM",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "select_maintenance",
+          "type": "JSON",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_select_maintenance",
+          "type": "JSON",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "person",
+          "type": "JSON",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_person_id",
+          "type": "JSON",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "select_equipment",
+          "type": "JSON",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_select_equipment",
+          "type": "JSON",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "damage_to_property",
+          "type": "VARCHAR(255)",
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_deleted",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "createdAt",
+          "type": "DATETIME",
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "program_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_program_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "police_officer_name",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "police_time_called",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "police_time_arrived",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "fire_engine",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "fire_time_called",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "fire_time_arrived",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "ems_company",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "ems_responder",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "ems_time_called",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "ems_time_arrived",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "client_name",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "created_by",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "updated_by",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "latitude",
+          "type": "DECIMAL(10, 6)",
+          "nullable": true,
+          "default": "'0.000000'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "longitude",
+          "type": "DECIMAL(10, 6)",
+          "nullable": true,
+          "default": "'0.000000'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "altitude",
+          "type": "DECIMAL(10, 6)",
+          "nullable": true,
+          "default": "'0.000000'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "heading",
+          "type": "DECIMAL(10, 6)",
+          "nullable": true,
+          "default": "'0.000000'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "horizontal_accuracy",
+          "type": "DECIMAL(10, 6)",
+          "nullable": true,
+          "default": "'0.000000'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "vertical_accuracy",
+          "type": "DECIMAL(10, 6)",
+          "nullable": true,
+          "default": "'0.000000'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "heading_accuracy",
+          "type": "DECIMAL(10, 6)",
+          "nullable": true,
+          "default": "'0.000000'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "hour",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "minute",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "period",
+          "type": "ENUM",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "date",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "date_captured",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_active",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'1'",
+          "autoincrement": false,
+          "comment": null
+        }
+      ],
+      "primary_keys": [
+        "id",
+        "createdAt"
+      ],
+      "foreign_keys": [],
+      "indexes": [
+        {
+          "name": "business_location",
+          "columns": [
+            "business_location"
+          ],
+          "unique": false
+        },
+        {
+          "name": "fixtures_id_idx",
+          "columns": [
+            "fixtures_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "idx_ambassador_id",
+          "columns": [
+            "ambassador_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "idx_is_deleted",
+          "columns": [
+            "is_deleted"
+          ],
+          "unique": false
+        },
+        {
+          "name": "idx_program_id",
+          "columns": [
+            "program_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "idx_zone_id",
+          "columns": [
+            "zone_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "incident_type",
+          "columns": [
+            "incident_type"
+          ],
+          "unique": false
+        },
+        {
+          "name": "is_deleted",
+          "columns": [
+            "is_deleted"
+          ],
+          "unique": false
+        },
+        {
+          "name": "old_id",
+          "columns": [
+            "old_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "outcome_id",
+          "columns": [
+            "outcome_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "priority",
+          "columns": [
+            "priority"
+          ],
+          "unique": false
+        }
+      ],
+      "row_count": 0,
+      "sample_data": null
+    },
+    "incidents_types": {
+      "name": "incidents_types",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null,
+          "autoincrement": true,
+          "comment": null
+        },
+        {
+          "name": "old_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(128)",
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "outcomes",
+          "type": "JSON",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "use_count",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_active",
+          "type": "TINYINT",
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_deleted",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "createdAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "incident_type_alias",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "assign",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "required",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "app_menu",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_checked",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "program_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_program_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        }
+      ],
+      "primary_keys": [
+        "id"
+      ],
+      "foreign_keys": [],
+      "indexes": [
+        {
+          "name": "idx_it_createdAt",
+          "columns": [
+            "createdAt"
+          ],
+          "unique": false
+        },
+        {
+          "name": "idx_it_deleted",
+          "columns": [
+            "is_deleted"
+          ],
+          "unique": false
+        },
+        {
+          "name": "old_id",
+          "columns": [
+            "old_id"
+          ],
+          "unique": false
+        }
+      ],
+      "row_count": 0,
+      "sample_data": null
+    },
+    "incident_comments": {
+      "name": "incident_comments",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null,
+          "autoincrement": true,
+          "comment": null
+        },
+        {
+          "name": "old_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "incident_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_incident_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "date_and_time",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_deleted",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "created_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_created_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "updated_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_updated_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "createdAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        }
+      ],
+      "primary_keys": [
+        "id"
+      ],
+      "foreign_keys": [],
+      "indexes": [
+        {
+          "name": "idx_old_id",
+          "columns": [
+            "old_id"
+          ],
+          "unique": false
+        }
+      ],
+      "row_count": 0,
+      "sample_data": null
+    },
+    "fixtures": {
+      "name": "fixtures",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null,
+          "autoincrement": true,
+          "comment": null
+        },
+        {
+          "name": "old_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "fixtures_type",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_fixtures_type",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(128)",
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "service_data_time",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "image",
+          "type": "JSON",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "zone_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_zone_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "latitude",
+          "type": "DECIMAL(10, 6)",
+          "nullable": false,
+          "default": "'0.000000'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "longitude",
+          "type": "DECIMAL(10, 6)",
+          "nullable": false,
+          "default": "'0.000000'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_active",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'1'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_checked",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_deleted",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "createdAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "program_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_program_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "address",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        }
+      ],
+      "primary_keys": [
+        "id"
+      ],
+      "foreign_keys": [],
+      "indexes": [
+        {
+          "name": "fixture_type_idx",
+          "columns": [
+            "fixtures_type"
+          ],
+          "unique": false
+        },
+        {
+          "name": "old_id",
+          "columns": [
+            "old_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "program_id_idx",
+          "columns": [
+            "program_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "zone_id_idx",
+          "columns": [
+            "zone_id"
+          ],
+          "unique": false
+        }
+      ],
+      "row_count": 0,
+      "sample_data": null
+    },
+    "business": {
+      "name": "business",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null,
+          "autoincrement": true,
+          "comment": null
+        },
+        {
+          "name": "old_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(255)",
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "business_type",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_business_type_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "disposition",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_disposition_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "zone",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_zone_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "location",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "property_location",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_property_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "date_established",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_active",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "upload_files",
+          "type": "JSON",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "category",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": "'2'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "status",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": "'1'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_checked",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_deleted",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "created_by",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_created_by",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "updated_by",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_updated_by",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "role_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_role_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "createdAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "program_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_program_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "latitude",
+          "type": "DECIMAL(10, 6)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "longitude",
+          "type": "DECIMAL(10, 6)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        }
+      ],
+      "primary_keys": [
+        "id"
+      ],
+      "foreign_keys": [],
+      "indexes": [
+        {
+          "name": "idx_business_type",
+          "columns": [
+            "business_type"
+          ],
+          "unique": false
+        },
+        {
+          "name": "idx_disposition",
+          "columns": [
+            "disposition"
+          ],
+          "unique": false
+        },
+        {
+          "name": "idx_is_deleted",
+          "columns": [
+            "is_deleted"
+          ],
+          "unique": false
+        },
+        {
+          "name": "idx_program_id",
+          "columns": [
+            "program_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "idx_property_location",
+          "columns": [
+            "property_location"
+          ],
+          "unique": false
+        },
+        {
+          "name": "idx_zone",
+          "columns": [
+            "zone"
+          ],
+          "unique": false
+        },
+        {
+          "name": "old_id",
+          "columns": [
+            "old_id"
+          ],
+          "unique": false
+        }
+      ],
+      "row_count": 0,
+      "sample_data": null
+    },
+    "media_library": {
+      "name": "media_library",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BIGINT",
+          "nullable": false,
+          "default": null,
+          "autoincrement": true,
+          "comment": null
+        },
+        {
+          "name": "main_id_bigint",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "main_id_int",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "upload_files",
+          "type": "TEXT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(128)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "url",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "file_type",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "file_size",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "dimensions",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "task_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "category_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": "'8'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_active",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'1'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_deleted",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "created_by",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "updated_by",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "createdAt",
+          "type": "DATETIME",
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "DATETIME",
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "program_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_type_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_program_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_category_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "alias",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        }
+      ],
+      "primary_keys": [
+        "id",
+        "createdAt"
+      ],
+      "foreign_keys": [],
+      "indexes": [
+        {
+          "name": "idx_category_id",
+          "columns": [
+            "category_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "idx_category_upload_type",
+          "columns": [
+            "main_id_int",
+            "category_id",
+            "program_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "idx_category_upload_type_deleted",
+          "columns": [
+            "main_id_int",
+            "category_id",
+            "program_id",
+            "is_deleted"
+          ],
+          "unique": false
+        },
+        {
+          "name": "idx_createdAt",
+          "columns": [
+            "createdAt"
+          ],
+          "unique": false
+        },
+        {
+          "name": "idx_created_by",
+          "columns": [
+            "created_by"
+          ],
+          "unique": false
+        },
+        {
+          "name": "idx_is_deleted",
+          "columns": [
+            "is_deleted"
+          ],
+          "unique": false
+        },
+        {
+          "name": "idx_main_id",
+          "columns": [
+            "main_id_int"
+          ],
+          "unique": false
+        },
+        {
+          "name": "idx_media_library_main_id_bigint",
+          "columns": [
+            "main_id_bigint"
+          ],
+          "unique": false
+        },
+        {
+          "name": "idx_old",
+          "columns": [
+            "old_id",
+            "old_type_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "idx_old_id",
+          "columns": [
+            "old_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "idx_program_id",
+          "columns": [
+            "program_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "idx_web_main",
+          "columns": [
+            "is_deleted",
+            "category_id",
+            "main_id_int",
+            "createdAt",
+            "created_by"
+          ],
+          "unique": false
+        },
+        {
+          "name": "idx_web_main_2",
+          "columns": [
+            "is_deleted",
+            "category_id",
+            "main_id_bigint",
+            "createdAt",
+            "created_by",
+            "program_id"
+          ],
+          "unique": false
+        }
+      ],
+      "row_count": 89,
+      "sample_data": [
+        {
+          "id": 1,
+          "main_id_bigint": 0,
+          "main_id_int": 0,
+          "upload_files": "https://smssmart-uat.s3.us-east-2.amazonaws.com/media-library//media-library/-1750200538430-405764999-SamplePNGImage_200kbmb%20%281%29.png",
+          "title": "SamplePNGImage_200kbmb (1).png",
+          "url": "",
+          "description": "",
+          "file_type": "image/png",
+          "file_size": "207071",
+          "dimensions": "",
+          "task_id": 0.0,
+          "category_id": 8,
+          "is_active": 1,
+          "is_deleted": 0,
+          "created_by": 22226,
+          "updated_by": 22226,
+          "createdAt": "2025-06-17 22:48:58",
+          "updatedAt": "2025-06-17 22:48:58",
+          "program_id": 415,
+          "old_id": null,
+          "old_type_id": null,
+          "old_program_id": null,
+          "old_category_id": null,
+          "alias": ""
+        },
+        {
+          "id": 2,
+          "main_id_bigint": 16,
+          "main_id_int": 16,
+          "upload_files": "inspection-items/temp-inspection-items-1750201123660-c5bc6f9c-D6268509-EB51-4993-9CD7-8DE8F0DC2DF1.jpg",
+          "title": "",
+          "url": "",
+          "description": "",
+          "file_type": "image/jpeg",
+          "file_size": null,
+          "dimensions": "",
+          "task_id": NaN,
+          "category_id": 15,
+          "is_active": 1,
+          "is_deleted": 0,
+          "created_by": 22252,
+          "updated_by": 22252,
+          "createdAt": "2025-06-17 23:00:20",
+          "updatedAt": "2025-06-17 23:00:20",
+          "program_id": 415,
+          "old_id": null,
+          "old_type_id": null,
+          "old_program_id": null,
+          "old_category_id": null,
+          "alias": null
+        },
+        {
+          "id": 3,
+          "main_id_bigint": 16,
+          "main_id_int": 16,
+          "upload_files": "inspection-items/temp-inspection-items-1750201133876-3896c8a3-312ACAFA-9058-47E0-B7E7-23B8799A19EB.jpg",
+          "title": "",
+          "url": "",
+          "description": "",
+          "file_type": "image/jpeg",
+          "file_size": null,
+          "dimensions": "",
+          "task_id": NaN,
+          "category_id": 15,
+          "is_active": 1,
+          "is_deleted": 0,
+          "created_by": 22252,
+          "updated_by": 22252,
+          "createdAt": "2025-06-17 23:00:20",
+          "updatedAt": "2025-06-17 23:00:20",
+          "program_id": 415,
+          "old_id": null,
+          "old_type_id": null,
+          "old_program_id": null,
+          "old_category_id": null,
+          "alias": null
+        },
+        {
+          "id": 4,
+          "main_id_bigint": 17,
+          "main_id_int": 17,
+          "upload_files": "inspection-items/temp-inspection-items-1750201143918-631faae5-22C273EC-75EA-4615-A4B8-DA1430E7254A.jpg",
+          "title": "",
+          "url": "",
+          "description": "",
+          "file_type": "image/jpeg",
+          "file_size": null,
+          "dimensions": "",
+          "task_id": NaN,
+          "category_id": 15,
+          "is_active": 1,
+          "is_deleted": 0,
+          "created_by": 22252,
+          "updated_by": 22252,
+          "createdAt": "2025-06-17 23:00:20",
+          "updatedAt": "2025-06-17 23:00:20",
+          "program_id": 415,
+          "old_id": null,
+          "old_type_id": null,
+          "old_program_id": null,
+          "old_category_id": null,
+          "alias": null
+        },
+        {
+          "id": 5,
+          "main_id_bigint": 17,
+          "main_id_int": 17,
+          "upload_files": "inspection-items/temp-inspection-items-1750201149783-3be30f1c-9B2F1B55-C800-4804-A813-A3A8F710D8A8.jpg",
+          "title": "",
+          "url": "",
+          "description": "",
+          "file_type": "image/jpeg",
+          "file_size": null,
+          "dimensions": "",
+          "task_id": NaN,
+          "category_id": 15,
+          "is_active": 1,
+          "is_deleted": 0,
+          "created_by": 22252,
+          "updated_by": 22252,
+          "createdAt": "2025-06-17 23:00:20",
+          "updatedAt": "2025-06-17 23:00:20",
+          "program_id": 415,
+          "old_id": null,
+          "old_type_id": null,
+          "old_program_id": null,
+          "old_category_id": null,
+          "alias": null
+        }
+      ]
+    },
+    "media_library_file_category": {
+      "name": "media_library_file_category",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BIGINT",
+          "nullable": false,
+          "default": null,
+          "autoincrement": true,
+          "comment": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(100)",
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_deleted",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "createdAt",
+          "type": "DATETIME",
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "DATETIME",
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        }
+      ],
+      "primary_keys": [
+        "id"
+      ],
+      "foreign_keys": [],
+      "indexes": [],
+      "row_count": 1,
+      "sample_data": [
+        {
+          "id": 28,
+          "title": "REPORT BUILDER",
+          "is_deleted": 0,
+          "createdAt": "2025-06-15 11:01:50",
+          "updatedAt": "2025-06-15 11:01:50"
+        }
+      ]
+    },
+    "incidents_locations": {
+      "name": "incidents_locations",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null,
+          "autoincrement": true,
+          "comment": null
+        },
+        {
+          "name": "old_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "incident_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_incident_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "location",
+          "type": "TEXT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "latitude",
+          "type": "DECIMAL(10, 6)",
+          "nullable": true,
+          "default": "'0.000000'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "longitude",
+          "type": "DECIMAL(10, 6)",
+          "nullable": true,
+          "default": "'0.000000'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_deleted",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "createdAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        }
+      ],
+      "primary_keys": [
+        "id"
+      ],
+      "foreign_keys": [],
+      "indexes": [],
+      "row_count": 0,
+      "sample_data": null
+    },
+    "incidents_parties": {
+      "name": "incidents_parties",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null,
+          "autoincrement": true,
+          "comment": null
+        },
+        {
+          "name": "old_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "incident_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_incident_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "party_type",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "business",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "street",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "street_name",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "phone",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_deleted",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "createdAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        }
+      ],
+      "primary_keys": [
+        "id"
+      ],
+      "foreign_keys": [],
+      "indexes": [],
+      "row_count": 0,
+      "sample_data": null
+    },
+    "incidents_vehicles": {
+      "name": "incidents_vehicles",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null,
+          "autoincrement": true,
+          "comment": null
+        },
+        {
+          "name": "old_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "incident_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_incident_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "year",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "make",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "model",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "color",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "license",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_deleted",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "createdAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": "CURRENT_TIMESTAMP",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": "CURRENT_TIMESTAMP",
+          "autoincrement": false,
+          "comment": null
+        }
+      ],
+      "primary_keys": [
+        "id"
+      ],
+      "foreign_keys": [],
+      "indexes": [],
+      "row_count": 0,
+      "sample_data": null
+    },
+    "program": {
+      "name": "program",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null,
+          "autoincrement": true,
+          "comment": null
+        },
+        {
+          "name": "old_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "city_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_city_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "program_name",
+          "type": "VARCHAR(128)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "abbreviation",
+          "type": "VARCHAR(128)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "time_zone",
+          "type": "VARCHAR(128)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_timezone_id",
+          "type": "VARCHAR(128)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "block_faces",
+          "type": "VARCHAR(128)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "primary_contact_id",
+          "type": "JSON",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_primary_contact_id",
+          "type": "JSON",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "shift_enabled",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "shift_type",
+          "type": "JSON",
+          "nullable": true,
+          "default": "(json_array())",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_shift_type",
+          "type": "JSON",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "invoicing",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "priority_email",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "geo_location",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "businesses",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "equipment",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "equipment_upkeep",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "fixtures",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "incident",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "incident_comments",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "maintenance_request_open",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "maintenance_request_closed",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "maintenance_request_comments",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "person",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "person_interaction",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "statistic",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "supervisor",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "zone",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_deleted",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_active",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'1'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "program_report_logo",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "program_logo",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "created_by",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_created_by",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "updated_by",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_updated_by",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "createdAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "webform_link",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "feedback_link",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "timezone_str",
+          "type": "VARCHAR(100)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "alias",
+          "type": "VARCHAR(128)",
+          "nullable": true,
+          "default": "''",
+          "autoincrement": false,
+          "comment": null
+        }
+      ],
+      "primary_keys": [
+        "id"
+      ],
+      "foreign_keys": [],
+      "indexes": [
+        {
+          "name": "city_id_idx",
+          "columns": [
+            "city_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "id_idx",
+          "columns": [
+            "id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "idx_p_deleted",
+          "columns": [
+            "is_deleted"
+          ],
+          "unique": false
+        },
+        {
+          "name": "is_active_idx",
+          "columns": [
+            "is_active"
+          ],
+          "unique": false
+        },
+        {
+          "name": "old_id",
+          "columns": [
+            "old_id"
+          ],
+          "unique": false
+        }
+      ],
+      "row_count": 3,
+      "sample_data": [
+        {
+          "id": 384,
+          "old_id": null,
+          "city_id": 1,
+          "old_city_id": null,
+          "program_name": "Sacramento Airport",
+          "abbreviation": "SAA",
+          "time_zone": "(UTC -07:00) - Los Angeles, CA",
+          "old_timezone_id": null,
+          "block_faces": "3",
+          "primary_contact_id": "[22226, 22238, 22240, 22239, 22241]",
+          "old_primary_contact_id": null,
+          "shift_enabled": 1,
+          "shift_type": "[9, 10, 11, 12, 17]",
+          "old_shift_type": null,
+          "invoicing": 0,
+          "priority_email": 1,
+          "geo_location": 0,
+          "businesses": 0.0,
+          "equipment": 2.0,
+          "equipment_upkeep": 90,
+          "fixtures": 2.0,
+          "incident": 11,
+          "incident_comments": 11,
+          "maintenance_request_open": 18,
+          "maintenance_request_closed": 7,
+          "maintenance_request_comments": 6,
+          "person": 8,
+          "person_interaction": 90,
+          "statistic": 15,
+          "supervisor": 1,
+          "zone": 5,
+          "is_deleted": 0,
+          "is_active": 1,
+          "program_report_logo": "Main-task/Main-task-1749735113195-04bdf296-report_logoSAIRPORT.png",
+          "program_logo": "Main-task/Main-task-1749735113195-ba942a2c-Sacramento Airport.png",
+          "created_by": 22226.0,
+          "old_created_by": null,
+          "updated_by": null,
+          "old_updated_by": null,
+          "createdAt": "2025-02-20 10:14:28",
+          "updatedAt": "2025-06-15 10:36:08",
+          "webform_link": "https://fe.blockbyblock.com/webform/prg_id=370/img=https%3A%2F%2Fcube84-prod.s3.us-east-2.amazonaws.com%2FMain-task%2F%2FMain-task%2F-1730486828068-40c43377-Sacramento%2520Airport.png/lat=0.000000/lng=0.000000",
+          "feedback_link": "https://fe.blockbyblock.com/feedback/prg_id=370/img=https%3A%2F%2Fcube.png",
+          "timezone_str": "America/Los_Angeles",
+          "alias": ""
+        },
+        {
+          "id": 415,
+          "old_id": null,
+          "city_id": 11,
+          "old_city_id": null,
+          "program_name": "0000 TEST SACRAMENTO AIRPORT",
+          "abbreviation": "TEST ABBREVIATION",
+          "time_zone": "(UTC -08:00) - Anchorage, Ak",
+          "old_timezone_id": null,
+          "block_faces": null,
+          "primary_contact_id": "[22241, 22245, 22251]",
+          "old_primary_contact_id": null,
+          "shift_enabled": 1,
+          "shift_type": "[9, 10, 11, 12, 17]",
+          "old_shift_type": null,
+          "invoicing": 0,
+          "priority_email": 0,
+          "geo_location": 0,
+          "businesses": NaN,
+          "equipment": NaN,
+          "equipment_upkeep": 90,
+          "fixtures": NaN,
+          "incident": 2,
+          "incident_comments": 5,
+          "maintenance_request_open": 5,
+          "maintenance_request_closed": 0,
+          "maintenance_request_comments": 3,
+          "person": 9,
+          "person_interaction": 0,
+          "statistic": 15,
+          "supervisor": 1,
+          "zone": 3,
+          "is_deleted": 0,
+          "is_active": 1,
+          "program_report_logo": "Main-task/Main-task-1750016680973-e7a886a5-SamplePNGImage_3mbmb.png",
+          "program_logo": "https://smssmart-uat.s3.us-east-2.amazonaws.com/Business-data/Business-data-1750012407572-a89b6bcb-SamplePNGImage_100kbmb.png",
+          "created_by": NaN,
+          "old_created_by": null,
+          "updated_by": null,
+          "old_updated_by": null,
+          "createdAt": "2025-06-15 19:44:41",
+          "updatedAt": "2025-06-18 14:53:33",
+          "webform_link": "https://uat-fe.smsclean.com/webform/prg_id=415",
+          "feedback_link": null,
+          "timezone_str": "America/Anchorage",
+          "alias": ""
+        },
+        {
+          "id": 416,
+          "old_id": null,
+          "city_id": 1,
+          "old_city_id": null,
+          "program_name": "0000 Training Sacramento Airport CA",
+          "abbreviation": "SMS-T 0000",
+          "time_zone": "(UTC -07:00) - Los Angeles, CA",
+          "old_timezone_id": null,
+          "block_faces": null,
+          "primary_contact_id": "[22240, 22239]",
+          "old_primary_contact_id": null,
+          "shift_enabled": 1,
+          "shift_type": "[9, 10, 11, 12, 17]",
+          "old_shift_type": null,
+          "invoicing": 0,
+          "priority_email": 0,
+          "geo_location": 0,
+          "businesses": NaN,
+          "equipment": NaN,
+          "equipment_upkeep": 90,
+          "fixtures": NaN,
+          "incident": 0,
+          "incident_comments": 0,
+          "maintenance_request_open": 0,
+          "maintenance_request_closed": 0,
+          "maintenance_request_comments": 0,
+          "person": 13,
+          "person_interaction": 0,
+          "statistic": 15,
+          "supervisor": 1,
+          "zone": 0,
+          "is_deleted": 0,
+          "is_active": 1,
+          "program_report_logo": "Main-task/Main-task-1750190678732-b0363586-report_logoSAIRPORT.png",
+          "program_logo": "Main-task/Main-task-1750190678728-28e1bce1-Sacramento Airport.png",
+          "created_by": NaN,
+          "old_created_by": null,
+          "updated_by": null,
+          "old_updated_by": null,
+          "createdAt": "2025-06-17 20:04:39",
+          "updatedAt": "2025-06-17 20:45:18",
+          "webform_link": "https://uat-fe.smsclean.com/webform/prg_id=416",
+          "feedback_link": null,
+          "timezone_str": "America/Los_Angeles",
+          "alias": ""
+        }
+      ]
+    },
+    "web_constants": {
+      "name": "web_constants",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null,
+          "autoincrement": true,
+          "comment": null
+        },
+        {
+          "name": "module",
+          "type": "VARCHAR(128)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "key_name",
+          "type": "VARCHAR(128)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "value",
+          "type": "VARCHAR(2000)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "createdAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        }
+      ],
+      "primary_keys": [
+        "id"
+      ],
+      "foreign_keys": [],
+      "indexes": [
+        {
+          "name": "key_name_idx",
+          "columns": [
+            "key_name"
+          ],
+          "unique": false
+        },
+        {
+          "name": "module_idx",
+          "columns": [
+            "module"
+          ],
+          "unique": false
+        }
+      ],
+      "row_count": 38,
+      "sample_data": [
+        {
+          "id": 1,
+          "module": "ReportResponseTemplate",
+          "key_name": "ticket",
+          "value": "{\"headers\":[{\"label\":\"Id\",\"isSort\":true,\"sortKey\":\"id\",\"value\":\"id\"},{\"label\":\"Title\",\"isSort\":true,\"sortKey\":\"title\",\"value\":\"title\"},{\"label\":\"Department\",\"isSort\":true,\"sortKey\":\"department\",\"value\":\"department\"},{\"label\":\"Cleaner\",\"isSort\":true,\"sortKey\":\"cleaner\",\"value\":\"cleaner\"},{\"label\":\"Address\",\"isSort\":true,\"sortKey\":\"address\",\"value\":\"address\"},{\"label\":\"Created\",\"isSort\":true,\"sortKey\":\"created\",\"value\":\"created\"},{\"label\":\"Created By\",\"isSort\":true,\"sortKey\":\"created_by\",\"value\":\"created_by\"},{\"label\":\"Completed\",\"isSort\":true,\"sortKey\":\"completed\",\"value\":\"completed\"},{\"label\":\"Aged\",\"isSort\":true,\"sortKey\":\"aged\",\"value\":\"aged\"},{\"label\":\"Area\",\"isSort\":true,\"sortKey\":\"area\",\"value\":\"area\"},{\"label\":\"Status\",\"isSort\":true,\"sortKey\":\"statuses\",\"value\":\"statuses\"},{\"label\":\"Description\",\"isSort\":false,\"sortKey\":\"description\",\"value\":\"description\"},{\"label\":\"Comments\",\"isSort\":false,\"sortKey\":\"add_info\",\"value\":\"add_info\"},{\"label\":\"Tasks\",\"isSort\":false,\"value\":\"tasks\"},{\"label\":\"Options\",\"isSort\":false,\"sortKey\":\"\",\"value\":\"\",\"options\":[{\"action\":\"view\",\"id\":\"id\",\"page\":\"/main/maintenance/view-request/\"}]}],\"sort_keys\":{\"id\":\"mr.id\",\"title\":\"mt.title\",\"department\":\"md.title\",\"cleaner\":\"cu.id\",\"address\":\"address\",\"created\":\"mr.createdAt\",\"created_by\":\"created_by\",\"completed\":\"mr.completedOn\",\"aged\":\"mr.aged\",\"area\":\"z.zone_name\",\"statuses\":\"statuses\"},\"export_row_id\":null}",
+          "createdAt": "2024-12-30 07:45:34",
+          "updatedAt": "2024-12-30 07:45:34"
+        },
+        {
+          "id": 2,
+          "module": "ReportResponseTemplate",
+          "key_name": "ticket_count",
+          "value": "{\"headers\":[{\"label\":\"Tickets Type\",\"isSort\":true,\"sortKey\":\"title\",\"value\":\"title\"},{\"label\":\"Count\",\"isSort\":true,\"sortKey\":\"count\",\"value\":\"count\"}],\"sort_keys\":{\"title\":\"mt.title\",\"count\":\"count\"},\"export_row_id\":null}",
+          "createdAt": "2024-12-30 07:45:34",
+          "updatedAt": "2024-12-30 07:45:34"
+        },
+        {
+          "id": 3,
+          "module": "ReportResponseTemplate",
+          "key_name": "ticket_detail",
+          "value": "{\"headers\":[{\"label\":\"Request\",\"isSort\":true,\"sortKey\":\"request\",\"value\":\"title\"},{\"label\":\"Type\",\"isSort\":true,\"sortKey\":\"type\",\"value\":\"type\"},{\"label\":\"Comments\",\"isSort\":false,\"sortKey\":\"message_count\",\"value\":\"message_count\",\"hyperLink\":{\"id\":\"id\",\"page\":\"/main/maintenance/view-request/\"}},{\"label\":\"Tasks\",\"isSort\":false,\"value\":\"tasks\"},{\"label\":\"Status\",\"isSort\":true,\"sortKey\":\"statuses\",\"value\":\"statuses\"},{\"label\":\"Modified By\",\"isSort\":true,\"sortKey\":\"modified_by\",\"value\":\"modified_by\"},{\"label\":\"Modified Date\",\"isSort\":true,\"sortKey\":\"updated\",\"value\":\"updated\"},{\"label\":\"Created By\",\"isSort\":true,\"sortKey\":\"created_by\",\"value\":\"created_by\"},{\"label\":\"Created Date\",\"isSort\":true,\"sortKey\":\"created\",\"value\":\"created\"},{\"label\":\"Options\",\"isSort\":false,\"sortKey\":\"\",\"value\":\"\",\"options\":[{\"action\":\"view\",\"id\":\"id\",\"page\":\"/main/maintenance/view-request/\"},{\"action\":\"audit\",\"id\":\"id\",\"page\":\"/main/maintenance/audit-request/\"}]}],\"sort_keys\":{\"request\":\"mr.title\",\"type\":\"mt.title\",\"message_count\":\"message_count\",\"modified_by\":\"modified_by\",\"updated\":\"mr.updatedAt\",\"created_by\":\"created_by\",\"created\":\"mr.createdAt\"},\"export_row_id\":\"id\"}",
+          "createdAt": "2024-12-30 07:45:34",
+          "updatedAt": "2024-12-30 07:45:34"
+        },
+        {
+          "id": 4,
+          "module": "ReportResponseTemplate",
+          "key_name": "entries_by_shift",
+          "value": "{\"headers\":[{\"label\":\"Site Name\",\"isSort\":true,\"sortKey\":\"program_name\",\"value\":\"program_name\"},{\"label\":\"Total Site Stats\",\"isSort\":true,\"sortKey\":\"total_stats\",\"value\":\"total_stats\"},{\"label\":\"Total Site Inspections\",\"isSort\":true,\"sortKey\":\"total_inspections\",\"value\":\"total_inspections\"},{\"label\":\"Total Site Tickets\",\"isSort\":true,\"sortKey\":\"total_tickets\",\"value\":\"total_tickets\"},{\"label\":\"Total Site Entries\",\"isSort\":true,\"sortKey\":\"total_entries\",\"value\":\"total_entries\"},{\"label\":\"Total Shift Hours\",\"isSort\":true,\"sortKey\":\"total_shift_hour\",\"value\":\"total_shift_hour\"},{\"label\":\"Total Actual Hours\",\"isSort\":true,\"sortKey\":\"total_actual_shift_hour\",\"value\":\"total_actual_shift_hour\"}],\"sort_keys\":{\"program_name\":\"p.program_name\",\"total_stats\":\"total_stats\",\"total_inspections\":\"total_inspections\",\"total_tickets\":\"total_tickets\",\"total_entries\":\"total_entries\",\"total_shift_hour\":\"total_shift_hour\",\"total_actual_shift_hour\":\"total_actual_shift_hour\"}}",
+          "createdAt": "2024-12-30 07:45:34",
+          "updatedAt": "2024-12-30 07:45:34"
+        },
+        {
+          "id": 5,
+          "module": "ReportResponseTemplate",
+          "key_name": "inspections",
+          "value": "{\"headers\":[{\"label\":\"Created\",\"isSort\":true,\"sortKey\":\"created\",\"value\":\"created\"},{\"label\":\"Area\",\"isSort\":true,\"sortKey\":\"area\",\"value\":\"area\"},{\"label\":\"Inspection\",\"isSort\":true,\"sortKey\":\"inspection\",\"value\":\"inspection\"},{\"label\":\"Score\",\"isSort\":false,\"sortKey\":\"score\",\"value\":\"score\"},{\"label\":\"Inspector\",\"isSort\":true,\"sortKey\":\"inspector\",\"value\":\"inspector\"}],\"sort_keys\":{\"completed\":\"i.createdAt\",\"area\":\"area.zone_name\",\"inspection\":\"inspectionForm.name\"},\"export_row_id\":null}",
+          "createdAt": "2024-12-30 07:45:34",
+          "updatedAt": "2024-12-30 07:45:34"
+        }
+      ]
+    },
+    "user": {
+      "name": "user",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null,
+          "autoincrement": true,
+          "comment": null
+        },
+        {
+          "name": "old_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "first_name",
+          "type": "VARCHAR(125)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "last_name",
+          "type": "VARCHAR(125)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "user_name",
+          "type": "VARCHAR(24)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(50)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "password",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_active",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'1'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "enable_shift_entry",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "user_blocked",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "device_name",
+          "type": "VARCHAR(125)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "device_id",
+          "type": "VARCHAR(125)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "device_os",
+          "type": "VARCHAR(125)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "os_version",
+          "type": "VARCHAR(125)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "fcm_token",
+          "type": "VARCHAR(125)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "language_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": "'1'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "user_session_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "role_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_role_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "job_title_ids",
+          "type": "JSON",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_job_title_ids",
+          "type": "JSON",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "currently_working_here",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'1'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "start_date",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "end_date",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "last_web_login",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "last_app_login",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_deleted",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "created_by",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_created_by",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "updated_by",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_updated_by",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "createdAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "image",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "user_type",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        }
+      ],
+      "primary_keys": [
+        "id"
+      ],
+      "foreign_keys": [],
+      "indexes": [
+        {
+          "name": "is_deleted_idx",
+          "columns": [
+            "is_deleted"
+          ],
+          "unique": false
+        },
+        {
+          "name": "old_id",
+          "columns": [
+            "old_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "role_id",
+          "columns": [
+            "role_id"
+          ],
+          "unique": false
+        }
+      ],
+      "row_count": 26,
+      "sample_data": [
+        {
+          "id": 22226,
+          "old_id": null,
+          "first_name": "Ahsann",
+          "last_name": "Rizvi",
+          "user_name": "0000arizvi",
+          "email": "ahsan.rizvi@smsholdings.com",
+          "password": "$2a$10$yLxBrxo3qo4wiQoxmOMGEuDfjhcJSrqbylGD9T4z8oB4lfw0DVjLO",
+          "is_active": 1,
+          "enable_shift_entry": 1,
+          "user_blocked": 0,
+          "device_name": null,
+          "device_id": null,
+          "device_os": null,
+          "os_version": null,
+          "fcm_token": null,
+          "language_id": 1,
+          "user_session_id": null,
+          "role_id": 36,
+          "old_role_id": null,
+          "job_title_ids": "[11, 9, 263, 267, 522, 5, 265, 6, 7, 266, 10, 4, 3, 2, 264, 8, 1]",
+          "old_job_title_ids": null,
+          "currently_working_here": 1,
+          "start_date": "2025-02-11 00:00:00",
+          "end_date": null,
+          "last_web_login": "2025-06-27 13:35:52",
+          "last_app_login": "2025-06-27 11:31:16",
+          "is_deleted": 0,
+          "created_by": 22219.0,
+          "old_created_by": null,
+          "updated_by": 22226,
+          "old_updated_by": null,
+          "createdAt": "2025-02-11 15:40:16",
+          "updatedAt": "2025-06-27 13:35:52",
+          "image": null,
+          "user_type": "SYSTEM ADMINISTRATION"
+        },
+        {
+          "id": 22238,
+          "old_id": null,
+          "first_name": "John",
+          "last_name": "Doe",
+          "user_name": "jhonny",
+          "email": "jhonny@smsholdings.com",
+          "password": "$2a$10$aVIsrsrKM3S8UcqlpgInj.EBe6Dtai29gQHH58cMy3oFaytDDbmcW",
+          "is_active": 1,
+          "enable_shift_entry": 1,
+          "user_blocked": 0,
+          "device_name": null,
+          "device_id": null,
+          "device_os": null,
+          "os_version": null,
+          "fcm_token": null,
+          "language_id": 1,
+          "user_session_id": null,
+          "role_id": 36,
+          "old_role_id": null,
+          "job_title_ids": "[11, 263, 265, 264]",
+          "old_job_title_ids": null,
+          "currently_working_here": 1,
+          "start_date": "2025-02-10 00:00:00",
+          "end_date": null,
+          "last_web_login": "2025-03-26 11:15:36",
+          "last_app_login": "2025-03-26 11:15:41",
+          "is_deleted": 1,
+          "created_by": NaN,
+          "old_created_by": null,
+          "updated_by": 22226,
+          "old_updated_by": null,
+          "createdAt": "2025-02-11 15:40:16",
+          "updatedAt": "2025-06-17 18:42:55",
+          "image": null,
+          "user_type": "SYSTEM ADMINISTRATION"
+        },
+        {
+          "id": 22239,
+          "old_id": null,
+          "first_name": "Beverley",
+          "last_name": "Lawrence",
+          "user_name": "001blaw",
+          "email": "blawrence@smsholdings.com",
+          "password": "$2a$10$i2hUVcyLZu6OiTR181dt0.LWud0hERwCQhTnbBkRSmIuDoiYIdoL2",
+          "is_active": 1,
+          "enable_shift_entry": 1,
+          "user_blocked": 0,
+          "device_name": null,
+          "device_id": null,
+          "device_os": null,
+          "os_version": null,
+          "fcm_token": null,
+          "language_id": 1,
+          "user_session_id": null,
+          "role_id": 36,
+          "old_role_id": null,
+          "job_title_ids": "[9, 11, 263, 267, 522, 5, 265, 6, 7, 10, 4, 3, 2, 264, 8, 1]",
+          "old_job_title_ids": null,
+          "currently_working_here": 1,
+          "start_date": "2025-03-29 00:00:00",
+          "end_date": null,
+          "last_web_login": "2025-06-17 23:31:51",
+          "last_app_login": "2025-06-17 23:33:49",
+          "is_deleted": 0,
+          "created_by": 22219.0,
+          "old_created_by": null,
+          "updated_by": 22226,
+          "old_updated_by": null,
+          "createdAt": "2025-03-28 15:40:16",
+          "updatedAt": "2025-06-17 23:33:49",
+          "image": null,
+          "user_type": "SYSTEM ADMINISTRATION"
+        },
+        {
+          "id": 22240,
+          "old_id": null,
+          "first_name": "Manny",
+          "last_name": "Singh",
+          "user_name": "002man",
+          "email": "msingh@smsholdings.com",
+          "password": "$2a$10$NzC1gLINcFIEtz7yn6sRkencPfyx/CrRrMIlvkeg7w41xske.IlQq",
+          "is_active": 1,
+          "enable_shift_entry": 1,
+          "user_blocked": 0,
+          "device_name": null,
+          "device_id": null,
+          "device_os": null,
+          "os_version": null,
+          "fcm_token": null,
+          "language_id": 1,
+          "user_session_id": null,
+          "role_id": 36,
+          "old_role_id": null,
+          "job_title_ids": "[9, 11, 263, 267, 522, 5, 265, 6, 7, 10, 4, 3, 2, 264, 8, 1]",
+          "old_job_title_ids": null,
+          "currently_working_here": 1,
+          "start_date": "2025-03-28 00:00:00",
+          "end_date": null,
+          "last_web_login": "2025-06-24 14:33:27",
+          "last_app_login": "2025-06-17 23:42:22",
+          "is_deleted": 0,
+          "created_by": 22219.0,
+          "old_created_by": null,
+          "updated_by": 22226,
+          "old_updated_by": null,
+          "createdAt": "2025-03-28 15:40:16",
+          "updatedAt": "2025-06-24 14:33:27",
+          "image": null,
+          "user_type": "SYSTEM ADMINISTRATION"
+        },
+        {
+          "id": 22241,
+          "old_id": null,
+          "first_name": "Faiz",
+          "last_name": "Ali",
+          "user_name": "faizi",
+          "email": "faiz.ali@smsholdings.com",
+          "password": "$2a$10$7bw8SfCPgag1gy.u4cuH7.SvC4wVJpFL3UjvAqAVxU9wTi/RQV0Ri",
+          "is_active": 1,
+          "enable_shift_entry": 1,
+          "user_blocked": 0,
+          "device_name": null,
+          "device_id": null,
+          "device_os": null,
+          "os_version": null,
+          "fcm_token": null,
+          "language_id": 1,
+          "user_session_id": null,
+          "role_id": 36,
+          "old_role_id": null,
+          "job_title_ids": "[11, 263]",
+          "old_job_title_ids": null,
+          "currently_working_here": 1,
+          "start_date": "2025-04-07 00:00:00",
+          "end_date": null,
+          "last_web_login": "2025-06-13 13:15:07",
+          "last_app_login": "NaT",
+          "is_deleted": 0,
+          "created_by": 22226.0,
+          "old_created_by": null,
+          "updated_by": 22226,
+          "old_updated_by": null,
+          "createdAt": "2025-04-07 23:04:56",
+          "updatedAt": "2025-06-17 18:48:15",
+          "image": null,
+          "user_type": "SYSTEM ADMINISTRATION"
+        }
+      ]
+    },
+    "job_titles": {
+      "name": "job_titles",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null,
+          "autoincrement": true,
+          "comment": null
+        },
+        {
+          "name": "old_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_deleted",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_custom",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "createdAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_created_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "created_by",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_modified_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "modified_by",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "alias",
+          "type": "VARCHAR(50)",
+          "nullable": true,
+          "default": "''",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_active",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'1'",
+          "autoincrement": false,
+          "comment": null
+        }
+      ],
+      "primary_keys": [
+        "id"
+      ],
+      "foreign_keys": [],
+      "indexes": [
+        {
+          "name": "idx_deleted",
+          "columns": [
+            "is_deleted"
+          ],
+          "unique": false
+        }
+      ],
+      "row_count": 674,
+      "sample_data": [
+        {
+          "id": 1,
+          "old_id": 1,
+          "name": "Vice President",
+          "is_deleted": 0,
+          "is_custom": 0,
+          "createdAt": "2020-07-10 19:45:18",
+          "updatedAt": "2020-07-10 19:45:18",
+          "old_created_id": 908,
+          "created_by": null,
+          "old_modified_id": 908,
+          "modified_by": null,
+          "alias": "vice-president",
+          "is_active": 1
+        },
+        {
+          "id": 2,
+          "old_id": 2,
+          "name": "Regional Vice President",
+          "is_deleted": 0,
+          "is_custom": 0,
+          "createdAt": "2020-07-10 19:45:18",
+          "updatedAt": "2020-07-10 19:45:18",
+          "old_created_id": 908,
+          "created_by": null,
+          "old_modified_id": 908,
+          "modified_by": null,
+          "alias": "regional-vice-president",
+          "is_active": 1
+        },
+        {
+          "id": 3,
+          "old_id": 3,
+          "name": "Regional Director",
+          "is_deleted": 0,
+          "is_custom": 0,
+          "createdAt": "2020-07-10 19:45:18",
+          "updatedAt": "2020-07-10 19:45:18",
+          "old_created_id": 908,
+          "created_by": null,
+          "old_modified_id": 908,
+          "modified_by": null,
+          "alias": "regional-director",
+          "is_active": 1
+        },
+        {
+          "id": 4,
+          "old_id": 4,
+          "name": "Project Manager",
+          "is_deleted": 0,
+          "is_custom": 0,
+          "createdAt": "2020-07-10 19:45:18",
+          "updatedAt": "2020-07-10 19:45:18",
+          "old_created_id": 908,
+          "created_by": null,
+          "old_modified_id": 908,
+          "modified_by": null,
+          "alias": "project-manager",
+          "is_active": 1
+        },
+        {
+          "id": 5,
+          "old_id": 5,
+          "name": "General Manager",
+          "is_deleted": 0,
+          "is_custom": 0,
+          "createdAt": "2020-07-10 19:45:18",
+          "updatedAt": "2020-07-10 19:45:18",
+          "old_created_id": 908,
+          "created_by": null,
+          "old_modified_id": 908,
+          "modified_by": null,
+          "alias": "general-manager",
+          "is_active": 1
+        }
+      ]
+    },
+    "user_program_mapping": {
+      "name": "user_program_mapping",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "nullable": false,
+          "default": null,
+          "autoincrement": true,
+          "comment": null
+        },
+        {
+          "name": "old_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "user_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_user_id",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "program_ids",
+          "type": "JSON",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_program_ids",
+          "type": "JSON",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "city_ids",
+          "type": "JSON",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_city_ids",
+          "type": "JSON",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "region_ids",
+          "type": "JSON",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "old_region_ids",
+          "type": "JSON",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "division_ids",
+          "type": "JSON",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "mapped_by",
+          "type": "INTEGER",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "is_deleted",
+          "type": "TINYINT",
+          "nullable": true,
+          "default": "'0'",
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "createdAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "DATETIME",
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": null
+        }
+      ],
+      "primary_keys": [
+        "id"
+      ],
+      "foreign_keys": [],
+      "indexes": [
+        {
+          "name": "idx_city_ids",
+          "columns": [],
+          "unique": false
+        },
+        {
+          "name": "idx_program_id",
+          "columns": [],
+          "unique": false
+        },
+        {
+          "name": "idx_region_ids",
+          "columns": [],
+          "unique": false
+        },
+        {
+          "name": "is_deleted_idx",
+          "columns": [
+            "is_deleted"
+          ],
+          "unique": false
+        },
+        {
+          "name": "user_id_idx",
+          "columns": [
+            "user_id"
+          ],
+          "unique": false
+        }
+      ],
+      "row_count": 26,
+      "sample_data": [
+        {
+          "id": 1,
+          "old_id": null,
+          "user_id": 22226,
+          "old_user_id": NaN,
+          "program_ids": "[384, 390, 391, 395, 396, 401, 393, 397, 398, 399, 400, 403, 405, 406, 408, 409, 402, 410, 413, 404, 411, 412, 414, 415, 416]",
+          "old_program_ids": null,
+          "city_ids": "[1, 4, 6, 8, 9, 10, 11]",
+          "old_city_ids": null,
+          "region_ids": "[2, 8, 21, 22, 23, 24]",
+          "old_region_ids": null,
+          "division_ids": "[2, 1, 105, 106, 107, 108]",
+          "mapped_by": 1,
+          "is_deleted": 0,
+          "createdAt": "2023-04-24 14:23:32",
+          "updatedAt": "2025-06-16 15:12:32"
+        },
+        {
+          "id": 23028,
+          "old_id": null,
+          "user_id": 22238,
+          "old_user_id": 22238.0,
+          "program_ids": "[384, 390, 398, 399, 400, 401, 403, 405, 413, 414, 416]",
+          "old_program_ids": null,
+          "city_ids": "[]",
+          "old_city_ids": null,
+          "region_ids": "[2]",
+          "old_region_ids": null,
+          "division_ids": "[2]",
+          "mapped_by": 1,
+          "is_deleted": 1,
+          "createdAt": "2023-04-24 14:23:32",
+          "updatedAt": "2025-06-17 18:42:55"
+        },
+        {
+          "id": 23029,
+          "old_id": null,
+          "user_id": 22239,
+          "old_user_id": 22239.0,
+          "program_ids": "[384, 390, 398, 399, 400, 401, 403, 405, 413, 414, 416]",
+          "old_program_ids": null,
+          "city_ids": "[]",
+          "old_city_ids": null,
+          "region_ids": "[2]",
+          "old_region_ids": null,
+          "division_ids": "[2]",
+          "mapped_by": 1,
+          "is_deleted": 0,
+          "createdAt": "2023-04-24 14:23:32",
+          "updatedAt": "2025-06-17 21:02:52"
+        },
+        {
+          "id": 23030,
+          "old_id": null,
+          "user_id": 22240,
+          "old_user_id": 22240.0,
+          "program_ids": "[384, 390, 398, 399, 400, 401, 403, 405, 413, 414, 416]",
+          "old_program_ids": null,
+          "city_ids": "[1]",
+          "old_city_ids": null,
+          "region_ids": "[2, 8]",
+          "old_region_ids": null,
+          "division_ids": "[2, 1]",
+          "mapped_by": 1,
+          "is_deleted": 0,
+          "createdAt": "2023-04-24 14:23:32",
+          "updatedAt": "2025-06-17 23:40:44"
+        },
+        {
+          "id": 23031,
+          "old_id": null,
+          "user_id": 22241,
+          "old_user_id": NaN,
+          "program_ids": "[384, 416]",
+          "old_program_ids": null,
+          "city_ids": "[]",
+          "old_city_ids": null,
+          "region_ids": "[]",
+          "old_region_ids": null,
+          "division_ids": "[]",
+          "mapped_by": 22226,
+          "is_deleted": 0,
+          "createdAt": "2025-04-07 23:04:56",
+          "updatedAt": "2025-06-17 18:48:15"
+        }
+      ]
+    }
+  },
+  "extraction_metadata": {
+    "extraction_date": "2025-07-31T15:59:38.715263",
+    "config": {
+      "database": {
+        "host": "localhost",
+        "port": 3306,
+        "database": "uat_latest_june",
+        "username": "sms"
+      },
+      "processing": {
+        "output_dir": "output",
+        "include_sample_data": true,
+        "sample_rows_limit": 5,
+        "include_foreign_keys": true,
+        "include_indexes": true
+      }
+    },
+    "report_type": "incident_details",
+    "table_filter_applied": true,
+    "total_tables": 15,
+    "total_columns": 320,
+    "extraction_duration_seconds": 0.18,
+    "processed_tables": 15,
+    "failed_tables": [],
+    "extraction_end_date": "2025-07-31T15:59:38.890975"
+  }
+}

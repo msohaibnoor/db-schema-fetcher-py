@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "original_extraction_date": "2025-07-31T15:36:52.758571",
-    "processing_date": "2025-07-31T15:36:53.024500",
+    "original_extraction_date": "2025-07-31T15:36:26.586609",
+    "processing_date": "2025-07-31T15:36:26.855209",
     "processor_version": "1.0.0",
     "database_name": "uat_latest_june",
     "processing_config": {
@@ -20,9 +20,9 @@
       }
     },
     "processing_stats": {
-      "processing_start": "2025-07-31T15:36:53.024488",
-      "processing_end": "2025-07-31T15:36:53.029768",
-      "processing_duration_seconds": 0.01,
+      "processing_start": "2025-07-31T15:36:26.855194",
+      "processing_end": "2025-07-31T15:36:26.858304",
+      "processing_duration_seconds": 0.0,
       "tables_processed": 15,
       "relationships_found": 0,
       "total_columns_processed": 320

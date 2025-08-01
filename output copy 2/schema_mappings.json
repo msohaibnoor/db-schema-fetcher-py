@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "creation_date": "2025-07-31T15:36:53.042333",
+    "creation_date": "2025-07-31T15:36:26.867770",
     "database_name": "uat_latest_june",
     "total_tables": 15,
     "mapping_version": "1.0.0",
@@ -17,8 +17,8 @@
       "actual_name": "business",
       "aliases": [
         "business",
-        "businesses",
-        "busines"
+        "busines",
+        "businesses"
       ],
       "business_terms": [],
       "description": "Table 'business' contains 31 columns. Key columns include: id, old_id, old_business_type_id.",
@@ -29,14 +29,14 @@
       "actual_name": "fixtures",
       "aliases": [
         "fixtures",
-        "fixtur",
         "fixture",
-        "fixtureses"
+        "fixtureses",
+        "fixtur"
       ],
       "business_terms": [
         "addresses",
-        "locations",
-        "geographic data"
+        "geographic data",
+        "locations"
       ],
       "description": "Table 'fixtures' contains 20 columns. Key columns include: id, old_id.",
       "purpose": "unknown",
@@ -46,11 +46,11 @@
       "actual_name": "incident_comments",
       "aliases": [
         "incident_comments",
+        "incident_comment",
         "incident",
-        "comments",
-        "incident_commentses",
         "incident comments",
-        "incident_comment"
+        "incident_commentses",
+        "comments"
       ],
       "business_terms": [],
       "description": "Table 'incident_comments' contains 13 columns. Key columns include: id, old_id, incident_id, old_incident_id.",
@@ -61,8 +61,8 @@
       "actual_name": "incidents",
       "aliases": [
         "incidents",
-        "incident",
-        "incidentses"
+        "incidentses",
+        "incident"
       ],
       "business_terms": [],
       "description": "Table 'incidents' contains 61 columns. Key columns include: id, old_id, incident_type, old_incident_type, outcome_id.",
@@ -73,11 +73,11 @@
       "actual_name": "incidents_locations",
       "aliases": [
         "incidents_locations",
-        "locations",
-        "incidents_location",
         "incidents",
         "incidents locations",
-        "incidents_locationses"
+        "incidents_locationses",
+        "locations",
+        "incidents_location"
       ],
       "business_terms": [],
       "description": "Table 'incidents_locations' contains 10 columns. Key columns include: id, old_id, incident_id, old_incident_id.",
@@ -88,18 +88,18 @@
       "actual_name": "incidents_parties",
       "aliases": [
         "incidents_parties",
-        "parties",
-        "incidents_partieses",
-        "incidents_partie",
-        "incidents parties",
         "incidents",
         "incidents_party",
-        "incidents_parti"
+        "incidents_parti",
+        "incidents parties",
+        "incidents_partieses",
+        "parties",
+        "incidents_partie"
       ],
       "business_terms": [
-        "contact information",
         "directory",
-        "contacts"
+        "contacts",
+        "contact information"
       ],
       "description": "Table 'incidents_parties' contains 14 columns. Key columns include: id, old_id, incident_id, old_incident_id.",
       "purpose": "unknown",
@@ -109,12 +109,12 @@
       "actual_name": "incidents_types",
       "aliases": [
         "incidents_types",
-        "incidents_typeses",
-        "incidents types",
         "incidents",
+        "incidents types",
+        "incidents_typeses",
+        "incidents_typ",
         "incidents_type",
-        "types",
-        "incidents_typ"
+        "types"
       ],
       "business_terms": [],
       "description": "Table 'incidents_types' contains 16 columns. Key columns include: id, old_id.",
@@ -125,12 +125,12 @@
       "actual_name": "incidents_vehicles",
       "aliases": [
         "incidents_vehicles",
-        "vehicles",
-        "incidents_vehicle",
         "incidents",
-        "incidents_vehicl",
+        "incidents_vehicleses",
+        "incidents_vehicle",
         "incidents vehicles",
-        "incidents_vehicleses"
+        "incidents_vehicl",
+        "vehicles"
       ],
       "business_terms": [],
       "description": "Table 'incidents_vehicles' contains 12 columns. Key columns include: id, old_id, incident_id, old_incident_id.",
@@ -141,12 +141,12 @@
       "actual_name": "job_titles",
       "aliases": [
         "job_titles",
-        "job_titleses",
         "job_title",
         "job titles",
         "job_titl",
         "job",
-        "titles"
+        "titles",
+        "job_titleses"
       ],
       "business_terms": [],
       "description": "Table 'job_titles' contains 13 columns. with approximately 674 records. Key columns include: id, old_id.",
@@ -157,11 +157,11 @@
       "actual_name": "media_library",
       "aliases": [
         "media_library",
-        "media_libraries",
         "media",
         "media library",
+        "library",
         "media_librarys",
-        "library"
+        "media_libraries"
       ],
       "business_terms": [],
       "description": "Table 'media_library' contains 24 columns. with approximately 89 records. Key columns include: id, main_id_bigint, main_id_int.",
@@ -172,14 +172,14 @@
       "actual_name": "media_library_file_category",
       "aliases": [
         "media_library_file_category",
-        "media_library_file_categories",
-        "media category",
-        "media library file category",
-        "media",
-        "media_library_file_categorys",
+        "file",
         "category",
+        "media",
+        "media_library_file_categories",
+        "media library file category",
         "library",
-        "file"
+        "media_library_file_categorys",
+        "media category"
       ],
       "business_terms": [],
       "description": "Table 'media_library_file_category' contains 5 columns. with approximately 1 records. Key columns include: id.",
@@ -193,12 +193,12 @@
         "programs"
       ],
       "business_terms": [
-        "locations",
-        "addresses",
-        "geographic data",
-        "contact information",
         "directory",
-        "contacts"
+        "contacts",
+        "addresses",
+        "contact information",
+        "locations",
+        "geographic data"
       ],
       "description": "Table 'program' contains 45 columns. with approximately 3 records. Key columns include: id, old_id, city_id, old_city_id.",
       "purpose": "unknown",
@@ -211,14 +211,14 @@
         "users"
       ],
       "business_terms": [
-        "accounts",
-        "people",
-        "directory",
-        "users",
-        "contact information",
         "members",
         "customers",
-        "contacts"
+        "accounts",
+        "directory",
+        "contacts",
+        "people",
+        "contact information",
+        "users"
       ],
       "description": "Table 'user' contains 35 columns. with approximately 26 records. Key columns include: id, old_id.",
       "purpose": "user_management",
@@ -228,22 +228,22 @@
       "actual_name": "user_program_mapping",
       "aliases": [
         "user_program_mapping",
-        "user mapping",
-        "user",
         "program",
-        "mapping",
+        "user",
         "user program mapping",
+        "user mapping",
+        "mapping",
         "user_program_mappings"
       ],
       "business_terms": [
-        "locations",
+        "members",
+        "customers",
         "accounts",
         "people",
         "addresses",
-        "geographic data",
         "users",
-        "members",
-        "customers"
+        "locations",
+        "geographic data"
       ],
       "description": "Table 'user_program_mapping' contains 15 columns. with approximately 26 records. Key columns include: id, old_id, user_id, old_user_id, program_ids.",
       "purpose": "user_management",
@@ -253,11 +253,11 @@
       "actual_name": "web_constants",
       "aliases": [
         "web_constants",
-        "web_constantses",
-        "web",
-        "web_constant",
         "constants",
-        "web constants"
+        "web_constant",
+        "web constants",
+        "web_constantses",
+        "web"
       ],
       "business_terms": [],
       "description": "Table 'web_constants' contains 6 columns. with approximately 38 records. Key columns include: id, key_name.",
@@ -272,22 +272,22 @@
         "table": "business",
         "type": "integer",
         "aliases": [
-          "code",
-          "key",
+          "number",
           "identifier",
-          "number"
+          "code",
+          "key"
         ],
         "business_meaning": "identifier",
         "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
         "sample_values": [],
         "common_phrases": [
-          "record key",
           "number of id",
-          "id count",
           "ID of record",
           "record number",
+          "record identifier",
+          "id count",
           "how much id",
-          "record identifier"
+          "record key"
         ]
       },
       "old_id": {
@@ -295,10 +295,10 @@
         "table": "business",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
           "old id",
           "identifier"
         ],
@@ -306,13 +306,13 @@
         "description": "Column 'old_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old key",
-          "how much old_id",
-          "old number",
+          "number of old_id",
+          "ID of old",
           "old_id count",
           "old identifier",
-          "number of old_id",
-          "ID of old"
+          "old key",
+          "old number",
+          "how much old_id"
         ]
       },
       "title": {
@@ -324,8 +324,8 @@
         "description": "Column 'title' of type VARCHAR(255) (required)",
         "sample_values": [],
         "common_phrases": [
-          "text of title",
           "title value",
+          "text of title",
           "what title"
         ]
       },
@@ -341,9 +341,9 @@
         "description": "Column 'business_type' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "how much business_type",
           "number of business_type",
-          "business_type count"
+          "business_type count",
+          "how much business_type"
         ]
       },
       "old_business_type_id": {
@@ -351,10 +351,10 @@
         "table": "business",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
           "old business type id",
           "identifier"
         ],
@@ -362,13 +362,13 @@
         "description": "Column 'old_business_type_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "ID of old_business_type",
           "old_business_type_id count",
+          "ID of old_business_type",
+          "number of old_business_type_id",
+          "old_business_type identifier",
           "how much old_business_type_id",
           "old_business_type number",
-          "number of old_business_type_id",
-          "old_business_type key",
-          "old_business_type identifier"
+          "old_business_type key"
         ]
       },
       "disposition": {
@@ -390,24 +390,24 @@
         "table": "business",
         "type": "integer",
         "aliases": [
-          "key",
-          "id",
-          "number",
-          "code",
           "old disposition id",
+          "id",
+          "key",
+          "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'old_disposition_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old_disposition identifier",
+          "old_disposition_id count",
           "how much old_disposition_id",
-          "old_disposition number",
-          "old_disposition key",
           "ID of old_disposition",
-          "number of old_disposition_id",
-          "old_disposition_id count"
+          "old_disposition key",
+          "old_disposition identifier",
+          "old_disposition number",
+          "number of old_disposition_id"
         ]
       },
       "zone": {
@@ -419,8 +419,8 @@
         "description": "Column 'zone' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "number of zone",
           "zone count",
+          "number of zone",
           "how much zone"
         ]
       },
@@ -429,23 +429,23 @@
         "table": "business",
         "type": "integer",
         "aliases": [
-          "old zone id",
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "old zone id",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'old_zone_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old_zone number",
-          "old_zone identifier",
-          "old_zone_id count",
-          "how much old_zone_id",
-          "ID of old_zone",
           "old_zone key",
+          "old_zone identifier",
+          "how much old_zone_id",
+          "old_zone number",
+          "ID of old_zone",
+          "old_zone_id count",
           "number of old_zone_id"
         ]
       },
@@ -468,8 +468,8 @@
         "table": "business",
         "type": "integer",
         "aliases": [
-          "property location",
-          "location"
+          "location",
+          "property location"
         ],
         "business_meaning": "general_data",
         "description": "Column 'property_location' of type INTEGER",
@@ -485,10 +485,10 @@
         "table": "business",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
           "old property id",
           "identifier"
         ],
@@ -496,11 +496,11 @@
         "description": "Column 'old_property_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old_property key",
-          "number of old_property_id",
-          "old_property number",
           "old_property identifier",
           "ID of old_property",
+          "old_property key",
+          "old_property number",
+          "number of old_property_id",
           "old_property_id count",
           "how much old_property_id"
         ]
@@ -517,13 +517,13 @@
         "description": "Column 'date_established' of type DATETIME",
         "sample_values": [],
         "common_phrases": [
+          "when date_established",
           "when",
+          "date_established date",
+          "date",
           "time of date_established",
           "time",
-          "when date_established",
-          "date",
-          "timestamp",
-          "date_established date"
+          "timestamp"
         ]
       },
       "is_active": {
@@ -531,19 +531,19 @@
         "table": "business",
         "type": "integer",
         "aliases": [
-          "live",
-          "active",
-          "enabled",
           "status",
-          "is active"
+          "enabled",
+          "is active",
+          "live",
+          "active"
         ],
         "business_meaning": "status_indicator",
         "description": "Column 'is_active' of type TINYINT with default value ''0''",
         "sample_values": [],
         "common_phrases": [
           "how much is_active",
-          "number of is_active",
-          "is_active count"
+          "is_active count",
+          "number of is_active"
         ]
       },
       "upload_files": {
@@ -568,9 +568,9 @@
         "description": "Column 'category' of type INTEGER with default value ''2''",
         "sample_values": [],
         "common_phrases": [
-          "category count",
+          "how much category",
           "number of category",
-          "how much category"
+          "category count"
         ]
       },
       "status": {
@@ -586,13 +586,13 @@
         "description": "Column 'status' of type INTEGER with default value ''1''",
         "sample_values": [],
         "common_phrases": [
-          "status count",
-          "condition",
-          "number of status",
-          "how much status",
-          "current state",
           "status",
-          "what status"
+          "current state",
+          "how much status",
+          "what status",
+          "number of status",
+          "status count",
+          "condition"
         ]
       },
       "is_checked": {
@@ -624,9 +624,9 @@
         "description": "Column 'is_deleted' of type TINYINT with default value ''0''",
         "sample_values": [],
         "common_phrases": [
+          "how much is_deleted",
           "number of is_deleted",
-          "is_deleted count",
-          "how much is_deleted"
+          "is_deleted count"
         ]
       },
       "created_by": {
@@ -641,9 +641,9 @@
         "description": "Column 'created_by' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
+          "how much created_by",
           "created_by count",
-          "number of created_by",
-          "how much created_by"
+          "number of created_by"
         ]
       },
       "old_created_by": {
@@ -658,9 +658,9 @@
         "description": "Column 'old_created_by' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
+          "how much old_created_by",
           "old_created_by count",
-          "number of old_created_by",
-          "how much old_created_by"
+          "number of old_created_by"
         ]
       },
       "updated_by": {
@@ -675,13 +675,13 @@
         "description": "Column 'updated_by' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "updated on",
+          "modification date",
+          "how much updated_by",
+          "last modified",
+          "updated_by count",
           "number of updated_by",
           "when updated",
-          "modification date",
-          "updated_by count",
-          "how much updated_by",
-          "last modified"
+          "updated on"
         ]
       },
       "old_updated_by": {
@@ -696,13 +696,13 @@
         "description": "Column 'old_updated_by' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "number of old_updated_by",
-          "updated on",
-          "how much old_updated_by",
-          "when updated",
           "modification date",
+          "how much old_updated_by",
+          "last modified",
           "old_updated_by count",
-          "last modified"
+          "number of old_updated_by",
+          "when updated",
+          "updated on"
         ]
       },
       "role_id": {
@@ -710,24 +710,24 @@
         "table": "business",
         "type": "integer",
         "aliases": [
-          "key",
-          "role id",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
+          "role id",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'role_id' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "number of role_id",
           "ID of role",
-          "role key",
-          "role_id count",
-          "role number",
+          "role identifier",
           "how much role_id",
-          "role identifier"
+          "role_id count",
+          "role key",
+          "role number",
+          "number of role_id"
         ]
       },
       "old_role_id": {
@@ -735,24 +735,24 @@
         "table": "business",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "old role id",
-          "number",
+          "key",
           "code",
+          "number",
+          "old role id",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'old_role_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old_role number",
-          "old_role identifier",
-          "number of old_role_id",
-          "how much old_role_id",
           "ID of old_role",
+          "old_role identifier",
+          "old_role number",
+          "old_role_id count",
           "old_role key",
-          "old_role_id count"
+          "number of old_role_id",
+          "how much old_role_id"
         ]
       },
       "createdAt": {
@@ -764,9 +764,9 @@
         "description": "Column 'createdAt' of type DATETIME",
         "sample_values": [],
         "common_phrases": [
+          "time of createdat",
           "createdat date",
-          "when createdat",
-          "time of createdat"
+          "when createdat"
         ]
       },
       "updatedAt": {
@@ -778,13 +778,13 @@
         "description": "Column 'updatedAt' of type DATETIME",
         "sample_values": [],
         "common_phrases": [
-          "last modified",
-          "updated on",
-          "when updated",
           "modification date",
+          "last modified",
           "updatedat date",
           "time of updatedat",
-          "when updatedat"
+          "when updatedat",
+          "when updated",
+          "updated on"
         ]
       },
       "program_id": {
@@ -792,24 +792,24 @@
         "table": "business",
         "type": "integer",
         "aliases": [
-          "program id",
-          "key",
           "id",
-          "number",
+          "key",
+          "program id",
           "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'program_id' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "program identifier",
-          "program_id count",
           "ID of program",
           "program key",
-          "program number",
+          "program identifier",
           "how much program_id",
-          "number of program_id"
+          "number of program_id",
+          "program number",
+          "program_id count"
         ]
       },
       "old_program_id": {
@@ -817,24 +817,24 @@
         "table": "business",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
-          "code",
           "old program id",
+          "key",
+          "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'old_program_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "number of old_program_id",
-          "old_program number",
-          "old_program key",
-          "old_program_id count",
           "how much old_program_id",
+          "number of old_program_id",
           "ID of old_program",
-          "old_program identifier"
+          "old_program key",
+          "old_program number",
+          "old_program identifier",
+          "old_program_id count"
         ]
       },
       "latitude": {
@@ -847,8 +847,8 @@
         "sample_values": [],
         "common_phrases": [
           "number of latitude",
-          "latitude count",
-          "how much latitude"
+          "how much latitude",
+          "latitude count"
         ]
       },
       "longitude": {
@@ -872,22 +872,22 @@
         "table": "fixtures",
         "type": "integer",
         "aliases": [
-          "code",
-          "key",
+          "number",
           "identifier",
-          "number"
+          "code",
+          "key"
         ],
         "business_meaning": "identifier",
         "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
         "sample_values": [],
         "common_phrases": [
-          "record key",
           "number of id",
-          "id count",
           "ID of record",
           "record number",
+          "record identifier",
+          "id count",
           "how much id",
-          "record identifier"
+          "record key"
         ]
       },
       "old_id": {
@@ -895,10 +895,10 @@
         "table": "fixtures",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
           "old id",
           "identifier"
         ],
@@ -906,13 +906,13 @@
         "description": "Column 'old_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old key",
-          "how much old_id",
-          "old number",
+          "number of old_id",
+          "ID of old",
           "old_id count",
           "old identifier",
-          "number of old_id",
-          "ID of old"
+          "old key",
+          "old number",
+          "how much old_id"
         ]
       },
       "fixtures_type": {
@@ -927,8 +927,8 @@
         "description": "Column 'fixtures_type' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "how much fixtures_type",
           "fixtures_type count",
+          "how much fixtures_type",
           "number of fixtures_type"
         ]
       },
@@ -944,9 +944,9 @@
         "description": "Column 'old_fixtures_type' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
+          "number of old_fixtures_type",
           "how much old_fixtures_type",
-          "old_fixtures_type count",
-          "number of old_fixtures_type"
+          "old_fixtures_type count"
         ]
       },
       "title": {
@@ -958,8 +958,8 @@
         "description": "Column 'title' of type VARCHAR(128) (required)",
         "sample_values": [],
         "common_phrases": [
-          "text of title",
           "title value",
+          "text of title",
           "what title"
         ]
       },
@@ -973,8 +973,8 @@
         "sample_values": [],
         "common_phrases": [
           "description value",
-          "text of description",
-          "what description"
+          "what description",
+          "text of description"
         ]
       },
       "service_data_time": {
@@ -989,13 +989,13 @@
         "description": "Column 'service_data_time' of type DATETIME",
         "sample_values": [],
         "common_phrases": [
-          "when",
           "service_data_time date",
-          "time",
+          "when service_data_time",
+          "when",
           "time of service_data_time",
           "date",
-          "timestamp",
-          "when service_data_time"
+          "time",
+          "timestamp"
         ]
       },
       "image": {
@@ -1013,10 +1013,10 @@
         "table": "fixtures",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
           "zone id",
           "identifier"
         ],
@@ -1025,12 +1025,12 @@
         "sample_values": [],
         "common_phrases": [
           "zone key",
-          "ID of zone",
-          "number of zone_id",
           "zone number",
-          "zone identifier",
+          "ID of zone",
           "how much zone_id",
-          "zone_id count"
+          "zone identifier",
+          "zone_id count",
+          "number of zone_id"
         ]
       },
       "old_zone_id": {
@@ -1038,23 +1038,23 @@
         "table": "fixtures",
         "type": "integer",
         "aliases": [
-          "old zone id",
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "old zone id",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'old_zone_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old_zone number",
-          "old_zone identifier",
-          "old_zone_id count",
-          "how much old_zone_id",
-          "ID of old_zone",
           "old_zone key",
+          "old_zone identifier",
+          "how much old_zone_id",
+          "old_zone number",
+          "ID of old_zone",
+          "old_zone_id count",
           "number of old_zone_id"
         ]
       },
@@ -1068,8 +1068,8 @@
         "sample_values": [],
         "common_phrases": [
           "number of latitude",
-          "latitude count",
-          "how much latitude"
+          "how much latitude",
+          "latitude count"
         ]
       },
       "longitude": {
@@ -1091,19 +1091,19 @@
         "table": "fixtures",
         "type": "integer",
         "aliases": [
-          "live",
-          "active",
-          "enabled",
           "status",
-          "is active"
+          "enabled",
+          "is active",
+          "live",
+          "active"
         ],
         "business_meaning": "status_indicator",
         "description": "Column 'is_active' of type TINYINT with default value ''1''",
         "sample_values": [],
         "common_phrases": [
           "how much is_active",
-          "number of is_active",
-          "is_active count"
+          "is_active count",
+          "number of is_active"
         ]
       },
       "is_checked": {
@@ -1135,9 +1135,9 @@
         "description": "Column 'is_deleted' of type TINYINT with default value ''0''",
         "sample_values": [],
         "common_phrases": [
+          "how much is_deleted",
           "number of is_deleted",
-          "is_deleted count",
-          "how much is_deleted"
+          "is_deleted count"
         ]
       },
       "createdAt": {
@@ -1149,9 +1149,9 @@
         "description": "Column 'createdAt' of type DATETIME",
         "sample_values": [],
         "common_phrases": [
+          "time of createdat",
           "createdat date",
-          "when createdat",
-          "time of createdat"
+          "when createdat"
         ]
       },
       "updatedAt": {
@@ -1163,13 +1163,13 @@
         "description": "Column 'updatedAt' of type DATETIME",
         "sample_values": [],
         "common_phrases": [
-          "last modified",
-          "updated on",
-          "when updated",
           "modification date",
+          "last modified",
           "updatedat date",
           "time of updatedat",
-          "when updatedat"
+          "when updatedat",
+          "when updated",
+          "updated on"
         ]
       },
       "program_id": {
@@ -1177,24 +1177,24 @@
         "table": "fixtures",
         "type": "integer",
         "aliases": [
-          "program id",
-          "key",
           "id",
-          "number",
+          "key",
+          "program id",
           "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'program_id' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "program identifier",
-          "program_id count",
           "ID of program",
           "program key",
-          "program number",
+          "program identifier",
           "how much program_id",
-          "number of program_id"
+          "number of program_id",
+          "program number",
+          "program_id count"
         ]
       },
       "old_program_id": {
@@ -1202,24 +1202,24 @@
         "table": "fixtures",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
-          "code",
           "old program id",
+          "key",
+          "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'old_program_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "number of old_program_id",
-          "old_program number",
-          "old_program key",
-          "old_program_id count",
           "how much old_program_id",
+          "number of old_program_id",
           "ID of old_program",
-          "old_program identifier"
+          "old_program key",
+          "old_program number",
+          "old_program identifier",
+          "old_program_id count"
         ]
       },
       "address": {
@@ -1231,8 +1231,8 @@
         "description": "Column 'address' of type VARCHAR(255)",
         "sample_values": [],
         "common_phrases": [
-          "text of address",
           "what address",
+          "text of address",
           "address value"
         ]
       }
@@ -1243,22 +1243,22 @@
         "table": "incident_comments",
         "type": "integer",
         "aliases": [
-          "code",
-          "key",
+          "number",
           "identifier",
-          "number"
+          "code",
+          "key"
         ],
         "business_meaning": "identifier",
         "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
         "sample_values": [],
         "common_phrases": [
-          "record key",
           "number of id",
-          "id count",
           "ID of record",
           "record number",
+          "record identifier",
+          "id count",
           "how much id",
-          "record identifier"
+          "record key"
         ]
       },
       "old_id": {
@@ -1266,10 +1266,10 @@
         "table": "incident_comments",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
           "old id",
           "identifier"
         ],
@@ -1277,13 +1277,13 @@
         "description": "Column 'old_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old key",
-          "how much old_id",
-          "old number",
+          "number of old_id",
+          "ID of old",
           "old_id count",
           "old identifier",
-          "number of old_id",
-          "ID of old"
+          "old key",
+          "old number",
+          "how much old_id"
         ]
       },
       "incident_id": {
@@ -1291,23 +1291,23 @@
         "table": "incident_comments",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "incident id",
-          "number",
+          "key",
           "code",
+          "number",
+          "incident id",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'incident_id' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "incident key",
-          "incident_id count",
           "how much incident_id",
+          "number of incident_id",
           "incident identifier",
           "incident number",
-          "number of incident_id",
+          "incident_id count",
+          "incident key",
           "ID of incident"
         ]
       },
@@ -1316,24 +1316,24 @@
         "table": "incident_comments",
         "type": "integer",
         "aliases": [
-          "key",
-          "id",
-          "number",
-          "code",
           "old incident id",
+          "id",
+          "key",
+          "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'old_incident_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old_incident number",
-          "old_incident key",
-          "ID of old_incident",
-          "number of old_incident_id",
-          "how much old_incident_id",
           "old_incident identifier",
-          "old_incident_id count"
+          "ID of old_incident",
+          "old_incident number",
+          "old_incident_id count",
+          "number of old_incident_id",
+          "old_incident key",
+          "how much old_incident_id"
         ]
       },
       "date_and_time": {
@@ -1341,20 +1341,20 @@
         "table": "incident_comments",
         "type": "datetime",
         "aliases": [
-          "date and time",
-          "time"
+          "time",
+          "date and time"
         ],
         "business_meaning": "temporal",
         "description": "Column 'date_and_time' of type DATETIME",
         "sample_values": [],
         "common_phrases": [
-          "when",
-          "time",
-          "date",
           "time of date_and_time",
+          "when date_and_time",
+          "when",
+          "date",
           "date_and_time date",
-          "timestamp",
-          "when date_and_time"
+          "time",
+          "timestamp"
         ]
       },
       "description": {
@@ -1367,8 +1367,8 @@
         "sample_values": [],
         "common_phrases": [
           "description value",
-          "text of description",
-          "what description"
+          "what description",
+          "text of description"
         ]
       },
       "is_deleted": {
@@ -1383,9 +1383,9 @@
         "description": "Column 'is_deleted' of type TINYINT with default value ''0''",
         "sample_values": [],
         "common_phrases": [
+          "how much is_deleted",
           "number of is_deleted",
-          "is_deleted count",
-          "how much is_deleted"
+          "is_deleted count"
         ]
       },
       "created_id": {
@@ -1393,24 +1393,24 @@
         "table": "incident_comments",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
-          "code",
+          "key",
           "created id",
+          "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'created_id' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "number of created_id",
-          "created number",
-          "created_id count",
           "created identifier",
-          "created key",
+          "created_id count",
+          "ID of created",
+          "number of created_id",
           "how much created_id",
-          "ID of created"
+          "created number",
+          "created key"
         ]
       },
       "old_created_id": {
@@ -1418,24 +1418,24 @@
         "table": "incident_comments",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "old created id",
-          "number",
+          "key",
           "code",
+          "number",
+          "old created id",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'old_created_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old_created number",
-          "old_created_id count",
-          "old_created key",
           "ID of old_created",
-          "old_created identifier",
+          "old_created key",
+          "old_created number",
           "how much old_created_id",
-          "number of old_created_id"
+          "old_created_id count",
+          "number of old_created_id",
+          "old_created identifier"
         ]
       },
       "updated_id": {
@@ -1443,11 +1443,11 @@
         "table": "incident_comments",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
-          "code",
+          "key",
           "updated id",
+          "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
@@ -1455,12 +1455,12 @@
         "sample_values": [],
         "common_phrases": [
           "updated number",
-          "number of updated_id",
-          "updated_id count",
-          "updated identifier",
           "ID of updated",
+          "number of updated_id",
+          "updated identifier",
+          "how much updated_id",
           "updated key",
-          "how much updated_id"
+          "updated_id count"
         ]
       },
       "old_updated_id": {
@@ -1468,11 +1468,11 @@
         "table": "incident_comments",
         "type": "integer",
         "aliases": [
+          "id",
           "key",
           "old updated id",
-          "id",
-          "number",
           "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
@@ -1480,12 +1480,12 @@
         "sample_values": [],
         "common_phrases": [
           "how much old_updated_id",
+          "number of old_updated_id",
           "old_updated identifier",
-          "old_updated_id count",
-          "ID of old_updated",
           "old_updated key",
-          "old_updated number",
-          "number of old_updated_id"
+          "ID of old_updated",
+          "old_updated_id count",
+          "old_updated number"
         ]
       },
       "createdAt": {
@@ -1497,9 +1497,9 @@
         "description": "Column 'createdAt' of type DATETIME",
         "sample_values": [],
         "common_phrases": [
+          "time of createdat",
           "createdat date",
-          "when createdat",
-          "time of createdat"
+          "when createdat"
         ]
       },
       "updatedAt": {
@@ -1511,13 +1511,13 @@
         "description": "Column 'updatedAt' of type DATETIME",
         "sample_values": [],
         "common_phrases": [
-          "last modified",
-          "updated on",
-          "when updated",
           "modification date",
+          "last modified",
           "updatedat date",
           "time of updatedat",
-          "when updatedat"
+          "when updatedat",
+          "when updated",
+          "updated on"
         ]
       }
     },
@@ -1527,22 +1527,22 @@
         "table": "incidents",
         "type": "integer",
         "aliases": [
-          "code",
-          "key",
+          "number",
           "identifier",
-          "number"
+          "code",
+          "key"
         ],
         "business_meaning": "identifier",
         "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
         "sample_values": [],
         "common_phrases": [
-          "record key",
           "number of id",
-          "id count",
           "ID of record",
           "record number",
+          "record identifier",
+          "id count",
           "how much id",
-          "record identifier"
+          "record key"
         ]
       },
       "old_id": {
@@ -1550,10 +1550,10 @@
         "table": "incidents",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
           "old id",
           "identifier"
         ],
@@ -1561,13 +1561,13 @@
         "description": "Column 'old_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old key",
-          "how much old_id",
-          "old number",
+          "number of old_id",
+          "ID of old",
           "old_id count",
           "old identifier",
-          "number of old_id",
-          "ID of old"
+          "old key",
+          "old number",
+          "how much old_id"
         ]
       },
       "incident_type": {
@@ -1575,11 +1575,11 @@
         "table": "incidents",
         "type": "integer",
         "aliases": [
-          "type",
-          "key",
           "incident type",
-          "number",
+          "key",
           "code",
+          "number",
+          "type",
           "identifier"
         ],
         "business_meaning": "general_data",
@@ -1587,8 +1587,8 @@
         "sample_values": [],
         "common_phrases": [
           "incident_type count",
-          "number of incident_type",
-          "how much incident_type"
+          "how much incident_type",
+          "number of incident_type"
         ]
       },
       "old_incident_type": {
@@ -1596,20 +1596,20 @@
         "table": "incidents",
         "type": "integer",
         "aliases": [
-          "type",
-          "key",
-          "number",
-          "code",
           "old incident type",
+          "key",
+          "code",
+          "number",
+          "type",
           "identifier"
         ],
         "business_meaning": "general_data",
         "description": "Column 'old_incident_type' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "how much old_incident_type",
+          "old_incident_type count",
           "number of old_incident_type",
-          "old_incident_type count"
+          "how much old_incident_type"
         ]
       },
       "outcome_id": {
@@ -1617,24 +1617,24 @@
         "table": "incidents",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
-          "code",
+          "key",
           "outcome id",
+          "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'outcome_id' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "outcome_id count",
-          "number of outcome_id",
-          "ID of outcome",
           "outcome number",
           "outcome key",
           "how much outcome_id",
-          "outcome identifier"
+          "ID of outcome",
+          "number of outcome_id",
+          "outcome identifier",
+          "outcome_id count"
         ]
       },
       "zone_id": {
@@ -1642,10 +1642,10 @@
         "table": "incidents",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
           "zone id",
           "identifier"
         ],
@@ -1654,12 +1654,12 @@
         "sample_values": [],
         "common_phrases": [
           "zone key",
-          "ID of zone",
-          "number of zone_id",
           "zone number",
-          "zone identifier",
+          "ID of zone",
           "how much zone_id",
-          "zone_id count"
+          "zone identifier",
+          "zone_id count",
+          "number of zone_id"
         ]
       },
       "old_zone_id": {
@@ -1667,23 +1667,23 @@
         "table": "incidents",
         "type": "integer",
         "aliases": [
-          "old zone id",
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "old zone id",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'old_zone_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old_zone number",
-          "old_zone identifier",
-          "old_zone_id count",
-          "how much old_zone_id",
-          "ID of old_zone",
           "old_zone key",
+          "old_zone identifier",
+          "how much old_zone_id",
+          "old_zone number",
+          "ID of old_zone",
+          "old_zone_id count",
           "number of old_zone_id"
         ]
       },
@@ -1692,24 +1692,24 @@
         "table": "incidents",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
-          "code",
+          "key",
           "ambassador id",
+          "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'ambassador_id' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "number of ambassador_id",
-          "ID of ambassador",
           "how much ambassador_id",
+          "ambassador number",
           "ambassador_id count",
-          "ambassador key",
+          "ID of ambassador",
           "ambassador identifier",
-          "ambassador number"
+          "ambassador key",
+          "number of ambassador_id"
         ]
       },
       "old_user_id": {
@@ -1717,24 +1717,24 @@
         "table": "incidents",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "old user id",
-          "number",
+          "key",
           "code",
+          "number",
+          "old user id",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'old_user_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old_user number",
-          "old_user identifier",
           "old_user key",
           "how much old_user_id",
           "number of old_user_id",
-          "old_user_id count",
-          "ID of old_user"
+          "ID of old_user",
+          "old_user identifier",
+          "old_user number",
+          "old_user_id count"
         ]
       },
       "priority": {
@@ -1746,8 +1746,8 @@
         "description": "Column 'priority' of type VARCHAR(255) with default value ''Low''",
         "sample_values": [],
         "common_phrases": [
-          "text of priority",
           "what priority",
+          "text of priority",
           "priority value"
         ]
       },
@@ -1756,24 +1756,24 @@
         "table": "incidents",
         "type": "datetime",
         "aliases": [
-          "incident",
           "key",
-          "number",
           "data and time of incident",
+          "incident",
           "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "temporal",
         "description": "Column 'data_and_time_of_incident' of type DATETIME",
         "sample_values": [],
         "common_phrases": [
+          "time of data_and_time_of_incident",
           "when",
-          "time",
+          "when data_and_time_of_incident",
           "data_and_time_of_incident date",
           "date",
-          "time of data_and_time_of_incident",
-          "timestamp",
-          "when data_and_time_of_incident"
+          "time",
+          "timestamp"
         ]
       },
       "police_response": {
@@ -1781,16 +1781,16 @@
         "table": "incidents",
         "type": "integer",
         "aliases": [
-          "police response",
-          "response"
+          "response",
+          "police response"
         ],
         "business_meaning": "general_data",
         "description": "Column 'police_response' of type TINYINT with default value ''0''",
         "sample_values": [],
         "common_phrases": [
-          "number of police_response",
+          "police_response count",
           "how much police_response",
-          "police_response count"
+          "number of police_response"
         ]
       },
       "fire_response": {
@@ -1805,9 +1805,9 @@
         "description": "Column 'fire_response' of type TINYINT with default value ''0''",
         "sample_values": [],
         "common_phrases": [
-          "fire_response count",
           "how much fire_response",
-          "number of fire_response"
+          "number of fire_response",
+          "fire_response count"
         ]
       },
       "ems_response": {
@@ -1822,9 +1822,9 @@
         "description": "Column 'ems_response' of type TINYINT with default value ''0''",
         "sample_values": [],
         "common_phrases": [
+          "ems_response count",
           "number of ems_response",
-          "how much ems_response",
-          "ems_response count"
+          "how much ems_response"
         ]
       },
       "client_contacted": {
@@ -1839,9 +1839,9 @@
         "description": "Column 'client_contacted' of type TINYINT with default value ''0''",
         "sample_values": [],
         "common_phrases": [
-          "number of client_contacted",
+          "client_contacted count",
           "how much client_contacted",
-          "client_contacted count"
+          "number of client_contacted"
         ]
       },
       "business_location": {
@@ -1856,9 +1856,9 @@
         "description": "Column 'business_location' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "how much business_location",
           "number of business_location",
-          "business_location count"
+          "business_location count",
+          "how much business_location"
         ]
       },
       "old_business_location": {
@@ -1873,9 +1873,9 @@
         "description": "Column 'old_business_location' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old_business_location count",
           "number of old_business_location",
-          "how much old_business_location"
+          "how much old_business_location",
+          "old_business_location count"
         ]
       },
       "fixtures_id": {
@@ -1883,11 +1883,11 @@
         "table": "incidents",
         "type": "integer",
         "aliases": [
-          "key",
-          "id",
           "fixtures id",
-          "number",
+          "id",
+          "key",
           "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
@@ -1896,11 +1896,11 @@
         "common_phrases": [
           "fixtures identifier",
           "fixtures key",
-          "how much fixtures_id",
-          "ID of fixtures",
           "fixtures number",
+          "fixtures_id count",
+          "ID of fixtures",
           "number of fixtures_id",
-          "fixtures_id count"
+          "how much fixtures_id"
         ]
       },
       "old_fixtures_id": {
@@ -1908,23 +1908,23 @@
         "table": "incidents",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
-          "code",
+          "key",
           "old fixtures id",
+          "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'old_fixtures_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old_fixtures identifier",
-          "ID of old_fixtures",
-          "how much old_fixtures_id",
-          "old_fixtures_id count",
           "number of old_fixtures_id",
+          "ID of old_fixtures",
+          "old_fixtures_id count",
+          "how much old_fixtures_id",
           "old_fixtures number",
+          "old_fixtures identifier",
           "old_fixtures key"
         ]
       },
@@ -1937,8 +1937,8 @@
         "description": "Column 'summary' of type TEXT",
         "sample_values": [],
         "common_phrases": [
-          "summary value",
           "what summary",
+          "summary value",
           "text of summary"
         ]
       },
@@ -1951,9 +1951,9 @@
         "description": "Column 'narrative' of type TEXT",
         "sample_values": [],
         "common_phrases": [
-          "narrative value",
           "what narrative",
-          "text of narrative"
+          "text of narrative",
+          "narrative value"
         ]
       },
       "report_completion_status": {
@@ -1961,20 +1961,20 @@
         "table": "incidents",
         "type": "other",
         "aliases": [
-          "report completion status",
-          "condition",
-          "flag",
           "status",
-          "state"
+          "state",
+          "flag",
+          "condition",
+          "report completion status"
         ],
         "business_meaning": "status_indicator",
         "description": "Column 'report_completion_status' of type ENUM",
         "sample_values": [],
         "common_phrases": [
-          "status",
-          "condition",
           "what status",
-          "current state"
+          "status",
+          "current state",
+          "condition"
         ]
       },
       "supervisor_reviewed_status": {
@@ -1982,20 +1982,20 @@
         "table": "incidents",
         "type": "other",
         "aliases": [
-          "condition",
+          "status",
+          "state",
           "supervisor reviewed status",
           "flag",
-          "status",
-          "state"
+          "condition"
         ],
         "business_meaning": "status_indicator",
         "description": "Column 'supervisor_reviewed_status' of type ENUM",
         "sample_values": [],
         "common_phrases": [
-          "status",
-          "condition",
           "what status",
-          "current state"
+          "status",
+          "current state",
+          "condition"
         ]
       },
       "select_maintenance": {
@@ -2003,8 +2003,8 @@
         "table": "incidents",
         "type": "json",
         "aliases": [
-          "select maintenance",
-          "maintenance"
+          "maintenance",
+          "select maintenance"
         ],
         "business_meaning": "general_data",
         "description": "Column 'select_maintenance' of type JSON",
@@ -2016,8 +2016,8 @@
         "table": "incidents",
         "type": "json",
         "aliases": [
-          "old select maintenance",
-          "maintenance"
+          "maintenance",
+          "old select maintenance"
         ],
         "business_meaning": "general_data",
         "description": "Column 'old_select_maintenance' of type JSON",
@@ -2039,11 +2039,11 @@
         "table": "incidents",
         "type": "json",
         "aliases": [
+          "id",
           "old person id",
           "key",
-          "id",
-          "number",
           "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
@@ -2052,8 +2052,8 @@
         "common_phrases": [
           "old_person identifier",
           "old_person number",
-          "old_person key",
-          "ID of old_person"
+          "ID of old_person",
+          "old_person key"
         ]
       },
       "select_equipment": {
@@ -2061,8 +2061,8 @@
         "table": "incidents",
         "type": "json",
         "aliases": [
-          "equipment",
-          "select equipment"
+          "select equipment",
+          "equipment"
         ],
         "business_meaning": "general_data",
         "description": "Column 'select_equipment' of type JSON",
@@ -2074,8 +2074,8 @@
         "table": "incidents",
         "type": "json",
         "aliases": [
-          "old select equipment",
-          "equipment"
+          "equipment",
+          "old select equipment"
         ],
         "business_meaning": "general_data",
         "description": "Column 'old_select_equipment' of type JSON",
@@ -2094,9 +2094,9 @@
         "description": "Column 'damage_to_property' of type VARCHAR(255) (required)",
         "sample_values": [],
         "common_phrases": [
-          "what damage_to_property",
           "damage_to_property value",
-          "text of damage_to_property"
+          "text of damage_to_property",
+          "what damage_to_property"
         ]
       },
       "is_deleted": {
@@ -2111,9 +2111,9 @@
         "description": "Column 'is_deleted' of type TINYINT with default value ''0''",
         "sample_values": [],
         "common_phrases": [
+          "how much is_deleted",
           "number of is_deleted",
-          "is_deleted count",
-          "how much is_deleted"
+          "is_deleted count"
         ]
       },
       "createdAt": {
@@ -2125,9 +2125,9 @@
         "description": "Column 'createdAt' of type DATETIME (required)",
         "sample_values": [],
         "common_phrases": [
+          "time of createdat",
           "createdat date",
-          "when createdat",
-          "time of createdat"
+          "when createdat"
         ]
       },
       "updatedAt": {
@@ -2139,13 +2139,13 @@
         "description": "Column 'updatedAt' of type DATETIME",
         "sample_values": [],
         "common_phrases": [
-          "last modified",
-          "updated on",
-          "when updated",
           "modification date",
+          "last modified",
           "updatedat date",
           "time of updatedat",
-          "when updatedat"
+          "when updatedat",
+          "when updated",
+          "updated on"
         ]
       },
       "program_id": {
@@ -2153,24 +2153,24 @@
         "table": "incidents",
         "type": "integer",
         "aliases": [
-          "program id",
-          "key",
           "id",
-          "number",
+          "key",
+          "program id",
           "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'program_id' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "program identifier",
-          "program_id count",
           "ID of program",
           "program key",
-          "program number",
+          "program identifier",
           "how much program_id",
-          "number of program_id"
+          "number of program_id",
+          "program number",
+          "program_id count"
         ]
       },
       "old_program_id": {
@@ -2178,24 +2178,24 @@
         "table": "incidents",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
-          "code",
           "old program id",
+          "key",
+          "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'old_program_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "number of old_program_id",
-          "old_program number",
-          "old_program key",
-          "old_program_id count",
           "how much old_program_id",
+          "number of old_program_id",
           "ID of old_program",
-          "old_program identifier"
+          "old_program key",
+          "old_program number",
+          "old_program identifier",
+          "old_program_id count"
         ]
       },
       "police_officer_name": {
@@ -2203,23 +2203,23 @@
         "table": "incidents",
         "type": "string",
         "aliases": [
-          "title",
-          "name",
-          "police officer name",
           "description",
-          "label"
+          "police officer name",
+          "label",
+          "title",
+          "name"
         ],
         "business_meaning": "name_reference",
         "description": "Column 'police_officer_name' of type VARCHAR(255)",
         "sample_values": [],
         "common_phrases": [
-          "title",
-          "what is called",
-          "police_officer_name value",
-          "name",
           "what police_officer_name",
           "label",
-          "text of police_officer_name"
+          "police_officer_name value",
+          "title",
+          "text of police_officer_name",
+          "what is called",
+          "name"
         ]
       },
       "police_time_called": {
@@ -2235,11 +2235,11 @@
         "sample_values": [],
         "common_phrases": [
           "when",
-          "time",
-          "when police_time_called",
           "police_time_called date",
+          "when police_time_called",
           "time of police_time_called",
           "date",
+          "time",
           "timestamp"
         ]
       },
@@ -2255,13 +2255,13 @@
         "description": "Column 'police_time_arrived' of type DATETIME",
         "sample_values": [],
         "common_phrases": [
+          "when police_time_arrived",
           "when",
           "time of police_time_arrived",
-          "time",
           "date",
-          "police_time_arrived date",
+          "time",
           "timestamp",
-          "when police_time_arrived"
+          "police_time_arrived date"
         ]
       },
       "fire_engine": {
@@ -2277,8 +2277,8 @@
         "sample_values": [],
         "common_phrases": [
           "fire_engine value",
-          "text of fire_engine",
-          "what fire_engine"
+          "what fire_engine",
+          "text of fire_engine"
         ]
       },
       "fire_time_called": {
@@ -2296,10 +2296,10 @@
           "when fire_time_called",
           "when",
           "time of fire_time_called",
-          "time",
+          "fire_time_called date",
           "date",
-          "timestamp",
-          "fire_time_called date"
+          "time",
+          "timestamp"
         ]
       },
       "fire_time_arrived": {
@@ -2315,12 +2315,12 @@
         "sample_values": [],
         "common_phrases": [
           "when fire_time_arrived",
+          "fire_time_arrived date",
           "when",
-          "time",
           "time of fire_time_arrived",
           "date",
-          "timestamp",
-          "fire_time_arrived date"
+          "time",
+          "timestamp"
         ]
       },
       "ems_company": {
@@ -2328,16 +2328,16 @@
         "table": "incidents",
         "type": "string",
         "aliases": [
-          "ems company",
-          "company"
+          "company",
+          "ems company"
         ],
         "business_meaning": "general_data",
         "description": "Column 'ems_company' of type VARCHAR(255)",
         "sample_values": [],
         "common_phrases": [
-          "what ems_company",
+          "text of ems_company",
           "ems_company value",
-          "text of ems_company"
+          "what ems_company"
         ]
       },
       "ems_responder": {
@@ -2345,16 +2345,16 @@
         "table": "incidents",
         "type": "string",
         "aliases": [
-          "responder",
-          "ems responder"
+          "ems responder",
+          "responder"
         ],
         "business_meaning": "general_data",
         "description": "Column 'ems_responder' of type VARCHAR(255)",
         "sample_values": [],
         "common_phrases": [
-          "ems_responder value",
+          "what ems_responder",
           "text of ems_responder",
-          "what ems_responder"
+          "ems_responder value"
         ]
       },
       "ems_time_called": {
@@ -2371,10 +2371,10 @@
         "common_phrases": [
           "when",
           "when ems_time_called",
-          "time",
           "ems_time_called date",
-          "date",
           "time of ems_time_called",
+          "date",
+          "time",
           "timestamp"
         ]
       },
@@ -2383,20 +2383,20 @@
         "table": "incidents",
         "type": "datetime",
         "aliases": [
-          "ems time arrived",
-          "arrived"
+          "arrived",
+          "ems time arrived"
         ],
         "business_meaning": "temporal",
         "description": "Column 'ems_time_arrived' of type DATETIME",
         "sample_values": [],
         "common_phrases": [
-          "when",
-          "time",
+          "when ems_time_arrived",
           "ems_time_arrived date",
+          "when",
           "time of ems_time_arrived",
           "date",
-          "timestamp",
-          "when ems_time_arrived"
+          "time",
+          "timestamp"
         ]
       },
       "client_name": {
@@ -2404,23 +2404,23 @@
         "table": "incidents",
         "type": "string",
         "aliases": [
-          "title",
-          "name",
           "description",
           "label",
-          "client name"
+          "title",
+          "client name",
+          "name"
         ],
         "business_meaning": "name_reference",
         "description": "Column 'client_name' of type VARCHAR(255)",
         "sample_values": [],
         "common_phrases": [
+          "label",
           "what client_name",
+          "client_name value",
           "title",
           "text of client_name",
           "what is called",
-          "name",
-          "label",
-          "client_name value"
+          "name"
         ]
       },
       "created_by": {
@@ -2435,9 +2435,9 @@
         "description": "Column 'created_by' of type VARCHAR(255)",
         "sample_values": [],
         "common_phrases": [
-          "what created_by",
+          "text of created_by",
           "created_by value",
-          "text of created_by"
+          "what created_by"
         ]
       },
       "updated_by": {
@@ -2452,13 +2452,13 @@
         "description": "Column 'updated_by' of type VARCHAR(255)",
         "sample_values": [],
         "common_phrases": [
-          "updated on",
-          "updated_by value",
-          "when updated",
           "modification date",
           "text of updated_by",
+          "last modified",
           "what updated_by",
-          "last modified"
+          "updated_by value",
+          "when updated",
+          "updated on"
         ]
       },
       "latitude": {
@@ -2471,8 +2471,8 @@
         "sample_values": [],
         "common_phrases": [
           "number of latitude",
-          "latitude count",
-          "how much latitude"
+          "how much latitude",
+          "latitude count"
         ]
       },
       "longitude": {
@@ -2498,9 +2498,9 @@
         "description": "Column 'altitude' of type DECIMAL(10, 6) with default value ''0.000000''",
         "sample_values": [],
         "common_phrases": [
-          "number of altitude",
+          "how much altitude",
           "altitude count",
-          "how much altitude"
+          "number of altitude"
         ]
       },
       "heading": {
@@ -2512,9 +2512,9 @@
         "description": "Column 'heading' of type DECIMAL(10, 6) with default value ''0.000000''",
         "sample_values": [],
         "common_phrases": [
-          "number of heading",
+          "heading count",
           "how much heading",
-          "heading count"
+          "number of heading"
         ]
       },
       "horizontal_accuracy": {
@@ -2522,15 +2522,15 @@
         "table": "incidents",
         "type": "decimal",
         "aliases": [
-          "horizontal accuracy",
-          "accuracy"
+          "accuracy",
+          "horizontal accuracy"
         ],
         "business_meaning": "general_data",
         "description": "Column 'horizontal_accuracy' of type DECIMAL(10, 6) with default value ''0.000000''",
         "sample_values": [],
         "common_phrases": [
-          "horizontal_accuracy count",
           "how much horizontal_accuracy",
+          "horizontal_accuracy count",
           "number of horizontal_accuracy"
         ]
       },
@@ -2539,16 +2539,16 @@
         "table": "incidents",
         "type": "decimal",
         "aliases": [
-          "vertical accuracy",
-          "accuracy"
+          "accuracy",
+          "vertical accuracy"
         ],
         "business_meaning": "general_data",
         "description": "Column 'vertical_accuracy' of type DECIMAL(10, 6) with default value ''0.000000''",
         "sample_values": [],
         "common_phrases": [
-          "number of vertical_accuracy",
           "how much vertical_accuracy",
-          "vertical_accuracy count"
+          "vertical_accuracy count",
+          "number of vertical_accuracy"
         ]
       },
       "heading_accuracy": {
@@ -2556,16 +2556,16 @@
         "table": "incidents",
         "type": "decimal",
         "aliases": [
-          "heading accuracy",
-          "accuracy"
+          "accuracy",
+          "heading accuracy"
         ],
         "business_meaning": "general_data",
         "description": "Column 'heading_accuracy' of type DECIMAL(10, 6) with default value ''0.000000''",
         "sample_values": [],
         "common_phrases": [
-          "how much heading_accuracy",
           "number of heading_accuracy",
-          "heading_accuracy count"
+          "heading_accuracy count",
+          "how much heading_accuracy"
         ]
       },
       "hour": {
@@ -2591,8 +2591,8 @@
         "description": "Column 'minute' of type TINYINT with default value ''0''",
         "sample_values": [],
         "common_phrases": [
-          "number of minute",
           "how much minute",
+          "number of minute",
           "minute count"
         ]
       },
@@ -2615,13 +2615,13 @@
         "description": "Column 'date' of type DATETIME",
         "sample_values": [],
         "common_phrases": [
-          "when",
-          "time",
-          "date",
           "when date",
+          "time of date",
+          "when",
           "date date",
-          "timestamp",
-          "time of date"
+          "date",
+          "time",
+          "timestamp"
         ]
       },
       "date_captured": {
@@ -2629,20 +2629,20 @@
         "table": "incidents",
         "type": "datetime",
         "aliases": [
-          "date captured",
-          "captured"
+          "captured",
+          "date captured"
         ],
         "business_meaning": "temporal",
         "description": "Column 'date_captured' of type DATETIME",
         "sample_values": [],
         "common_phrases": [
-          "when",
-          "time",
-          "date_captured date",
           "time of date_captured",
+          "when",
+          "date_captured date",
           "date",
-          "when date_captured",
-          "timestamp"
+          "time",
+          "timestamp",
+          "when date_captured"
         ]
       },
       "is_active": {
@@ -2650,19 +2650,19 @@
         "table": "incidents",
         "type": "integer",
         "aliases": [
-          "live",
-          "active",
-          "enabled",
           "status",
-          "is active"
+          "enabled",
+          "is active",
+          "live",
+          "active"
         ],
         "business_meaning": "status_indicator",
         "description": "Column 'is_active' of type TINYINT with default value ''1''",
         "sample_values": [],
         "common_phrases": [
           "how much is_active",
-          "number of is_active",
-          "is_active count"
+          "is_active count",
+          "number of is_active"
         ]
       }
     },
@@ -2672,22 +2672,22 @@
         "table": "incidents_locations",
         "type": "integer",
         "aliases": [
-          "code",
-          "key",
+          "number",
           "identifier",
-          "number"
+          "code",
+          "key"
         ],
         "business_meaning": "identifier",
         "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
         "sample_values": [],
         "common_phrases": [
-          "record key",
           "number of id",
-          "id count",
           "ID of record",
           "record number",
+          "record identifier",
+          "id count",
           "how much id",
-          "record identifier"
+          "record key"
         ]
       },
       "old_id": {
@@ -2695,10 +2695,10 @@
         "table": "incidents_locations",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
           "old id",
           "identifier"
         ],
@@ -2706,13 +2706,13 @@
         "description": "Column 'old_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old key",
-          "how much old_id",
-          "old number",
+          "number of old_id",
+          "ID of old",
           "old_id count",
           "old identifier",
-          "number of old_id",
-          "ID of old"
+          "old key",
+          "old number",
+          "how much old_id"
         ]
       },
       "incident_id": {
@@ -2720,23 +2720,23 @@
         "table": "incidents_locations",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "incident id",
-          "number",
+          "key",
           "code",
+          "number",
+          "incident id",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'incident_id' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "incident key",
-          "incident_id count",
           "how much incident_id",
+          "number of incident_id",
           "incident identifier",
           "incident number",
-          "number of incident_id",
+          "incident_id count",
+          "incident key",
           "ID of incident"
         ]
       },
@@ -2745,24 +2745,24 @@
         "table": "incidents_locations",
         "type": "integer",
         "aliases": [
-          "key",
-          "id",
-          "number",
-          "code",
           "old incident id",
+          "id",
+          "key",
+          "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'old_incident_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old_incident number",
-          "old_incident key",
-          "ID of old_incident",
-          "number of old_incident_id",
-          "how much old_incident_id",
           "old_incident identifier",
-          "old_incident_id count"
+          "ID of old_incident",
+          "old_incident number",
+          "old_incident_id count",
+          "number of old_incident_id",
+          "old_incident key",
+          "how much old_incident_id"
         ]
       },
       "location": {
@@ -2789,8 +2789,8 @@
         "sample_values": [],
         "common_phrases": [
           "number of latitude",
-          "latitude count",
-          "how much latitude"
+          "how much latitude",
+          "latitude count"
         ]
       },
       "longitude": {
@@ -2819,9 +2819,9 @@
         "description": "Column 'is_deleted' of type TINYINT with default value ''0''",
         "sample_values": [],
         "common_phrases": [
+          "how much is_deleted",
           "number of is_deleted",
-          "is_deleted count",
-          "how much is_deleted"
+          "is_deleted count"
         ]
       },
       "createdAt": {
@@ -2833,9 +2833,9 @@
         "description": "Column 'createdAt' of type DATETIME",
         "sample_values": [],
         "common_phrases": [
+          "time of createdat",
           "createdat date",
-          "when createdat",
-          "time of createdat"
+          "when createdat"
         ]
       },
       "updatedAt": {
@@ -2847,13 +2847,13 @@
         "description": "Column 'updatedAt' of type DATETIME",
         "sample_values": [],
         "common_phrases": [
-          "last modified",
-          "updated on",
-          "when updated",
           "modification date",
+          "last modified",
           "updatedat date",
           "time of updatedat",
-          "when updatedat"
+          "when updatedat",
+          "when updated",
+          "updated on"
         ]
       }
     },
@@ -2863,22 +2863,22 @@
         "table": "incidents_parties",
         "type": "integer",
         "aliases": [
-          "code",
-          "key",
+          "number",
           "identifier",
-          "number"
+          "code",
+          "key"
         ],
         "business_meaning": "identifier",
         "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
         "sample_values": [],
         "common_phrases": [
-          "record key",
           "number of id",
-          "id count",
           "ID of record",
           "record number",
+          "record identifier",
+          "id count",
           "how much id",
-          "record identifier"
+          "record key"
         ]
       },
       "old_id": {
@@ -2886,10 +2886,10 @@
         "table": "incidents_parties",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
           "old id",
           "identifier"
         ],
@@ -2897,13 +2897,13 @@
         "description": "Column 'old_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old key",
-          "how much old_id",
-          "old number",
+          "number of old_id",
+          "ID of old",
           "old_id count",
           "old identifier",
-          "number of old_id",
-          "ID of old"
+          "old key",
+          "old number",
+          "how much old_id"
         ]
       },
       "incident_id": {
@@ -2911,23 +2911,23 @@
         "table": "incidents_parties",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "incident id",
-          "number",
+          "key",
           "code",
+          "number",
+          "incident id",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'incident_id' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "incident key",
-          "incident_id count",
           "how much incident_id",
+          "number of incident_id",
           "incident identifier",
           "incident number",
-          "number of incident_id",
+          "incident_id count",
+          "incident key",
           "ID of incident"
         ]
       },
@@ -2936,24 +2936,24 @@
         "table": "incidents_parties",
         "type": "integer",
         "aliases": [
-          "key",
-          "id",
-          "number",
-          "code",
           "old incident id",
+          "id",
+          "key",
+          "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'old_incident_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old_incident number",
-          "old_incident key",
-          "ID of old_incident",
-          "number of old_incident_id",
-          "how much old_incident_id",
           "old_incident identifier",
-          "old_incident_id count"
+          "ID of old_incident",
+          "old_incident number",
+          "old_incident_id count",
+          "number of old_incident_id",
+          "old_incident key",
+          "how much old_incident_id"
         ]
       },
       "party_type": {
@@ -2979,20 +2979,20 @@
         "type": "string",
         "aliases": [
           "description",
-          "label",
-          "title"
+          "title",
+          "label"
         ],
         "business_meaning": "name_reference",
         "description": "Column 'name' of type VARCHAR(255)",
         "sample_values": [],
         "common_phrases": [
+          "label",
           "text of name",
-          "title",
           "what name",
-          "what is called",
+          "title",
           "name value",
-          "name",
-          "label"
+          "what is called",
+          "name"
         ]
       },
       "business": {
@@ -3004,9 +3004,9 @@
         "description": "Column 'business' of type VARCHAR(255)",
         "sample_values": [],
         "common_phrases": [
-          "business value",
+          "text of business",
           "what business",
-          "text of business"
+          "business value"
         ]
       },
       "street": {
@@ -3018,9 +3018,9 @@
         "description": "Column 'street' of type VARCHAR(255)",
         "sample_values": [],
         "common_phrases": [
+          "street value",
           "text of street",
-          "what street",
-          "street value"
+          "what street"
         ]
       },
       "street_name": {
@@ -3028,23 +3028,23 @@
         "table": "incidents_parties",
         "type": "string",
         "aliases": [
-          "title",
-          "name",
           "description",
+          "label",
           "street name",
-          "label"
+          "title",
+          "name"
         ],
         "business_meaning": "name_reference",
         "description": "Column 'street_name' of type VARCHAR(255)",
         "sample_values": [],
         "common_phrases": [
-          "title",
-          "what is called",
-          "name",
-          "street_name value",
-          "what street_name",
           "label",
-          "text of street_name"
+          "text of street_name",
+          "title",
+          "what street_name",
+          "street_name value",
+          "what is called",
+          "name"
         ]
       },
       "phone": {
@@ -3052,17 +3052,17 @@
         "table": "incidents_parties",
         "type": "string",
         "aliases": [
-          "telephone",
+          "phone number",
           "contact number",
-          "phone number"
+          "telephone"
         ],
         "business_meaning": "contact_information",
         "description": "Column 'phone' of type VARCHAR(255)",
         "sample_values": [],
         "common_phrases": [
+          "phone value",
           "text of phone",
-          "what phone",
-          "phone value"
+          "what phone"
         ]
       },
       "email": {
@@ -3079,8 +3079,8 @@
         "sample_values": [],
         "common_phrases": [
           "email value",
-          "what email",
-          "text of email"
+          "text of email",
+          "what email"
         ]
       },
       "is_deleted": {
@@ -3095,9 +3095,9 @@
         "description": "Column 'is_deleted' of type TINYINT with default value ''0''",
         "sample_values": [],
         "common_phrases": [
+          "how much is_deleted",
           "number of is_deleted",
-          "is_deleted count",
-          "how much is_deleted"
+          "is_deleted count"
         ]
       },
       "createdAt": {
@@ -3109,9 +3109,9 @@
         "description": "Column 'createdAt' of type DATETIME",
         "sample_values": [],
         "common_phrases": [
+          "time of createdat",
           "createdat date",
-          "when createdat",
-          "time of createdat"
+          "when createdat"
         ]
       },
       "updatedAt": {
@@ -3123,13 +3123,13 @@
         "description": "Column 'updatedAt' of type DATETIME",
         "sample_values": [],
         "common_phrases": [
-          "last modified",
-          "updated on",
-          "when updated",
           "modification date",
+          "last modified",
           "updatedat date",
           "time of updatedat",
-          "when updatedat"
+          "when updatedat",
+          "when updated",
+          "updated on"
         ]
       }
     },
@@ -3139,22 +3139,22 @@
         "table": "incidents_types",
         "type": "integer",
         "aliases": [
-          "code",
-          "key",
+          "number",
           "identifier",
-          "number"
+          "code",
+          "key"
         ],
         "business_meaning": "identifier",
         "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
         "sample_values": [],
         "common_phrases": [
-          "record key",
           "number of id",
-          "id count",
           "ID of record",
           "record number",
+          "record identifier",
+          "id count",
           "how much id",
-          "record identifier"
+          "record key"
         ]
       },
       "old_id": {
@@ -3162,10 +3162,10 @@
         "table": "incidents_types",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
           "old id",
           "identifier"
         ],
@@ -3173,13 +3173,13 @@
         "description": "Column 'old_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old key",
-          "how much old_id",
-          "old number",
+          "number of old_id",
+          "ID of old",
           "old_id count",
           "old identifier",
-          "number of old_id",
-          "ID of old"
+          "old key",
+          "old number",
+          "how much old_id"
         ]
       },
       "title": {
@@ -3191,8 +3191,8 @@
         "description": "Column 'title' of type VARCHAR(128) (required)",
         "sample_values": [],
         "common_phrases": [
-          "text of title",
           "title value",
+          "text of title",
           "what title"
         ]
       },
@@ -3211,20 +3211,20 @@
         "table": "incidents_types",
         "type": "integer",
         "aliases": [
-          "use count",
-          "count"
+          "count",
+          "use count"
         ],
         "business_meaning": "numeric_measure",
         "description": "Column 'use_count' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "count",
-          "number of use_count",
           "use_count count",
           "how much use_count",
           "number of",
-          "how many",
-          "quantity"
+          "number of use_count",
+          "count",
+          "quantity",
+          "how many"
         ]
       },
       "is_active": {
@@ -3232,19 +3232,19 @@
         "table": "incidents_types",
         "type": "integer",
         "aliases": [
-          "live",
-          "active",
-          "enabled",
           "status",
-          "is active"
+          "enabled",
+          "is active",
+          "live",
+          "active"
         ],
         "business_meaning": "status_indicator",
         "description": "Column 'is_active' of type TINYINT (required)",
         "sample_values": [],
         "common_phrases": [
           "how much is_active",
-          "number of is_active",
-          "is_active count"
+          "is_active count",
+          "number of is_active"
         ]
       },
       "is_deleted": {
@@ -3259,9 +3259,9 @@
         "description": "Column 'is_deleted' of type TINYINT with default value ''0''",
         "sample_values": [],
         "common_phrases": [
+          "how much is_deleted",
           "number of is_deleted",
-          "is_deleted count",
-          "how much is_deleted"
+          "is_deleted count"
         ]
       },
       "createdAt": {
@@ -3273,9 +3273,9 @@
         "description": "Column 'createdAt' of type DATETIME",
         "sample_values": [],
         "common_phrases": [
+          "time of createdat",
           "createdat date",
-          "when createdat",
-          "time of createdat"
+          "when createdat"
         ]
       },
       "updatedAt": {
@@ -3287,13 +3287,13 @@
         "description": "Column 'updatedAt' of type DATETIME",
         "sample_values": [],
         "common_phrases": [
-          "last modified",
-          "updated on",
-          "when updated",
           "modification date",
+          "last modified",
           "updatedat date",
           "time of updatedat",
-          "when updatedat"
+          "when updatedat",
+          "when updated",
+          "updated on"
         ]
       },
       "incident_type_alias": {
@@ -3302,10 +3302,10 @@
         "type": "string",
         "aliases": [
           "key",
-          "number",
           "alias",
           "code",
           "incident type alias",
+          "number",
           "identifier"
         ],
         "business_meaning": "general_data",
@@ -3326,8 +3326,8 @@
         "description": "Column 'assign' of type TINYINT",
         "sample_values": [],
         "common_phrases": [
-          "how much assign",
           "assign count",
+          "how much assign",
           "number of assign"
         ]
       },
@@ -3340,9 +3340,9 @@
         "description": "Column 'required' of type TINYINT",
         "sample_values": [],
         "common_phrases": [
-          "number of required",
           "required count",
-          "how much required"
+          "how much required",
+          "number of required"
         ]
       },
       "app_menu": {
@@ -3350,8 +3350,8 @@
         "table": "incidents_types",
         "type": "integer",
         "aliases": [
-          "menu",
-          "app menu"
+          "app menu",
+          "menu"
         ],
         "business_meaning": "general_data",
         "description": "Column 'app_menu' of type TINYINT",
@@ -3384,24 +3384,24 @@
         "table": "incidents_types",
         "type": "integer",
         "aliases": [
-          "program id",
-          "key",
           "id",
-          "number",
+          "key",
+          "program id",
           "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'program_id' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "program identifier",
-          "program_id count",
           "ID of program",
           "program key",
-          "program number",
+          "program identifier",
           "how much program_id",
-          "number of program_id"
+          "number of program_id",
+          "program number",
+          "program_id count"
         ]
       },
       "old_program_id": {
@@ -3409,24 +3409,24 @@
         "table": "incidents_types",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
-          "code",
           "old program id",
+          "key",
+          "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'old_program_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "number of old_program_id",
-          "old_program number",
-          "old_program key",
-          "old_program_id count",
           "how much old_program_id",
+          "number of old_program_id",
           "ID of old_program",
-          "old_program identifier"
+          "old_program key",
+          "old_program number",
+          "old_program identifier",
+          "old_program_id count"
         ]
       }
     },
@@ -3436,22 +3436,22 @@
         "table": "incidents_vehicles",
         "type": "integer",
         "aliases": [
-          "code",
-          "key",
+          "number",
           "identifier",
-          "number"
+          "code",
+          "key"
         ],
         "business_meaning": "identifier",
         "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
         "sample_values": [],
         "common_phrases": [
-          "record key",
           "number of id",
-          "id count",
           "ID of record",
           "record number",
+          "record identifier",
+          "id count",
           "how much id",
-          "record identifier"
+          "record key"
         ]
       },
       "old_id": {
@@ -3459,10 +3459,10 @@
         "table": "incidents_vehicles",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
           "old id",
           "identifier"
         ],
@@ -3470,13 +3470,13 @@
         "description": "Column 'old_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old key",
-          "how much old_id",
-          "old number",
+          "number of old_id",
+          "ID of old",
           "old_id count",
           "old identifier",
-          "number of old_id",
-          "ID of old"
+          "old key",
+          "old number",
+          "how much old_id"
         ]
       },
       "incident_id": {
@@ -3484,23 +3484,23 @@
         "table": "incidents_vehicles",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "incident id",
-          "number",
+          "key",
           "code",
+          "number",
+          "incident id",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'incident_id' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "incident key",
-          "incident_id count",
           "how much incident_id",
+          "number of incident_id",
           "incident identifier",
           "incident number",
-          "number of incident_id",
+          "incident_id count",
+          "incident key",
           "ID of incident"
         ]
       },
@@ -3509,24 +3509,24 @@
         "table": "incidents_vehicles",
         "type": "integer",
         "aliases": [
-          "key",
-          "id",
-          "number",
-          "code",
           "old incident id",
+          "id",
+          "key",
+          "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'old_incident_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old_incident number",
-          "old_incident key",
-          "ID of old_incident",
-          "number of old_incident_id",
-          "how much old_incident_id",
           "old_incident identifier",
-          "old_incident_id count"
+          "ID of old_incident",
+          "old_incident number",
+          "old_incident_id count",
+          "number of old_incident_id",
+          "old_incident key",
+          "how much old_incident_id"
         ]
       },
       "year": {
@@ -3538,9 +3538,9 @@
         "description": "Column 'year' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "year count",
           "number of year",
-          "how much year"
+          "how much year",
+          "year count"
         ]
       },
       "make": {
@@ -3553,8 +3553,8 @@
         "sample_values": [],
         "common_phrases": [
           "what make",
-          "make value",
-          "text of make"
+          "text of make",
+          "make value"
         ]
       },
       "model": {
@@ -3566,9 +3566,9 @@
         "description": "Column 'model' of type VARCHAR(255)",
         "sample_values": [],
         "common_phrases": [
-          "model value",
+          "what model",
           "text of model",
-          "what model"
+          "model value"
         ]
       },
       "color": {
@@ -3580,9 +3580,9 @@
         "description": "Column 'color' of type VARCHAR(255)",
         "sample_values": [],
         "common_phrases": [
-          "color value",
+          "what color",
           "text of color",
-          "what color"
+          "color value"
         ]
       },
       "license": {
@@ -3594,8 +3594,8 @@
         "description": "Column 'license' of type VARCHAR(255)",
         "sample_values": [],
         "common_phrases": [
-          "license value",
           "what license",
+          "license value",
           "text of license"
         ]
       },
@@ -3611,9 +3611,9 @@
         "description": "Column 'is_deleted' of type TINYINT with default value ''0''",
         "sample_values": [],
         "common_phrases": [
+          "how much is_deleted",
           "number of is_deleted",
-          "is_deleted count",
-          "how much is_deleted"
+          "is_deleted count"
         ]
       },
       "createdAt": {
@@ -3625,9 +3625,9 @@
         "description": "Column 'createdAt' of type DATETIME with default value 'CURRENT_TIMESTAMP'",
         "sample_values": [],
         "common_phrases": [
+          "time of createdat",
           "createdat date",
-          "when createdat",
-          "time of createdat"
+          "when createdat"
         ]
       },
       "updatedAt": {
@@ -3639,13 +3639,13 @@
         "description": "Column 'updatedAt' of type DATETIME with default value 'CURRENT_TIMESTAMP'",
         "sample_values": [],
         "common_phrases": [
-          "last modified",
-          "updated on",
-          "when updated",
           "modification date",
+          "last modified",
           "updatedat date",
           "time of updatedat",
-          "when updatedat"
+          "when updatedat",
+          "when updated",
+          "updated on"
         ]
       }
     },
@@ -3655,10 +3655,10 @@
         "table": "job_titles",
         "type": "integer",
         "aliases": [
-          "code",
-          "key",
+          "number",
           "identifier",
-          "number"
+          "code",
+          "key"
         ],
         "business_meaning": "identifier",
         "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
@@ -3670,13 +3670,13 @@
           5
         ],
         "common_phrases": [
-          "record key",
           "number of id",
-          "id count",
           "ID of record",
           "record number",
+          "record identifier",
+          "id count",
           "how much id",
-          "record identifier"
+          "record key"
         ]
       },
       "old_id": {
@@ -3684,10 +3684,10 @@
         "table": "job_titles",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
           "old id",
           "identifier"
         ],
@@ -3701,13 +3701,13 @@
           5
         ],
         "common_phrases": [
-          "old key",
-          "how much old_id",
-          "old number",
+          "number of old_id",
+          "ID of old",
           "old_id count",
           "old identifier",
-          "number of old_id",
-          "ID of old"
+          "old key",
+          "old number",
+          "how much old_id"
         ]
       },
       "name": {
@@ -3716,8 +3716,8 @@
         "type": "string",
         "aliases": [
           "description",
-          "label",
-          "title"
+          "title",
+          "label"
         ],
         "business_meaning": "name_reference",
         "description": "Column 'name' of type VARCHAR(255)",
@@ -3729,13 +3729,13 @@
           "General Manager"
         ],
         "common_phrases": [
+          "label",
           "text of name",
-          "title",
           "what name",
-          "what is called",
+          "title",
           "name value",
-          "name",
-          "label"
+          "what is called",
+          "name"
         ]
       },
       "is_deleted": {
@@ -3752,9 +3752,9 @@
           0
         ],
         "common_phrases": [
+          "how much is_deleted",
           "number of is_deleted",
-          "is_deleted count",
-          "how much is_deleted"
+          "is_deleted count"
         ]
       },
       "is_custom": {
@@ -3771,8 +3771,8 @@
           0
         ],
         "common_phrases": [
-          "is_custom count",
           "how much is_custom",
+          "is_custom count",
           "number of is_custom"
         ]
       },
@@ -3787,9 +3787,9 @@
           "2020-07-10 19:45:18"
         ],
         "common_phrases": [
+          "time of createdat",
           "createdat date",
-          "when createdat",
-          "time of createdat"
+          "when createdat"
         ]
       },
       "updatedAt": {
@@ -3803,13 +3803,13 @@
           "2020-07-10 19:45:18"
         ],
         "common_phrases": [
-          "last modified",
-          "updated on",
-          "when updated",
           "modification date",
+          "last modified",
           "updatedat date",
           "time of updatedat",
-          "when updatedat"
+          "when updatedat",
+          "when updated",
+          "updated on"
         ]
       },
       "old_created_id": {
@@ -3817,11 +3817,11 @@
         "table": "job_titles",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "old created id",
-          "number",
+          "key",
           "code",
+          "number",
+          "old created id",
           "identifier"
         ],
         "business_meaning": "identifier",
@@ -3830,13 +3830,13 @@
           908
         ],
         "common_phrases": [
-          "old_created number",
-          "old_created_id count",
-          "old_created key",
           "ID of old_created",
-          "old_created identifier",
+          "old_created key",
+          "old_created number",
           "how much old_created_id",
-          "number of old_created_id"
+          "old_created_id count",
+          "number of old_created_id",
+          "old_created identifier"
         ]
       },
       "created_by": {
@@ -3851,9 +3851,9 @@
         "description": "Column 'created_by' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
+          "how much created_by",
           "created_by count",
-          "number of created_by",
-          "how much created_by"
+          "number of created_by"
         ]
       },
       "old_modified_id": {
@@ -3861,11 +3861,11 @@
         "table": "job_titles",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
+          "key",
           "old modified id",
-          "number",
           "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
@@ -3874,11 +3874,11 @@
           908
         ],
         "common_phrases": [
-          "old_modified_id count",
-          "old_modified key",
           "old_modified identifier",
-          "old_modified number",
           "ID of old_modified",
+          "old_modified_id count",
+          "old_modified number",
+          "old_modified key",
           "number of old_modified_id",
           "how much old_modified_id"
         ]
@@ -3895,8 +3895,8 @@
         "description": "Column 'modified_by' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "number of modified_by",
           "modified_by count",
+          "number of modified_by",
           "how much modified_by"
         ]
       },
@@ -3925,11 +3925,11 @@
         "table": "job_titles",
         "type": "integer",
         "aliases": [
-          "live",
-          "active",
-          "enabled",
           "status",
-          "is active"
+          "enabled",
+          "is active",
+          "live",
+          "active"
         ],
         "business_meaning": "status_indicator",
         "description": "Column 'is_active' of type TINYINT with default value ''1''",
@@ -3938,8 +3938,8 @@
         ],
         "common_phrases": [
           "how much is_active",
-          "number of is_active",
-          "is_active count"
+          "is_active count",
+          "number of is_active"
         ]
       }
     },
@@ -3949,10 +3949,10 @@
         "table": "media_library",
         "type": "integer",
         "aliases": [
-          "code",
-          "key",
+          "number",
           "identifier",
-          "number"
+          "code",
+          "key"
         ],
         "business_meaning": "identifier",
         "description": "Column 'id' of type BIGINT (required) (auto-incrementing)",
@@ -3964,13 +3964,13 @@
           5
         ],
         "common_phrases": [
-          "record key",
           "number of id",
-          "id count",
           "ID of record",
           "record number",
+          "record identifier",
+          "id count",
           "how much id",
-          "record identifier"
+          "record key"
         ]
       },
       "main_id_bigint": {
@@ -3980,9 +3980,9 @@
         "aliases": [
           "key",
           "main id bigint",
-          "number",
-          "code",
           "bigint",
+          "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "general_data",
@@ -3993,8 +3993,8 @@
           17
         ],
         "common_phrases": [
-          "how much main_id_bigint",
           "number of main_id_bigint",
+          "how much main_id_bigint",
           "main_id_bigint count"
         ]
       },
@@ -4003,11 +4003,11 @@
         "table": "media_library",
         "type": "integer",
         "aliases": [
-          "key",
-          "int",
-          "number",
-          "code",
           "main id int",
+          "key",
+          "code",
+          "number",
+          "int",
           "identifier"
         ],
         "business_meaning": "general_data",
@@ -4018,8 +4018,8 @@
           17
         ],
         "common_phrases": [
-          "how much main_id_int",
           "main_id_int count",
+          "how much main_id_int",
           "number of main_id_int"
         ]
       },
@@ -4058,8 +4058,8 @@
           ""
         ],
         "common_phrases": [
-          "text of title",
           "title value",
+          "text of title",
           "what title"
         ]
       },
@@ -4074,9 +4074,9 @@
           ""
         ],
         "common_phrases": [
+          "text of url",
           "what url",
-          "url value",
-          "text of url"
+          "url value"
         ]
       },
       "description": {
@@ -4091,8 +4091,8 @@
         ],
         "common_phrases": [
           "description value",
-          "text of description",
-          "what description"
+          "what description",
+          "text of description"
         ]
       },
       "file_type": {
@@ -4129,9 +4129,9 @@
           "207071"
         ],
         "common_phrases": [
+          "file_size value",
           "what file_size",
-          "text of file_size",
-          "file_size value"
+          "text of file_size"
         ]
       },
       "dimensions": {
@@ -4146,8 +4146,8 @@
         ],
         "common_phrases": [
           "what dimensions",
-          "dimensions value",
-          "text of dimensions"
+          "text of dimensions",
+          "dimensions value"
         ]
       },
       "task_id": {
@@ -4155,11 +4155,11 @@
         "table": "media_library",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
-          "code",
+          "key",
           "task id",
+          "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
@@ -4172,13 +4172,13 @@
           NaN
         ],
         "common_phrases": [
-          "task identifier",
-          "task_id count",
-          "how much task_id",
           "task key",
-          "number of task_id",
+          "how much task_id",
           "task number",
-          "ID of task"
+          "ID of task",
+          "number of task_id",
+          "task identifier",
+          "task_id count"
         ]
       },
       "category_id": {
@@ -4186,11 +4186,11 @@
         "table": "media_library",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "category id",
-          "number",
+          "key",
           "code",
+          "number",
+          "category id",
           "identifier"
         ],
         "business_meaning": "identifier",
@@ -4200,13 +4200,13 @@
           15
         ],
         "common_phrases": [
-          "how much category_id",
-          "ID of category",
-          "category number",
           "category key",
+          "category identifier",
+          "ID of category",
           "number of category_id",
+          "how much category_id",
           "category_id count",
-          "category identifier"
+          "category number"
         ]
       },
       "is_active": {
@@ -4214,11 +4214,11 @@
         "table": "media_library",
         "type": "integer",
         "aliases": [
-          "live",
-          "active",
-          "enabled",
           "status",
-          "is active"
+          "enabled",
+          "is active",
+          "live",
+          "active"
         ],
         "business_meaning": "status_indicator",
         "description": "Column 'is_active' of type TINYINT with default value ''1''",
@@ -4227,8 +4227,8 @@
         ],
         "common_phrases": [
           "how much is_active",
-          "number of is_active",
-          "is_active count"
+          "is_active count",
+          "number of is_active"
         ]
       },
       "is_deleted": {
@@ -4245,9 +4245,9 @@
           0
         ],
         "common_phrases": [
+          "how much is_deleted",
           "number of is_deleted",
-          "is_deleted count",
-          "how much is_deleted"
+          "is_deleted count"
         ]
       },
       "created_by": {
@@ -4265,9 +4265,9 @@
           22252
         ],
         "common_phrases": [
+          "how much created_by",
           "created_by count",
-          "number of created_by",
-          "how much created_by"
+          "number of created_by"
         ]
       },
       "updated_by": {
@@ -4285,13 +4285,13 @@
           22252
         ],
         "common_phrases": [
-          "updated on",
+          "modification date",
+          "how much updated_by",
+          "last modified",
+          "updated_by count",
           "number of updated_by",
           "when updated",
-          "modification date",
-          "updated_by count",
-          "how much updated_by",
-          "last modified"
+          "updated on"
         ]
       },
       "createdAt": {
@@ -4306,9 +4306,9 @@
           "2025-06-17 23:00:20"
         ],
         "common_phrases": [
+          "time of createdat",
           "createdat date",
-          "when createdat",
-          "time of createdat"
+          "when createdat"
         ]
       },
       "updatedAt": {
@@ -4323,13 +4323,13 @@
           "2025-06-17 23:00:20"
         ],
         "common_phrases": [
-          "last modified",
-          "updated on",
-          "when updated",
           "modification date",
+          "last modified",
           "updatedat date",
           "time of updatedat",
-          "when updatedat"
+          "when updatedat",
+          "when updated",
+          "updated on"
         ]
       },
       "program_id": {
@@ -4337,11 +4337,11 @@
         "table": "media_library",
         "type": "integer",
         "aliases": [
-          "program id",
-          "key",
           "id",
-          "number",
+          "key",
+          "program id",
           "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
@@ -4350,13 +4350,13 @@
           415
         ],
         "common_phrases": [
-          "program identifier",
-          "program_id count",
           "ID of program",
           "program key",
-          "program number",
+          "program identifier",
           "how much program_id",
-          "number of program_id"
+          "number of program_id",
+          "program number",
+          "program_id count"
         ]
       },
       "old_id": {
@@ -4364,10 +4364,10 @@
         "table": "media_library",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
           "old id",
           "identifier"
         ],
@@ -4375,13 +4375,13 @@
         "description": "Column 'old_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old key",
-          "how much old_id",
-          "old number",
+          "number of old_id",
+          "ID of old",
           "old_id count",
           "old identifier",
-          "number of old_id",
-          "ID of old"
+          "old key",
+          "old number",
+          "how much old_id"
         ]
       },
       "old_type_id": {
@@ -4389,10 +4389,10 @@
         "table": "media_library",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
           "old type id",
           "identifier"
         ],
@@ -4400,10 +4400,10 @@
         "description": "Column 'old_type_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old_type identifier",
           "how much old_type_id",
-          "number of old_type_id",
           "old_type key",
+          "old_type identifier",
+          "number of old_type_id",
           "old_type number",
           "ID of old_type",
           "old_type_id count"
@@ -4414,24 +4414,24 @@
         "table": "media_library",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
-          "code",
           "old program id",
+          "key",
+          "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'old_program_id' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "number of old_program_id",
-          "old_program number",
-          "old_program key",
-          "old_program_id count",
           "how much old_program_id",
+          "number of old_program_id",
           "ID of old_program",
-          "old_program identifier"
+          "old_program key",
+          "old_program number",
+          "old_program identifier",
+          "old_program_id count"
         ]
       },
       "old_category_id": {
@@ -4439,24 +4439,24 @@
         "table": "media_library",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
+          "key",
           "code",
           "old category id",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'old_category_id' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "how much old_category_id",
           "ID of old_category",
-          "number of old_category_id",
-          "old_category key",
-          "old_category number",
           "old_category identifier",
-          "old_category_id count"
+          "how much old_category_id",
+          "old_category key",
+          "number of old_category_id",
+          "old_category_id count",
+          "old_category number"
         ]
       },
       "alias": {
@@ -4482,10 +4482,10 @@
         "table": "media_library_file_category",
         "type": "integer",
         "aliases": [
-          "code",
-          "key",
+          "number",
           "identifier",
-          "number"
+          "code",
+          "key"
         ],
         "business_meaning": "identifier",
         "description": "Column 'id' of type BIGINT (required) (auto-incrementing)",
@@ -4493,13 +4493,13 @@
           28
         ],
         "common_phrases": [
-          "record key",
           "number of id",
-          "id count",
           "ID of record",
           "record number",
+          "record identifier",
+          "id count",
           "how much id",
-          "record identifier"
+          "record key"
         ]
       },
       "title": {
@@ -4513,8 +4513,8 @@
           "REPORT BUILDER"
         ],
         "common_phrases": [
-          "text of title",
           "title value",
+          "text of title",
           "what title"
         ]
       },
@@ -4532,9 +4532,9 @@
           0
         ],
         "common_phrases": [
+          "how much is_deleted",
           "number of is_deleted",
-          "is_deleted count",
-          "how much is_deleted"
+          "is_deleted count"
         ]
       },
       "createdAt": {
@@ -4548,9 +4548,9 @@
           "2025-06-15 11:01:50"
         ],
         "common_phrases": [
+          "time of createdat",
           "createdat date",
-          "when createdat",
-          "time of createdat"
+          "when createdat"
         ]
       },
       "updatedAt": {
@@ -4564,13 +4564,13 @@
           "2025-06-15 11:01:50"
         ],
         "common_phrases": [
-          "last modified",
-          "updated on",
-          "when updated",
           "modification date",
+          "last modified",
           "updatedat date",
           "time of updatedat",
-          "when updatedat"
+          "when updatedat",
+          "when updated",
+          "updated on"
         ]
       }
     },
@@ -4580,10 +4580,10 @@
         "table": "program",
         "type": "integer",
         "aliases": [
-          "code",
-          "key",
+          "number",
           "identifier",
-          "number"
+          "code",
+          "key"
         ],
         "business_meaning": "identifier",
         "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
@@ -4593,13 +4593,13 @@
           416
         ],
         "common_phrases": [
-          "record key",
           "number of id",
-          "id count",
           "ID of record",
           "record number",
+          "record identifier",
+          "id count",
           "how much id",
-          "record identifier"
+          "record key"
         ]
       },
       "old_id": {
@@ -4607,10 +4607,10 @@
         "table": "program",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
           "old id",
           "identifier"
         ],
@@ -4618,13 +4618,13 @@
         "description": "Column 'old_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old key",
-          "how much old_id",
-          "old number",
+          "number of old_id",
+          "ID of old",
           "old_id count",
           "old identifier",
-          "number of old_id",
-          "ID of old"
+          "old key",
+          "old number",
+          "how much old_id"
         ]
       },
       "city_id": {
@@ -4632,11 +4632,11 @@
         "table": "program",
         "type": "integer",
         "aliases": [
-          "key",
-          "id",
           "city id",
-          "number",
+          "id",
+          "key",
           "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
@@ -4646,13 +4646,13 @@
           11
         ],
         "common_phrases": [
-          "city_id count",
+          "how much city_id",
           "ID of city",
           "city identifier",
-          "city key",
-          "city number",
+          "city_id count",
           "number of city_id",
-          "how much city_id"
+          "city number",
+          "city key"
         ]
       },
       "old_city_id": {
@@ -4660,10 +4660,10 @@
         "table": "program",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
           "old city id",
           "identifier"
         ],
@@ -4671,13 +4671,13 @@
         "description": "Column 'old_city_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old_city key",
-          "old_city_id count",
-          "old_city number",
           "how much old_city_id",
-          "number of old_city_id",
+          "old_city_id count",
           "ID of old_city",
-          "old_city identifier"
+          "number of old_city_id",
+          "old_city identifier",
+          "old_city number",
+          "old_city key"
         ]
       },
       "program_name": {
@@ -4685,11 +4685,11 @@
         "table": "program",
         "type": "string",
         "aliases": [
-          "title",
-          "name",
-          "program name",
           "description",
-          "label"
+          "label",
+          "title",
+          "program name",
+          "name"
         ],
         "business_meaning": "name_reference",
         "description": "Column 'program_name' of type VARCHAR(128)",
@@ -4699,13 +4699,13 @@
           "0000 Training Sacramento Airport CA"
         ],
         "common_phrases": [
+          "text of program_name",
+          "label",
           "title",
+          "what program_name",
           "program_name value",
           "what is called",
-          "name",
-          "what program_name",
-          "text of program_name",
-          "label"
+          "name"
         ]
       },
       "abbreviation": {
@@ -4722,8 +4722,8 @@
         ],
         "common_phrases": [
           "text of abbreviation",
-          "what abbreviation",
-          "abbreviation value"
+          "abbreviation value",
+          "what abbreviation"
         ]
       },
       "time_zone": {
@@ -4741,13 +4741,13 @@
           "(UTC -08:00) - Anchorage, Ak"
         ],
         "common_phrases": [
-          "what time_zone",
           "when",
-          "time",
-          "date",
-          "timestamp",
+          "what time_zone",
+          "time_zone value",
           "text of time_zone",
-          "time_zone value"
+          "date",
+          "time",
+          "timestamp"
         ]
       },
       "old_timezone_id": {
@@ -4755,24 +4755,24 @@
         "table": "program",
         "type": "string",
         "aliases": [
-          "key",
           "id",
+          "key",
           "old timezone id",
-          "number",
           "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'old_timezone_id' of type VARCHAR(128)",
         "sample_values": [],
         "common_phrases": [
-          "old_timezone key",
-          "old_timezone number",
-          "old_timezone_id value",
-          "old_timezone identifier",
-          "ID of old_timezone",
           "text of old_timezone_id",
-          "what old_timezone_id"
+          "old_timezone_id value",
+          "what old_timezone_id",
+          "old_timezone key",
+          "old_timezone identifier",
+          "old_timezone number",
+          "ID of old_timezone"
         ]
       },
       "block_faces": {
@@ -4789,9 +4789,9 @@
           "3"
         ],
         "common_phrases": [
-          "what block_faces",
+          "text of block_faces",
           "block_faces value",
-          "text of block_faces"
+          "what block_faces"
         ]
       },
       "primary_contact_id": {
@@ -4799,11 +4799,11 @@
         "table": "program",
         "type": "json",
         "aliases": [
-          "key",
           "id",
+          "key",
+          "code",
           "primary contact id",
           "number",
-          "code",
           "identifier"
         ],
         "business_meaning": "identifier",
@@ -4814,10 +4814,10 @@
           "[22240, 22239]"
         ],
         "common_phrases": [
-          "primary_contact key",
+          "primary_contact identifier",
           "ID of primary_contact",
-          "primary_contact number",
-          "primary_contact identifier"
+          "primary_contact key",
+          "primary_contact number"
         ]
       },
       "old_primary_contact_id": {
@@ -4825,10 +4825,10 @@
         "table": "program",
         "type": "json",
         "aliases": [
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
           "old primary contact id",
           "identifier"
         ],
@@ -4837,9 +4837,9 @@
         "sample_values": [],
         "common_phrases": [
           "old_primary_contact key",
+          "old_primary_contact identifier",
           "ID of old_primary_contact",
-          "old_primary_contact number",
-          "old_primary_contact identifier"
+          "old_primary_contact number"
         ]
       },
       "shift_enabled": {
@@ -4856,9 +4856,9 @@
           1
         ],
         "common_phrases": [
+          "number of shift_enabled",
           "shift_enabled count",
-          "how much shift_enabled",
-          "number of shift_enabled"
+          "how much shift_enabled"
         ]
       },
       "shift_type": {
@@ -4866,8 +4866,8 @@
         "table": "program",
         "type": "json",
         "aliases": [
-          "type",
-          "shift type"
+          "shift type",
+          "type"
         ],
         "business_meaning": "general_data",
         "description": "Column 'shift_type' of type JSON with default value '(json_array())'",
@@ -4900,9 +4900,9 @@
           0
         ],
         "common_phrases": [
-          "number of invoicing",
           "how much invoicing",
-          "invoicing count"
+          "invoicing count",
+          "number of invoicing"
         ]
       },
       "priority_email": {
@@ -4911,10 +4911,10 @@
         "type": "integer",
         "aliases": [
           "electronic mail",
+          "priority email",
           "email",
-          "e-mail",
           "email address",
-          "priority email"
+          "e-mail"
         ],
         "business_meaning": "contact_information",
         "description": "Column 'priority_email' of type TINYINT",
@@ -4933,8 +4933,8 @@
         "table": "program",
         "type": "integer",
         "aliases": [
-          "location",
-          "geo location"
+          "geo location",
+          "location"
         ],
         "business_meaning": "general_data",
         "description": "Column 'geo_location' of type TINYINT",
@@ -4960,9 +4960,9 @@
           NaN
         ],
         "common_phrases": [
-          "number of businesses",
           "businesses count",
-          "how much businesses"
+          "how much businesses",
+          "number of businesses"
         ]
       },
       "equipment": {
@@ -4978,9 +4978,9 @@
           NaN
         ],
         "common_phrases": [
-          "number of equipment",
+          "how much equipment",
           "equipment count",
-          "how much equipment"
+          "number of equipment"
         ]
       },
       "equipment_upkeep": {
@@ -4988,8 +4988,8 @@
         "table": "program",
         "type": "integer",
         "aliases": [
-          "equipment upkeep",
-          "upkeep"
+          "upkeep",
+          "equipment upkeep"
         ],
         "business_meaning": "general_data",
         "description": "Column 'equipment_upkeep' of type INTEGER",
@@ -4997,8 +4997,8 @@
           90
         ],
         "common_phrases": [
-          "number of equipment_upkeep",
           "how much equipment_upkeep",
+          "number of equipment_upkeep",
           "equipment_upkeep count"
         ]
       },
@@ -5015,9 +5015,9 @@
           NaN
         ],
         "common_phrases": [
+          "number of fixtures",
           "fixtures count",
-          "how much fixtures",
-          "number of fixtures"
+          "how much fixtures"
         ]
       },
       "incident": {
@@ -5025,10 +5025,10 @@
         "table": "program",
         "type": "integer",
         "aliases": [
-          "code",
-          "key",
+          "number",
           "identifier",
-          "number"
+          "code",
+          "key"
         ],
         "business_meaning": "general_data",
         "description": "Column 'incident' of type INTEGER",
@@ -5048,12 +5048,12 @@
         "table": "program",
         "type": "integer",
         "aliases": [
-          "comments",
           "key",
-          "number",
-          "incident comments",
           "code",
-          "identifier"
+          "incident comments",
+          "number",
+          "identifier",
+          "comments"
         ],
         "business_meaning": "descriptive_text",
         "description": "Column 'incident_comments' of type INTEGER",
@@ -5063,8 +5063,8 @@
           0
         ],
         "common_phrases": [
-          "incident_comments count",
           "number of incident_comments",
+          "incident_comments count",
           "how much incident_comments"
         ]
       },
@@ -5073,8 +5073,8 @@
         "table": "program",
         "type": "integer",
         "aliases": [
-          "maintenance request open",
-          "open"
+          "open",
+          "maintenance request open"
         ],
         "business_meaning": "general_data",
         "description": "Column 'maintenance_request_open' of type INTEGER",
@@ -5104,9 +5104,9 @@
           0
         ],
         "common_phrases": [
-          "maintenance_request_closed count",
+          "how much maintenance_request_closed",
           "number of maintenance_request_closed",
-          "how much maintenance_request_closed"
+          "maintenance_request_closed count"
         ]
       },
       "maintenance_request_comments": {
@@ -5125,9 +5125,9 @@
           0
         ],
         "common_phrases": [
-          "how much maintenance_request_comments",
           "number of maintenance_request_comments",
-          "maintenance_request_comments count"
+          "maintenance_request_comments count",
+          "how much maintenance_request_comments"
         ]
       },
       "person": {
@@ -5143,9 +5143,9 @@
           13
         ],
         "common_phrases": [
-          "how much person",
+          "person count",
           "number of person",
-          "person count"
+          "how much person"
         ]
       },
       "person_interaction": {
@@ -5164,8 +5164,8 @@
         ],
         "common_phrases": [
           "person_interaction count",
-          "how much person_interaction",
-          "number of person_interaction"
+          "number of person_interaction",
+          "how much person_interaction"
         ]
       },
       "statistic": {
@@ -5179,8 +5179,8 @@
           15
         ],
         "common_phrases": [
-          "how much statistic",
           "statistic count",
+          "how much statistic",
           "number of statistic"
         ]
       },
@@ -5213,8 +5213,8 @@
           0
         ],
         "common_phrases": [
-          "number of zone",
           "zone count",
+          "number of zone",
           "how much zone"
         ]
       },
@@ -5232,9 +5232,9 @@
           0
         ],
         "common_phrases": [
+          "how much is_deleted",
           "number of is_deleted",
-          "is_deleted count",
-          "how much is_deleted"
+          "is_deleted count"
         ]
       },
       "is_active": {
@@ -5242,11 +5242,11 @@
         "table": "program",
         "type": "integer",
         "aliases": [
-          "live",
-          "active",
-          "enabled",
           "status",
-          "is active"
+          "enabled",
+          "is active",
+          "live",
+          "active"
         ],
         "business_meaning": "status_indicator",
         "description": "Column 'is_active' of type TINYINT with default value ''1''",
@@ -5255,8 +5255,8 @@
         ],
         "common_phrases": [
           "how much is_active",
-          "number of is_active",
-          "is_active count"
+          "is_active count",
+          "number of is_active"
         ]
       },
       "program_report_logo": {
@@ -5264,8 +5264,8 @@
         "table": "program",
         "type": "string",
         "aliases": [
-          "program report logo",
-          "logo"
+          "logo",
+          "program report logo"
         ],
         "business_meaning": "general_data",
         "description": "Column 'program_report_logo' of type VARCHAR(255)",
@@ -5275,9 +5275,9 @@
           "Main-task/Main-task-1750190678732-b0363586-report_logoSAIRPORT.png"
         ],
         "common_phrases": [
+          "program_report_logo value",
           "what program_report_logo",
-          "text of program_report_logo",
-          "program_report_logo value"
+          "text of program_report_logo"
         ]
       },
       "program_logo": {
@@ -5285,8 +5285,8 @@
         "table": "program",
         "type": "string",
         "aliases": [
-          "logo",
-          "program logo"
+          "program logo",
+          "logo"
         ],
         "business_meaning": "general_data",
         "description": "Column 'program_logo' of type VARCHAR(255)",
@@ -5317,9 +5317,9 @@
           NaN
         ],
         "common_phrases": [
+          "how much created_by",
           "created_by count",
-          "number of created_by",
-          "how much created_by"
+          "number of created_by"
         ]
       },
       "old_created_by": {
@@ -5334,9 +5334,9 @@
         "description": "Column 'old_created_by' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
+          "how much old_created_by",
           "old_created_by count",
-          "number of old_created_by",
-          "how much old_created_by"
+          "number of old_created_by"
         ]
       },
       "updated_by": {
@@ -5351,13 +5351,13 @@
         "description": "Column 'updated_by' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "updated on",
+          "modification date",
+          "how much updated_by",
+          "last modified",
+          "updated_by count",
           "number of updated_by",
           "when updated",
-          "modification date",
-          "updated_by count",
-          "how much updated_by",
-          "last modified"
+          "updated on"
         ]
       },
       "old_updated_by": {
@@ -5372,13 +5372,13 @@
         "description": "Column 'old_updated_by' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "number of old_updated_by",
-          "updated on",
-          "how much old_updated_by",
-          "when updated",
           "modification date",
+          "how much old_updated_by",
+          "last modified",
           "old_updated_by count",
-          "last modified"
+          "number of old_updated_by",
+          "when updated",
+          "updated on"
         ]
       },
       "createdAt": {
@@ -5394,9 +5394,9 @@
           "2025-06-17 20:04:39"
         ],
         "common_phrases": [
+          "time of createdat",
           "createdat date",
-          "when createdat",
-          "time of createdat"
+          "when createdat"
         ]
       },
       "updatedAt": {
@@ -5412,13 +5412,13 @@
           "2025-06-17 20:45:18"
         ],
         "common_phrases": [
-          "last modified",
-          "updated on",
-          "when updated",
           "modification date",
+          "last modified",
           "updatedat date",
           "time of updatedat",
-          "when updatedat"
+          "when updatedat",
+          "when updated",
+          "updated on"
         ]
       },
       "webform_link": {
@@ -5426,8 +5426,8 @@
         "table": "program",
         "type": "string",
         "aliases": [
-          "link",
-          "webform link"
+          "webform link",
+          "link"
         ],
         "business_meaning": "general_data",
         "description": "Column 'webform_link' of type VARCHAR(255)",
@@ -5437,9 +5437,9 @@
           "https://uat-fe.smsclean.com/webform/prg_id=416"
         ],
         "common_phrases": [
-          "what webform_link",
           "webform_link value",
-          "text of webform_link"
+          "text of webform_link",
+          "what webform_link"
         ]
       },
       "feedback_link": {
@@ -5447,8 +5447,8 @@
         "table": "program",
         "type": "string",
         "aliases": [
-          "link",
-          "feedback link"
+          "feedback link",
+          "link"
         ],
         "business_meaning": "general_data",
         "description": "Column 'feedback_link' of type VARCHAR(255)",
@@ -5457,8 +5457,8 @@
         ],
         "common_phrases": [
           "text of feedback_link",
-          "feedback_link value",
-          "what feedback_link"
+          "what feedback_link",
+          "feedback_link value"
         ]
       },
       "timezone_str": {
@@ -5476,13 +5476,13 @@
           "America/Anchorage"
         ],
         "common_phrases": [
+          "text of timezone_str",
           "when",
-          "what timezone_str",
-          "time",
-          "date",
           "timezone_str value",
-          "timestamp",
-          "text of timezone_str"
+          "what timezone_str",
+          "date",
+          "time",
+          "timestamp"
         ]
       },
       "alias": {
@@ -5508,10 +5508,10 @@
         "table": "user",
         "type": "integer",
         "aliases": [
-          "code",
-          "key",
+          "number",
           "identifier",
-          "number"
+          "code",
+          "key"
         ],
         "business_meaning": "identifier",
         "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
@@ -5523,13 +5523,13 @@
           22241
         ],
         "common_phrases": [
-          "record key",
           "number of id",
-          "id count",
           "ID of record",
           "record number",
+          "record identifier",
+          "id count",
           "how much id",
-          "record identifier"
+          "record key"
         ]
       },
       "old_id": {
@@ -5537,10 +5537,10 @@
         "table": "user",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
           "old id",
           "identifier"
         ],
@@ -5548,13 +5548,13 @@
         "description": "Column 'old_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old key",
-          "how much old_id",
-          "old number",
+          "number of old_id",
+          "ID of old",
           "old_id count",
           "old identifier",
-          "number of old_id",
-          "ID of old"
+          "old key",
+          "old number",
+          "how much old_id"
         ]
       },
       "first_name": {
@@ -5562,11 +5562,11 @@
         "table": "user",
         "type": "string",
         "aliases": [
-          "title",
-          "name",
           "description",
           "label",
-          "first name"
+          "first name",
+          "title",
+          "name"
         ],
         "business_meaning": "name_reference",
         "description": "Column 'first_name' of type VARCHAR(125)",
@@ -5578,13 +5578,13 @@
           "Faiz"
         ],
         "common_phrases": [
-          "first_name value",
+          "label",
           "title",
           "text of first_name",
+          "first_name value",
+          "what first_name",
           "what is called",
-          "name",
-          "label",
-          "what first_name"
+          "name"
         ]
       },
       "last_name": {
@@ -5592,11 +5592,11 @@
         "table": "user",
         "type": "string",
         "aliases": [
+          "description",
+          "label",
           "last name",
           "title",
-          "name",
-          "description",
-          "label"
+          "name"
         ],
         "business_meaning": "name_reference",
         "description": "Column 'last_name' of type VARCHAR(125)",
@@ -5608,13 +5608,13 @@
           "Ali"
         ],
         "common_phrases": [
-          "title",
-          "what is called",
-          "last_name value",
-          "name",
-          "what last_name",
           "text of last_name",
-          "label"
+          "label",
+          "name",
+          "title",
+          "last_name value",
+          "what is called",
+          "what last_name"
         ]
       },
       "user_name": {
@@ -5622,11 +5622,11 @@
         "table": "user",
         "type": "string",
         "aliases": [
-          "title",
-          "name",
-          "user name",
           "description",
-          "label"
+          "label",
+          "title",
+          "user name",
+          "name"
         ],
         "business_meaning": "name_reference",
         "description": "Column 'user_name' of type VARCHAR(24)",
@@ -5638,13 +5638,13 @@
           "faizi"
         ],
         "common_phrases": [
-          "title",
-          "what user_name",
-          "what is called",
-          "name",
           "user_name value",
+          "text of user_name",
           "label",
-          "text of user_name"
+          "what user_name",
+          "title",
+          "what is called",
+          "name"
         ]
       },
       "email": {
@@ -5667,8 +5667,8 @@
         ],
         "common_phrases": [
           "email value",
-          "what email",
-          "text of email"
+          "text of email",
+          "what email"
         ]
       },
       "password": {
@@ -5686,9 +5686,9 @@
           "$2a$10$7bw8SfCPgag1gy.u4cuH7.SvC4wVJpFL3UjvAqAVxU9wTi/RQV0Ri"
         ],
         "common_phrases": [
-          "what password",
           "text of password",
-          "password value"
+          "password value",
+          "what password"
         ]
       },
       "is_active": {
@@ -5696,11 +5696,11 @@
         "table": "user",
         "type": "integer",
         "aliases": [
-          "live",
-          "active",
-          "enabled",
           "status",
-          "is active"
+          "enabled",
+          "is active",
+          "live",
+          "active"
         ],
         "business_meaning": "status_indicator",
         "description": "Column 'is_active' of type TINYINT with default value ''1''",
@@ -5709,8 +5709,8 @@
         ],
         "common_phrases": [
           "how much is_active",
-          "number of is_active",
-          "is_active count"
+          "is_active count",
+          "number of is_active"
         ]
       },
       "enable_shift_entry": {
@@ -5746,8 +5746,8 @@
           0
         ],
         "common_phrases": [
-          "user_blocked count",
           "number of user_blocked",
+          "user_blocked count",
           "how much user_blocked"
         ]
       },
@@ -5756,23 +5756,23 @@
         "table": "user",
         "type": "string",
         "aliases": [
-          "title",
-          "name",
-          "device name",
           "description",
-          "label"
+          "device name",
+          "label",
+          "title",
+          "name"
         ],
         "business_meaning": "name_reference",
         "description": "Column 'device_name' of type VARCHAR(125)",
         "sample_values": [],
         "common_phrases": [
+          "label",
+          "device_name value",
           "text of device_name",
+          "what device_name",
           "title",
           "what is called",
-          "what device_name",
-          "name",
-          "device_name value",
-          "label"
+          "name"
         ]
       },
       "device_id": {
@@ -5780,24 +5780,24 @@
         "table": "user",
         "type": "string",
         "aliases": [
-          "key",
-          "id",
           "device id",
-          "number",
+          "id",
+          "key",
           "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'device_id' of type VARCHAR(125)",
         "sample_values": [],
         "common_phrases": [
-          "text of device_id",
-          "device key",
-          "ID of device",
           "what device_id",
+          "device identifier",
+          "text of device_id",
           "device number",
           "device_id value",
-          "device identifier"
+          "ID of device",
+          "device key"
         ]
       },
       "device_os": {
@@ -5805,16 +5805,16 @@
         "table": "user",
         "type": "string",
         "aliases": [
-          "os",
-          "device os"
+          "device os",
+          "os"
         ],
         "business_meaning": "general_data",
         "description": "Column 'device_os' of type VARCHAR(125)",
         "sample_values": [],
         "common_phrases": [
+          "text of device_os",
           "what device_os",
-          "device_os value",
-          "text of device_os"
+          "device_os value"
         ]
       },
       "os_version": {
@@ -5822,16 +5822,16 @@
         "table": "user",
         "type": "string",
         "aliases": [
-          "os version",
-          "version"
+          "version",
+          "os version"
         ],
         "business_meaning": "general_data",
         "description": "Column 'os_version' of type VARCHAR(125)",
         "sample_values": [],
         "common_phrases": [
           "os_version value",
-          "text of os_version",
-          "what os_version"
+          "what os_version",
+          "text of os_version"
         ]
       },
       "fcm_token": {
@@ -5839,16 +5839,16 @@
         "table": "user",
         "type": "string",
         "aliases": [
-          "token",
-          "fcm token"
+          "fcm token",
+          "token"
         ],
         "business_meaning": "general_data",
         "description": "Column 'fcm_token' of type VARCHAR(125)",
         "sample_values": [],
         "common_phrases": [
           "text of fcm_token",
-          "fcm_token value",
-          "what fcm_token"
+          "what fcm_token",
+          "fcm_token value"
         ]
       },
       "language_id": {
@@ -5856,10 +5856,10 @@
         "table": "user",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
           "language id",
           "identifier"
         ],
@@ -5869,13 +5869,13 @@
           1
         ],
         "common_phrases": [
-          "number of language_id",
           "language key",
+          "how much language_id",
+          "number of language_id",
           "language identifier",
           "language_id count",
-          "how much language_id",
-          "language number",
-          "ID of language"
+          "ID of language",
+          "language number"
         ]
       },
       "user_session_id": {
@@ -5883,23 +5883,23 @@
         "table": "user",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
+          "key",
           "user session id",
-          "number",
           "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'user_session_id' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
+          "ID of user_session",
           "user_session key",
           "user_session_id count",
-          "ID of user_session",
-          "user_session identifier",
-          "user_session number",
           "how much user_session_id",
+          "user_session number",
+          "user_session identifier",
           "number of user_session_id"
         ]
       },
@@ -5908,11 +5908,11 @@
         "table": "user",
         "type": "integer",
         "aliases": [
-          "key",
-          "role id",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
+          "role id",
           "identifier"
         ],
         "business_meaning": "identifier",
@@ -5921,13 +5921,13 @@
           36
         ],
         "common_phrases": [
-          "number of role_id",
           "ID of role",
-          "role key",
-          "role_id count",
-          "role number",
+          "role identifier",
           "how much role_id",
-          "role identifier"
+          "role_id count",
+          "role key",
+          "role number",
+          "number of role_id"
         ]
       },
       "old_role_id": {
@@ -5935,24 +5935,24 @@
         "table": "user",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "old role id",
-          "number",
+          "key",
           "code",
+          "number",
+          "old role id",
           "identifier"
         ],
         "business_meaning": "identifier",
         "description": "Column 'old_role_id' of type BIGINT",
         "sample_values": [],
         "common_phrases": [
-          "old_role number",
-          "old_role identifier",
-          "number of old_role_id",
-          "how much old_role_id",
           "ID of old_role",
+          "old_role identifier",
+          "old_role number",
+          "old_role_id count",
           "old_role key",
-          "old_role_id count"
+          "number of old_role_id",
+          "how much old_role_id"
         ]
       },
       "job_title_ids": {
@@ -5960,11 +5960,11 @@
         "table": "user",
         "type": "json",
         "aliases": [
-          "key",
-          "number",
-          "code",
-          "job title ids",
           "ids",
+          "key",
+          "job title ids",
+          "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "general_data",
@@ -5982,11 +5982,11 @@
         "table": "user",
         "type": "json",
         "aliases": [
-          "old job title ids",
-          "key",
-          "number",
-          "code",
           "ids",
+          "key",
+          "old job title ids",
+          "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "general_data",
@@ -6008,8 +6008,8 @@
           1
         ],
         "common_phrases": [
-          "currently_working_here count",
           "how much currently_working_here",
+          "currently_working_here count",
           "number of currently_working_here"
         ]
       },
@@ -6032,11 +6032,11 @@
         ],
         "common_phrases": [
           "time of start_date",
-          "when",
-          "time",
-          "date",
-          "start_date date",
           "when start_date",
+          "when",
+          "start_date date",
+          "date",
+          "time",
           "timestamp"
         ]
       },
@@ -6052,13 +6052,13 @@
         "description": "Column 'end_date' of type DATETIME",
         "sample_values": [],
         "common_phrases": [
-          "when",
           "when end_date",
-          "time",
-          "date",
           "time of end_date",
-          "timestamp",
-          "end_date date"
+          "when",
+          "end_date date",
+          "date",
+          "time",
+          "timestamp"
         ]
       },
       "last_web_login": {
@@ -6089,8 +6089,8 @@
         "table": "user",
         "type": "datetime",
         "aliases": [
-          "last app login",
-          "login"
+          "login",
+          "last app login"
         ],
         "business_meaning": "general_data",
         "description": "Column 'last_app_login' of type DATETIME",
@@ -6122,9 +6122,9 @@
           1
         ],
         "common_phrases": [
+          "how much is_deleted",
           "number of is_deleted",
-          "is_deleted count",
-          "how much is_deleted"
+          "is_deleted count"
         ]
       },
       "created_by": {
@@ -6143,9 +6143,9 @@
           22226.0
         ],
         "common_phrases": [
+          "how much created_by",
           "created_by count",
-          "number of created_by",
-          "how much created_by"
+          "number of created_by"
         ]
       },
       "old_created_by": {
@@ -6160,9 +6160,9 @@
         "description": "Column 'old_created_by' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
+          "how much old_created_by",
           "old_created_by count",
-          "number of old_created_by",
-          "how much old_created_by"
+          "number of old_created_by"
         ]
       },
       "updated_by": {
@@ -6179,13 +6179,13 @@
           22226
         ],
         "common_phrases": [
-          "updated on",
+          "modification date",
+          "how much updated_by",
+          "last modified",
+          "updated_by count",
           "number of updated_by",
           "when updated",
-          "modification date",
-          "updated_by count",
-          "how much updated_by",
-          "last modified"
+          "updated on"
         ]
       },
       "old_updated_by": {
@@ -6200,13 +6200,13 @@
         "description": "Column 'old_updated_by' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "number of old_updated_by",
-          "updated on",
-          "how much old_updated_by",
-          "when updated",
           "modification date",
+          "how much old_updated_by",
+          "last modified",
           "old_updated_by count",
-          "last modified"
+          "number of old_updated_by",
+          "when updated",
+          "updated on"
         ]
       },
       "createdAt": {
@@ -6222,9 +6222,9 @@
           "2025-04-07 23:04:56"
         ],
         "common_phrases": [
+          "time of createdat",
           "createdat date",
-          "when createdat",
-          "time of createdat"
+          "when createdat"
         ]
       },
       "updatedAt": {
@@ -6242,13 +6242,13 @@
           "2025-06-17 18:48:15"
         ],
         "common_phrases": [
-          "last modified",
-          "updated on",
-          "when updated",
           "modification date",
+          "last modified",
           "updatedat date",
           "time of updatedat",
-          "when updatedat"
+          "when updatedat",
+          "when updated",
+          "updated on"
         ]
       },
       "image": {
@@ -6260,8 +6260,8 @@
         "description": "Column 'image' of type VARCHAR(255)",
         "sample_values": [],
         "common_phrases": [
-          "image value",
           "text of image",
+          "image value",
           "what image"
         ]
       },
@@ -6280,8 +6280,8 @@
         ],
         "common_phrases": [
           "what user_type",
-          "text of user_type",
-          "user_type value"
+          "user_type value",
+          "text of user_type"
         ]
       }
     },
@@ -6291,10 +6291,10 @@
         "table": "user_program_mapping",
         "type": "integer",
         "aliases": [
-          "code",
-          "key",
+          "number",
           "identifier",
-          "number"
+          "code",
+          "key"
         ],
         "business_meaning": "identifier",
         "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
@@ -6306,13 +6306,13 @@
           23031
         ],
         "common_phrases": [
-          "record key",
           "number of id",
-          "id count",
           "ID of record",
           "record number",
+          "record identifier",
+          "id count",
           "how much id",
-          "record identifier"
+          "record key"
         ]
       },
       "old_id": {
@@ -6320,10 +6320,10 @@
         "table": "user_program_mapping",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
           "old id",
           "identifier"
         ],
@@ -6331,13 +6331,13 @@
         "description": "Column 'old_id' of type INTEGER",
         "sample_values": [],
         "common_phrases": [
-          "old key",
-          "how much old_id",
-          "old number",
+          "number of old_id",
+          "ID of old",
           "old_id count",
           "old identifier",
-          "number of old_id",
-          "ID of old"
+          "old key",
+          "old number",
+          "how much old_id"
         ]
       },
       "user_id": {
@@ -6345,10 +6345,10 @@
         "table": "user_program_mapping",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "number",
+          "key",
           "code",
+          "number",
           "user id",
           "identifier"
         ],
@@ -6363,11 +6363,11 @@
         ],
         "common_phrases": [
           "user_id count",
-          "ID of user",
-          "user key",
           "user identifier",
           "user number",
           "number of user_id",
+          "ID of user",
+          "user key",
           "how much user_id"
         ]
       },
@@ -6376,11 +6376,11 @@
         "table": "user_program_mapping",
         "type": "integer",
         "aliases": [
-          "key",
           "id",
-          "old user id",
-          "number",
+          "key",
           "code",
+          "number",
+          "old user id",
           "identifier"
         ],
         "business_meaning": "identifier",
@@ -6393,13 +6393,13 @@
           NaN
         ],
         "common_phrases": [
-          "old_user number",
-          "old_user identifier",
           "old_user key",
           "how much old_user_id",
           "number of old_user_id",
-          "old_user_id count",
-          "ID of old_user"
+          "ID of old_user",
+          "old_user identifier",
+          "old_user number",
+          "old_user_id count"
         ]
       },
       "program_ids": {
@@ -6407,11 +6407,11 @@
         "table": "user_program_mapping",
         "type": "json",
         "aliases": [
-          "key",
-          "number",
-          "program ids",
-          "code",
           "ids",
+          "key",
+          "code",
+          "program ids",
+          "number",
           "identifier"
         ],
         "business_meaning": "general_data",
@@ -6428,11 +6428,11 @@
         "table": "user_program_mapping",
         "type": "json",
         "aliases": [
+          "ids",
           "key",
-          "number",
           "code",
           "old program ids",
-          "ids",
+          "number",
           "identifier"
         ],
         "business_meaning": "general_data",
@@ -6445,11 +6445,11 @@
         "table": "user_program_mapping",
         "type": "json",
         "aliases": [
-          "key",
-          "number",
-          "code",
-          "city ids",
           "ids",
+          "city ids",
+          "key",
+          "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "general_data",
@@ -6466,11 +6466,11 @@
         "table": "user_program_mapping",
         "type": "json",
         "aliases": [
-          "key",
-          "old city ids",
-          "number",
-          "code",
           "ids",
+          "key",
+          "code",
+          "number",
+          "old city ids",
           "identifier"
         ],
         "business_meaning": "general_data",
@@ -6483,11 +6483,11 @@
         "table": "user_program_mapping",
         "type": "json",
         "aliases": [
-          "key",
-          "region ids",
-          "number",
-          "code",
           "ids",
+          "key",
+          "code",
+          "number",
+          "region ids",
           "identifier"
         ],
         "business_meaning": "general_data",
@@ -6505,11 +6505,11 @@
         "table": "user_program_mapping",
         "type": "json",
         "aliases": [
-          "key",
-          "number",
-          "code",
-          "old region ids",
           "ids",
+          "key",
+          "code",
+          "number",
+          "old region ids",
           "identifier"
         ],
         "business_meaning": "general_data",
@@ -6522,11 +6522,11 @@
         "table": "user_program_mapping",
         "type": "json",
         "aliases": [
-          "division ids",
-          "key",
-          "number",
-          "code",
           "ids",
+          "key",
+          "division ids",
+          "code",
+          "number",
           "identifier"
         ],
         "business_meaning": "general_data",
@@ -6554,9 +6554,9 @@
           22226
         ],
         "common_phrases": [
-          "how much mapped_by",
+          "mapped_by count",
           "number of mapped_by",
-          "mapped_by count"
+          "how much mapped_by"
         ]
       },
       "is_deleted": {
@@ -6574,9 +6574,9 @@
           1
         ],
         "common_phrases": [
+          "how much is_deleted",
           "number of is_deleted",
-          "is_deleted count",
-          "how much is_deleted"
+          "is_deleted count"
         ]
       },
       "createdAt": {
@@ -6591,9 +6591,9 @@
           "2025-04-07 23:04:56"
         ],
         "common_phrases": [
+          "time of createdat",
           "createdat date",
-          "when createdat",
-          "time of createdat"
+          "when createdat"
         ]
       },
       "updatedAt": {
@@ -6611,13 +6611,13 @@
           "2025-06-17 18:48:15"
         ],
         "common_phrases": [
-          "last modified",
-          "updated on",
-          "when updated",
           "modification date",
+          "last modified",
           "updatedat date",
           "time of updatedat",
-          "when updatedat"
+          "when updatedat",
+          "when updated",
+          "updated on"
         ]
       }
     },
@@ -6627,10 +6627,10 @@
         "table": "web_constants",
         "type": "integer",
         "aliases": [
-          "code",
-          "key",
+          "number",
           "identifier",
-          "number"
+          "code",
+          "key"
         ],
         "business_meaning": "identifier",
         "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
@@ -6642,13 +6642,13 @@
           5
         ],
         "common_phrases": [
-          "record key",
           "number of id",
-          "id count",
           "ID of record",
           "record number",
+          "record identifier",
+          "id count",
           "how much id",
-          "record identifier"
+          "record key"
         ]
       },
       "module": {
@@ -6662,9 +6662,9 @@
           "ReportResponseTemplate"
         ],
         "common_phrases": [
-          "what module",
           "module value",
-          "text of module"
+          "text of module",
+          "what module"
         ]
       },
       "key_name": {
@@ -6672,11 +6672,11 @@
         "table": "web_constants",
         "type": "string",
         "aliases": [
-          "title",
-          "name",
-          "key name",
           "description",
-          "label"
+          "label",
+          "title",
+          "key name",
+          "name"
         ],
         "business_meaning": "name_reference",
         "description": "Column 'key_name' of type VARCHAR(128)",
@@ -6688,13 +6688,13 @@
           "inspections"
         ],
         "common_phrases": [
-          "title",
-          "key_name value",
-          "what is called",
-          "name",
           "what key_name",
           "label",
-          "text of key_name"
+          "key_name value",
+          "text of key_name",
+          "title",
+          "what is called",
+          "name"
         ]
       },
       "value": {
@@ -6712,9 +6712,9 @@
           "{\"headers\":[{\"label\":\"Created\",\"isSort\":true,\"sortKey\":\"created\",\"value\":\"created\"},{\"label\":\"Area\",\"isSort\":true,\"sortKey\":\"area\",\"value\":\"area\"},{\"label\":\"Inspection\",\"isSort\":true,\"sortKey\":\"inspection\",\"value\":\"inspection\"},{\"label\":\"Score\",\"isSort\":false,\"sortKey\":\"score\",\"value\":\"score\"},{\"label\":\"Inspector\",\"isSort\":true,\"sortKey\":\"inspector\",\"value\":\"inspector\"}],\"sort_keys\":{\"completed\":\"i.createdAt\",\"area\":\"area.zone_name\",\"inspection\":\"inspectionForm.name\"},\"export_row_id\":null}"
         ],
         "common_phrases": [
+          "what value",
           "text of value",
-          "value value",
-          "what value"
+          "value value"
         ]
       },
       "createdAt": {
@@ -6728,9 +6728,9 @@
           "2024-12-30 07:45:34"
         ],
         "common_phrases": [
+          "time of createdat",
           "createdat date",
-          "when createdat",
-          "time of createdat"
+          "when createdat"
         ]
       },
       "updatedAt": {
@@ -6744,13 +6744,13 @@
           "2024-12-30 07:45:34"
         ],
         "common_phrases": [
-          "last modified",
-          "updated on",
-          "when updated",
           "modification date",
+          "last modified",
           "updatedat date",
           "time of updatedat",
-          "when updatedat"
+          "when updatedat",
+          "when updated",
+          "updated on"
         ]
       }
     }
@@ -9053,343 +9053,343 @@
   ],
   "fuzzy_matching": {
     "all_table_names": [
-      "fixtures",
-      "incident_comments",
-      "business",
-      "incidents_vehicles",
-      "user",
-      "media_library_file_category",
-      "incidents_types",
-      "user_program_mapping",
-      "incidents_parties",
       "media_library",
-      "program",
+      "incidents_locations",
       "incidents",
       "web_constants",
-      "incidents_locations",
-      "job_titles"
+      "fixtures",
+      "incidents_types",
+      "program",
+      "business",
+      "media_library_file_category",
+      "user",
+      "job_titles",
+      "incidents_vehicles",
+      "user_program_mapping",
+      "incidents_parties",
+      "incident_comments"
     ],
     "all_column_names": [
-      "business.created_by",
-      "incidents.ems_time_called",
-      "media_library.task_id",
-      "program.createdAt",
-      "incidents_vehicles.updatedAt",
-      "program.equipment",
-      "user.user_name",
-      "media_library.category_id",
-      "incidents_types.required",
-      "incidents_types.is_deleted",
-      "incident_comments.old_created_id",
-      "media_library.createdAt",
-      "fixtures.id",
-      "business.old_business_type_id",
-      "incidents_locations.location",
-      "program.priority_email",
-      "user_program_mapping.region_ids",
-      "program.updatedAt",
-      "media_library.id",
-      "incident_comments.created_id",
-      "program.updated_by",
-      "incidents.hour",
-      "incidents_vehicles.old_incident_id",
-      "program.alias",
-      "media_library.main_id_int",
-      "user_program_mapping.mapped_by",
-      "incidents.supervisor_reviewed_status",
-      "program.incident",
-      "incidents.heading_accuracy",
-      "fixtures.is_active",
-      "media_library_file_category.is_deleted",
-      "program.is_active",
-      "business.program_id",
-      "program.primary_contact_id",
-      "incidents_vehicles.make",
-      "incidents_types.old_program_id",
-      "user.enable_shift_entry",
-      "fixtures.longitude",
-      "incidents.is_deleted",
-      "incidents.old_program_id",
-      "incidents.priority",
-      "user_program_mapping.old_city_ids",
-      "incidents_types.createdAt",
-      "incidents.vertical_accuracy",
-      "user_program_mapping.old_program_ids",
-      "business.latitude",
-      "incidents.police_time_called",
-      "incidents.summary",
-      "user_program_mapping.division_ids",
-      "program.zone",
-      "user_program_mapping.old_user_id",
-      "incidents_vehicles.model",
-      "program.time_zone",
-      "incidents_locations.longitude",
-      "business.property_location",
-      "incidents_locations.is_deleted",
-      "media_library_file_category.createdAt",
-      "incidents.report_completion_status",
-      "media_library.old_program_id",
-      "business.zone",
-      "incidents.fire_engine",
-      "program.old_timezone_id",
-      "program.equipment_upkeep",
-      "program.supervisor",
-      "user.id",
-      "program.shift_enabled",
-      "incidents.updated_by",
-      "user.image",
-      "incidents_vehicles.createdAt",
-      "user.device_name",
-      "business.old_program_id",
-      "incidents_parties.phone",
-      "user.old_job_title_ids",
-      "incidents_parties.name",
-      "business.title",
-      "user.is_deleted",
-      "incidents.narrative",
-      "media_library.is_deleted",
-      "incident_comments.old_id",
-      "business.old_disposition_id",
-      "job_titles.id",
-      "business.old_created_by",
-      "media_library.description",
-      "user.device_os",
-      "user.createdAt",
-      "fixtures.program_id",
-      "business.is_checked",
-      "business.old_zone_id",
-      "media_library.old_id",
-      "incidents_types.is_active",
-      "incidents_types.program_id",
-      "job_titles.created_by",
-      "job_titles.old_modified_id",
-      "program.abbreviation",
-      "incidents.zone_id",
-      "incidents.old_user_id",
-      "incident_comments.updatedAt",
-      "user.currently_working_here",
-      "incident_comments.is_deleted",
-      "incidents.updatedAt",
-      "business.longitude",
-      "incidents.createdAt",
-      "job_titles.modified_by",
-      "media_library_file_category.id",
-      "incidents_vehicles.old_id",
-      "media_library.updatedAt",
-      "incidents_locations.id",
-      "incidents_vehicles.license",
-      "incidents.fixtures_id",
-      "incidents.damage_to_property",
-      "incidents_parties.party_type",
-      "incidents_vehicles.is_deleted",
-      "incidents_vehicles.incident_id",
-      "program.shift_type",
-      "incidents.old_incident_type",
-      "fixtures.description",
-      "incidents.fire_response",
-      "incidents_types.use_count",
-      "job_titles.name",
-      "incidents.police_response",
-      "fixtures.image",
-      "user_program_mapping.updatedAt",
-      "program.maintenance_request_comments",
-      "job_titles.createdAt",
-      "business.role_id",
-      "incidents_locations.updatedAt",
-      "incidents.latitude",
-      "incidents_types.is_checked",
-      "fixtures.zone_id",
-      "program.program_logo",
-      "media_library.updated_by",
-      "user.updatedAt",
-      "fixtures.old_fixtures_type",
-      "program.block_faces",
-      "business.business_type",
-      "program.incident_comments",
-      "media_library.url",
-      "incidents.is_active",
-      "program.id",
-      "incidents.select_equipment",
-      "incidents_parties.incident_id",
-      "incidents.altitude",
-      "user_program_mapping.city_ids",
-      "program.old_city_id",
-      "incidents_parties.id",
-      "fixtures.service_data_time",
-      "program.feedback_link",
-      "incidents_types.incident_type_alias",
-      "fixtures.old_program_id",
-      "incident_comments.old_updated_id",
-      "user_program_mapping.createdAt",
-      "media_library.created_by",
-      "fixtures.is_checked",
-      "program.city_id",
-      "business.is_deleted",
-      "incident_comments.id",
-      "user_program_mapping.old_id",
-      "incidents.person",
-      "incidents.ems_time_arrived",
-      "incidents.fire_time_called",
-      "business.category",
-      "program.program_name",
-      "incidents.created_by",
-      "incidents.period",
-      "program.person",
-      "program.maintenance_request_open",
-      "user.device_id",
-      "media_library.dimensions",
-      "incidents.old_id",
-      "business.createdAt",
-      "user_program_mapping.user_id",
-      "user.old_updated_by",
-      "incidents.heading",
-      "program.old_primary_contact_id",
-      "incidents_parties.street_name",
-      "media_library.main_id_bigint",
-      "business.old_id",
-      "incidents.old_select_equipment",
-      "user.password",
-      "program.timezone_str",
-      "incidents_types.outcomes",
-      "user.old_created_by",
-      "program.fixtures",
-      "media_library.upload_files",
-      "job_titles.is_active",
-      "incidents.old_fixtures_id",
-      "job_titles.alias",
-      "incidents.fire_time_arrived",
-      "business.old_property_id",
-      "business.id",
-      "user.email",
-      "business.old_role_id",
-      "incidents.date_captured",
-      "media_library_file_category.updatedAt",
-      "business.date_established",
-      "incidents_parties.street",
-      "incident_comments.old_incident_id",
-      "program.old_updated_by",
-      "business.status",
       "program.old_id",
-      "user_program_mapping.id",
-      "incidents.incident_type",
-      "user_program_mapping.old_region_ids",
-      "incidents_parties.business",
-      "fixtures.old_zone_id",
-      "job_titles.updatedAt",
-      "incidents_parties.createdAt",
-      "program.created_by",
-      "incidents.police_time_arrived",
-      "program.old_created_by",
-      "incidents_parties.updatedAt",
-      "program.program_report_logo",
-      "incidents.business_location",
-      "fixtures.old_id",
-      "job_titles.is_custom",
-      "incidents.ambassador_id",
-      "incidents.old_business_location",
-      "incidents_locations.createdAt",
-      "user.start_date",
-      "incidents_parties.old_id",
-      "incidents_vehicles.year",
-      "user_program_mapping.program_ids",
-      "job_titles.old_created_id",
-      "program.maintenance_request_closed",
-      "business.old_updated_by",
-      "user.last_app_login",
-      "program.statistic",
-      "incident_comments.updated_id",
-      "incidents_types.updatedAt",
-      "fixtures.title",
-      "incidents_parties.is_deleted",
-      "user.language_id",
-      "program.webform_link",
-      "user.created_by",
-      "web_constants.key_name",
-      "media_library.file_type",
-      "business.updatedAt",
-      "incidents.old_person_id",
-      "business.upload_files",
-      "media_library_file_category.title",
-      "fixtures.updatedAt",
-      "incidents.date",
-      "user.user_type",
-      "web_constants.createdAt",
-      "incidents_types.assign",
-      "program.is_deleted",
-      "fixtures.address",
+      "media_library.upload_files",
+      "business.old_created_by",
+      "user.updatedAt",
+      "incidents.longitude",
+      "user.old_updated_by",
+      "business.zone",
+      "incidents.client_contacted",
+      "incidents_locations.latitude",
       "incidents_locations.old_incident_id",
-      "incidents.id",
-      "business.disposition",
+      "business.is_checked",
+      "business.id",
+      "incidents_locations.id",
+      "program.equipment",
+      "program.maintenance_request_comments",
+      "program.webform_link",
+      "user.device_name",
+      "program.person",
+      "business.updatedAt",
+      "incidents.date_captured",
       "job_titles.is_deleted",
-      "user.user_session_id",
-      "program.old_shift_type",
-      "incidents.program_id",
-      "incidents.select_maintenance",
-      "program.geo_location",
-      "user.job_title_ids",
-      "media_library.old_category_id",
-      "web_constants.module",
-      "incidents.horizontal_accuracy",
-      "incident_comments.incident_id",
+      "program.timezone_str",
+      "user.is_active",
+      "incidents.hour",
       "media_library.file_size",
-      "incidents.ems_company",
-      "incidents.data_and_time_of_incident",
-      "incidents.client_name",
+      "program.old_updated_by",
+      "user_program_mapping.old_id",
+      "incidents_parties.is_deleted",
+      "web_constants.key_name",
+      "user_program_mapping.user_id",
+      "web_constants.createdAt",
+      "incidents_parties.name",
+      "business.old_id",
+      "user_program_mapping.old_program_ids",
+      "job_titles.is_custom",
+      "media_library_file_category.title",
+      "program.id",
+      "business.status",
+      "incidents.old_select_maintenance",
+      "incidents.zone_id",
+      "incidents.incident_type",
+      "incidents_parties.street",
+      "user.last_name",
+      "program.zone",
+      "program.feedback_link",
+      "media_library_file_category.updatedAt",
+      "user.language_id",
+      "incidents.fire_response",
+      "incidents.created_by",
+      "incidents_vehicles.old_incident_id",
+      "fixtures.address",
+      "user.is_deleted",
+      "incident_comments.updated_id",
+      "user.device_os",
+      "media_library.id",
+      "job_titles.old_modified_id",
+      "incidents.minute",
+      "incidents.person",
+      "media_library.old_category_id",
+      "fixtures.is_deleted",
+      "incidents.old_incident_type",
       "media_library.old_type_id",
       "web_constants.id",
-      "incident_comments.createdAt",
-      "program.person_interaction",
-      "media_library.alias",
-      "fixtures.createdAt",
-      "user.old_role_id",
-      "user.user_blocked",
-      "incidents.outcome_id",
-      "user.last_name",
-      "business.location",
-      "incidents.old_select_maintenance",
-      "web_constants.value",
-      "user.is_active",
-      "incidents_types.title",
-      "incidents_locations.incident_id",
-      "incidents_types.app_menu",
-      "user.end_date",
-      "user.fcm_token",
-      "program.businesses",
+      "business.disposition",
+      "program.incident",
+      "program.maintenance_request_closed",
       "fixtures.latitude",
-      "business.updated_by",
-      "user.last_web_login",
+      "user.user_session_id",
+      "incident_comments.incident_id",
+      "incidents.altitude",
+      "business.latitude",
+      "incidents.ambassador_id",
+      "user_program_mapping.updatedAt",
       "incidents_types.id",
-      "incident_comments.description",
-      "incidents.police_officer_name",
       "user.os_version",
-      "media_library.is_active",
-      "user.old_id",
-      "incidents_vehicles.color",
-      "incidents.client_contacted",
-      "job_titles.old_id",
-      "incidents.old_zone_id",
-      "incidents.ems_response",
-      "incidents_types.old_id",
       "user_program_mapping.is_deleted",
+      "program.program_report_logo",
+      "incident_comments.createdAt",
+      "incidents_parties.incident_id",
+      "program.priority_email",
+      "media_library_file_category.createdAt",
+      "fixtures.id",
+      "media_library.old_program_id",
+      "program.shift_enabled",
+      "user.start_date",
+      "program.invoicing",
+      "business.title",
+      "business.date_established",
+      "user.end_date",
+      "media_library.is_deleted",
+      "media_library.is_active",
+      "incidents.client_name",
+      "fixtures.is_active",
+      "media_library.main_id_bigint",
+      "business.old_updated_by",
+      "incidents.select_maintenance",
+      "incident_comments.old_updated_id",
+      "user_program_mapping.old_region_ids",
+      "business.location",
+      "incident_comments.id",
+      "media_library_file_category.is_deleted",
+      "incidents.police_response",
+      "fixtures.old_fixtures_type",
+      "user_program_mapping.old_city_ids",
+      "incidents.fire_engine",
+      "incidents.vertical_accuracy",
+      "fixtures.old_program_id",
+      "program.equipment_upkeep",
+      "user.fcm_token",
+      "media_library.task_id",
+      "user.id",
+      "program.fixtures",
+      "incidents.createdAt",
+      "incidents.is_deleted",
+      "program.city_id",
+      "user_program_mapping.mapped_by",
+      "program.incident_comments",
+      "incidents_types.old_id",
+      "incidents.outcome_id",
+      "incidents_vehicles.is_deleted",
+      "user_program_mapping.old_user_id",
+      "user.createdAt",
+      "incidents.fixtures_id",
+      "incidents_types.use_count",
+      "incidents_parties.party_type",
+      "job_titles.id",
+      "program.createdAt",
+      "incidents.ems_response",
+      "incidents_locations.incident_id",
+      "program.abbreviation",
+      "business.createdAt",
+      "job_titles.modified_by",
+      "job_titles.old_created_id",
+      "program.program_name",
+      "incidents_types.program_id",
+      "program.old_shift_type",
+      "media_library.category_id",
+      "program.updated_by",
+      "incidents.report_completion_status",
+      "user.role_id",
+      "media_library.created_by",
+      "program.old_timezone_id",
+      "incidents.old_business_location",
+      "incidents.police_time_arrived",
+      "user.created_by",
+      "incidents.program_id",
+      "incidents_types.is_deleted",
+      "fixtures.image",
+      "media_library.updatedAt",
+      "program.is_deleted",
+      "incidents_parties.id",
+      "incidents_types.required",
+      "media_library.updated_by",
+      "program.primary_contact_id",
+      "media_library.createdAt",
+      "user.old_created_by",
+      "incidents_types.app_menu",
+      "program.old_city_id",
+      "incidents_parties.email",
+      "program.alias",
+      "incidents_vehicles.color",
+      "incident_comments.updatedAt",
+      "incidents.old_select_equipment",
+      "incidents.ems_responder",
+      "user.first_name",
+      "incidents.date",
+      "business.property_location",
+      "incidents.supervisor_reviewed_status",
+      "job_titles.updatedAt",
+      "incidents_locations.updatedAt",
+      "incidents_vehicles.updatedAt",
+      "incidents.old_user_id",
+      "incidents.period",
+      "user_program_mapping.createdAt",
+      "user_program_mapping.division_ids",
+      "incidents.horizontal_accuracy",
+      "business.old_business_type_id",
+      "incidents.heading",
+      "media_library.alias",
+      "incidents.updated_by",
+      "incidents.heading_accuracy",
+      "incidents_types.title",
+      "user_program_mapping.region_ids",
+      "program.block_faces",
+      "incidents_locations.old_id",
+      "business.role_id",
+      "user.user_name",
+      "program.program_logo",
+      "incidents.fire_time_arrived",
+      "incidents.police_time_called",
+      "incidents_parties.createdAt",
+      "business.is_deleted",
+      "incidents_vehicles.make",
+      "media_library.title",
+      "fixtures.longitude",
+      "incidents.narrative",
+      "media_library.old_id",
+      "incidents.id",
+      "program.is_active",
+      "business.old_zone_id",
+      "user.updated_by",
+      "incidents.ems_company",
+      "media_library_file_category.id",
+      "business.program_id",
+      "incidents.old_program_id",
+      "fixtures.updatedAt",
+      "web_constants.updatedAt",
+      "incident_comments.description",
+      "fixtures.zone_id",
+      "incidents_types.old_program_id",
+      "program.person_interaction",
+      "incidents.is_active",
+      "incidents.summary",
+      "fixtures.createdAt",
+      "business.old_program_id",
+      "job_titles.alias",
+      "incidents.data_and_time_of_incident",
+      "incident_comments.old_id",
+      "incidents.select_equipment",
+      "incidents.ems_time_called",
+      "business.category",
+      "user.old_id",
+      "user.old_role_id",
+      "incidents.old_zone_id",
+      "incidents_types.is_active",
       "incident_comments.date_and_time",
       "media_library.program_id",
-      "business.is_active",
-      "user.first_name",
-      "incidents_locations.latitude",
+      "program.created_by",
+      "job_titles.old_id",
+      "incident_comments.created_id",
+      "user.image",
+      "incidents_types.outcomes",
+      "business.longitude",
+      "user_program_mapping.city_ids",
+      "program.supervisor",
+      "incidents.damage_to_property",
+      "user.last_app_login",
+      "incidents.old_id",
+      "media_library.file_type",
+      "incidents.latitude",
       "fixtures.fixtures_type",
-      "incidents.minute",
-      "program.invoicing",
-      "user.updated_by",
-      "incidents_vehicles.id",
+      "incidents_vehicles.model",
+      "incidents_parties.old_id",
+      "incidents_locations.is_deleted",
+      "incidents.business_location",
+      "business.upload_files",
+      "business.old_property_id",
+      "business.old_role_id",
+      "incidents_locations.longitude",
+      "incidents_types.createdAt",
+      "user.user_type",
+      "incident_comments.old_created_id",
+      "program.geo_location",
+      "user_program_mapping.id",
+      "job_titles.is_active",
+      "program.time_zone",
+      "incidents_vehicles.incident_id",
+      "fixtures.is_checked",
+      "user.enable_shift_entry",
+      "media_library.url",
+      "incidents_locations.location",
+      "job_titles.created_by",
+      "user_program_mapping.program_ids",
+      "incidents_types.incident_type_alias",
+      "business.business_type",
+      "web_constants.module",
+      "incidents_vehicles.year",
+      "incidents.old_fixtures_id",
+      "program.updatedAt",
+      "incidents_types.assign",
+      "media_library.description",
+      "incident_comments.old_incident_id",
+      "program.old_primary_contact_id",
+      "incidents.updatedAt",
+      "job_titles.name",
+      "incidents_parties.updatedAt",
+      "user.user_blocked",
+      "user.device_id",
+      "fixtures.program_id",
+      "incidents_locations.createdAt",
+      "fixtures.description",
+      "user.old_job_title_ids",
+      "business.old_disposition_id",
+      "user.email",
+      "web_constants.value",
+      "program.businesses",
+      "incidents.fire_time_called",
+      "incidents_vehicles.createdAt",
+      "program.old_created_by",
+      "business.created_by",
       "incidents_parties.old_incident_id",
-      "media_library.title",
-      "web_constants.updatedAt",
-      "incidents_locations.old_id",
-      "incidents.ems_responder",
-      "incidents_parties.email",
-      "fixtures.is_deleted",
-      "incidents.longitude",
-      "user.role_id"
+      "fixtures.title",
+      "media_library.dimensions",
+      "incidents_parties.phone",
+      "incidents_vehicles.id",
+      "media_library.main_id_int",
+      "business.updated_by",
+      "program.shift_type",
+      "program.statistic",
+      "incident_comments.is_deleted",
+      "incidents.old_person_id",
+      "incidents_parties.business",
+      "program.maintenance_request_open",
+      "incidents_types.updatedAt",
+      "incidents_vehicles.old_id",
+      "incidents_parties.street_name",
+      "incidents_vehicles.license",
+      "business.is_active",
+      "incidents.priority",
+      "fixtures.old_id",
+      "user.last_web_login",
+      "user.password",
+      "user.currently_working_here",
+      "job_titles.createdAt",
+      "fixtures.service_data_time",
+      "incidents_types.is_checked",
+      "incidents.ems_time_arrived",
+      "fixtures.old_zone_id",
+      "user.job_title_ids",
+      "incidents.police_officer_name"
     ],
     "all_business_terms": [],
     "similarity_threshold": 0.6

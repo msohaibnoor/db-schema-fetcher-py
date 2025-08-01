@@ -3,7 +3,7 @@ Database connection management for MySQL Schema Fetcher
 """
 import time
 from contextlib import contextmanager
-from typing import Optional, Dict, Any, Generator
+from typing import Optional, Dict, Any, Generator, List
 from sqlalchemy import create_engine, text, MetaData, inspect
 from sqlalchemy.engine import Engine, Connection
 from sqlalchemy.exc import SQLAlchemyError, OperationalError
@@ -13,7 +13,7 @@ from ..utils.config import config
 from ..utils.logger import schema_logger, logger
 
 class DatabaseConnector:
-    """Handles MySQL database connections and operations"""
+    """Handles MySQL database connections and operations with table filtering"""
     
     def __init__(self):
         self.engine: Optional[Engine] = None
@@ -194,8 +194,8 @@ class DatabaseConnector:
         
         return info
     
-    def get_database_info(self) -> Dict[str, Any]:
-        """Get general database information"""
+    def get_database_info(self, table_filter: Optional[List[str]] = None) -> Dict[str, Any]:
+        """Get general database information with optional table filtering"""
         info = {
             "database_name": config.database.database,
             "host": config.database.host,
@@ -203,19 +203,72 @@ class DatabaseConnector:
             "charset": config.database.charset,
             "extraction_timestamp": pd.Timestamp.now().isoformat(),
             "total_tables": 0,
-            "tables": []
+            "tables": [],
+            "table_filter_applied": bool(table_filter)
         }
         
         try:
             inspector = self.get_inspector()
-            table_names = inspector.get_table_names()
-            info["total_tables"] = len(table_names)
-            info["tables"] = table_names
+            all_table_names = inspector.get_table_names()
+            
+            # Apply table filter if provided
+            if table_filter:
+                # Find existing tables that match the filter
+                filtered_tables = []
+                missing_tables = []
+                
+                for table in table_filter:
+                    if table in all_table_names:
+                        filtered_tables.append(table)
+                    else:
+                        missing_tables.append(table)
+                
+                info["tables"] = filtered_tables
+                info["total_tables"] = len(filtered_tables)
+                info["filtered_from_total"] = len(all_table_names)
+                info["missing_tables"] = missing_tables
+                
+                if missing_tables:
+                    schema_logger.log_warning(f"Tables not found in database: {', '.join(missing_tables)}")
+                
+                schema_logger.log_info(f"Table filter applied: {len(filtered_tables)}/{len(all_table_names)} tables selected")
+                
+            else:
+                info["tables"] = all_table_names
+                info["total_tables"] = len(all_table_names)
+            
         except Exception as e:
             logger.error(f"Error getting database info: {str(e)}")
             raise
         
         return info
+    
+    def table_exists(self, table_name: str) -> bool:
+        """Check if a table exists in the database"""
+        try:
+            inspector = self.get_inspector()
+            return table_name in inspector.get_table_names()
+        except Exception as e:
+            logger.error(f"Error checking if table {table_name} exists: {str(e)}")
+            return False
+    
+    def validate_table_filter(self, table_filter: List[str]) -> Dict[str, List[str]]:
+        """Validate that tables in filter exist in database"""
+        try:
+            inspector = self.get_inspector()
+            all_tables = inspector.get_table_names()
+            
+            existing_tables = [table for table in table_filter if table in all_tables]
+            missing_tables = [table for table in table_filter if table not in all_tables]
+            
+            return {
+                "existing": existing_tables,
+                "missing": missing_tables,
+                "total_in_db": len(all_tables)
+            }
+        except Exception as e:
+            logger.error(f"Error validating table filter: {str(e)}")
+            return {"existing": [], "missing": table_filter, "total_in_db": 0}
     
     def disconnect(self):
         """Close database connection"""

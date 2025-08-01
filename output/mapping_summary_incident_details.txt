@@ -7,29 +7,29 @@ MAPPING STATISTICS:
   Total Column Mappings: 320
   Business Terms: 9
   Query Patterns: 6
-  Creation Time: 0.01 seconds
+  Creation Time: 0.00 seconds
 
 TABLE MAPPINGS SAMPLE:
 ----------------------------------------
-Table: business
-  Aliases: business, businesses, busines
+Table: incidents
+  Aliases: incidents, incidentses, incident
   Purpose: unknown
 
-Table: fixtures
-  Aliases: fixtures, fixtur, fixture
-  Business Terms: addresses, locations
+Table: incidents_types
+  Aliases: incidents_types, incidents, incidents types
   Purpose: unknown
 
 Table: incident_comments
-  Aliases: incident_comments, incident, comments
+  Aliases: incident_comments, incident_comment, comments
   Purpose: unknown
 
-Table: incidents
-  Aliases: incidents, incident, incidentses
+Table: fixtures
+  Aliases: fixtures, fixtureses, fixtur
+  Business Terms: geographic data, addresses
   Purpose: unknown
 
-Table: incidents_locations
-  Aliases: incidents_locations, locations, incidents_location
+Table: business
+  Aliases: business, businesses, busines
   Purpose: unknown
 
 ... and 10 more tables

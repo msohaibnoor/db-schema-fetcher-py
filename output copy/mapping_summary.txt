@@ -16,20 +16,20 @@ Table: business
   Purpose: unknown
 
 Table: fixtures
-  Aliases: fixtures, fixtur, fixture
-  Business Terms: addresses, locations
+  Aliases: fixtures, fixtur, fixtureses
+  Business Terms: geographic data, locations
   Purpose: unknown
 
 Table: incident_comments
-  Aliases: incident_comments, incident, comments
+  Aliases: incident_comments, incident_comment, comments
   Purpose: unknown
 
 Table: incidents
-  Aliases: incidents, incident, incidentses
+  Aliases: incidents, incidentses, incident
   Purpose: unknown
 
 Table: incidents_locations
-  Aliases: incidents_locations, locations, incidents_location
+  Aliases: incidents_locations, incidents, incidents_locationses
   Purpose: unknown
 
 ... and 10 more tables

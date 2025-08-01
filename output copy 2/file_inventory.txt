@@ -1,12 +1,12 @@
 FILE INVENTORY - MySQL Schema Fetcher Output
 ============================================================
-Generated: 2025-07-31 15:36:53
+Generated: 2025-07-31 15:36:26
 Directory: output
 
 SCHEMA DATA:
 ------------------------------
   📄 processed_schema.json
-     Size: 130,189 bytes
+     Size: 130,188 bytes
      Modified: 2025-07-31 15:36
 
   📄 raw_schema.json
@@ -20,27 +20,31 @@ SCHEMA DATA:
 REPORTS:
 ------------------------------
   📄 complete_analysis.txt
-     Size: 1,484 bytes
+     Size: 1,568 bytes
      Modified: 2025-07-31 15:36
 
   📄 extraction_report.txt
      Size: 2,442 bytes
      Modified: 2025-07-31 15:36
 
+  📄 file_inventory.txt
+     Size: 1,719 bytes
+     Modified: 2025-07-31 15:35
+
   📄 mapping_summary.txt
-     Size: 2,114 bytes
+     Size: 2,133 bytes
      Modified: 2025-07-31 15:36
 
 LOGS:
 ------------------------------
   📄 schema_extraction.log
-     Size: 3,801 bytes
+     Size: 47,796 bytes
      Modified: 2025-07-31 15:36
 
 SUMMARY:
 ------------------------------
-Total Files: 7
-Total Size: 523,809 bytes (0.50 MB)
+Total Files: 8
+Total Size: 569,625 bytes (0.54 MB)
 
 FILE DESCRIPTIONS:
 ------------------------------
@@ -49,6 +53,7 @@ raw_schema.json: Complete database schema extracted directly from MySQL
 schema_mappings.json: Natural language mappings for query processing
 complete_analysis.txt: Combined analysis report with recommendations
 extraction_report.txt: Detailed report of the schema extraction process
+file_inventory.txt: This file - inventory of all generated files
 mapping_summary.txt: Summary of created natural language mappings
 schema_extraction.log: Detailed logs from the extraction process
 

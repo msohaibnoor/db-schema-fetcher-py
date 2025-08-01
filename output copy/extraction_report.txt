@@ -4,12 +4,12 @@ DATABASE SCHEMA EXTRACTION REPORT
 
 Database: uat_latest_june
 Host: localhost:3306
-Extraction Date: 2025-07-31T15:36:52.802659
+Extraction Date: 2025-07-31T15:32:20.072974
 
 OVERALL STATISTICS:
   Total Tables: 15
   Total Columns: 320
-  Extraction Duration: 0.25 seconds
+  Extraction Duration: 0.30 seconds
 
 DATA TYPE DISTRIBUTION:
   INTEGER: 81 (25.3%)

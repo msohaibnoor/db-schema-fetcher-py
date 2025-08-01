@@ -1,0 +1,59 @@
+FILE INVENTORY - MySQL Schema Fetcher Output (INCIDENT_DETAILS)
+============================================================
+Generated: 2025-07-31 15:59:38
+Directory: output
+Report Type: incident_details
+
+SCHEMA DATA:
+------------------------------
+  📄 processed_schema_incident_details.json
+     Size: 130,179 bytes
+     Modified: 2025-07-31 15:59
+
+  📄 raw_schema_incident_details.json
+     Size: 104,886 bytes
+     Modified: 2025-07-31 15:59
+
+  📄 schema_mappings_incident_details.json
+     Size: 270,871 bytes
+     Modified: 2025-07-31 15:59
+
+REPORTS:
+------------------------------
+  📄 complete_analysis.txt
+     Size: 1,484 bytes
+     Modified: 2025-07-31 15:36
+
+  📄 complete_analysis_incident_details.txt
+     Size: 1,729 bytes
+     Modified: 2025-07-31 15:59
+
+  📄 extraction_report_incident_details.txt
+     Size: 2,545 bytes
+     Modified: 2025-07-31 15:59
+
+  📄 file_inventory.txt
+     Size: 1,562 bytes
+     Modified: 2025-07-31 15:36
+
+  📄 mapping_summary_incident_details.txt
+     Size: 2,120 bytes
+     Modified: 2025-07-31 15:59
+
+SUMMARY:
+------------------------------
+Total Files: 8
+Total Size: 515,376 bytes (0.49 MB)
+
+FILE DESCRIPTIONS:
+------------------------------
+processed_schema_incident_details.json: Schema processed and optimized for AI/LLM (incident_details)
+raw_schema_incident_details.json: Complete database schema for incident_details report
+schema_mappings_incident_details.json: Natural language mappings for incident_details queries
+complete_analysis.txt: Generated output file
+complete_analysis_incident_details.txt: Combined analysis report with recommendations (incident_details)
+extraction_report_incident_details.txt: Detailed report of the schema extraction process (incident_details)
+file_inventory.txt: Generated output file
+mapping_summary_incident_details.txt: Summary of created natural language mappings (incident_details)
+
+============================================================

@@ -1,15 +1,17 @@
 ================================================================================
-DATABASE SCHEMA EXTRACTION REPORT
+DATABASE SCHEMA EXTRACTION REPORT - INCIDENT_DETAILS
 ================================================================================
 
 Database: uat_latest_june
 Host: localhost:3306
-Extraction Date: 2025-07-31T15:36:52.802659
+Report Type: incident_details
+Extraction Date: 2025-07-31T15:59:38.758440
+Table Filter Applied: Yes (15 target tables)
 
 OVERALL STATISTICS:
   Total Tables: 15
   Total Columns: 320
-  Extraction Duration: 0.25 seconds
+  Extraction Duration: 0.18 seconds
 
 DATA TYPE DISTRIBUTION:
   INTEGER: 81 (25.3%)
@@ -23,10 +25,10 @@ DATA TYPE DISTRIBUTION:
   TEXT: 7 (2.2%)
   VARCHAR(125): 7 (2.2%)
   ENUM: 3 (0.9%)
-  VARCHAR(50): 2 (0.6%)
   VARCHAR(100): 2 (0.6%)
-  VARCHAR(24): 1 (0.3%)
+  VARCHAR(50): 2 (0.6%)
   VARCHAR(2000): 1 (0.3%)
+  VARCHAR(24): 1 (0.3%)
 
 MOST COMMON COLUMN NAMES:
   id: 15 occurrences
@@ -36,9 +38,9 @@ MOST COMMON COLUMN NAMES:
   old_id: 13 occurrences
   is_active: 8 occurrences
   created_by: 6 occurrences
-  title: 5 occurrences
-  updated_by: 5 occurrences
   program_id: 5 occurrences
+  old_program_id: 5 occurrences
+  updated_by: 5 occurrences
 
 TABLE DETAILS:
 --------------------------------------------------------------------------------

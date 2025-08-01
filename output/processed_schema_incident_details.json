@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "original_extraction_date": "2025-07-31T15:36:52.758571",
-    "processing_date": "2025-07-31T15:36:53.024500",
+    "original_extraction_date": "2025-07-31T15:59:38.715263",
+    "processing_date": "2025-07-31T15:59:38.898779",
     "processor_version": "1.0.0",
     "database_name": "uat_latest_june",
     "processing_config": {
@@ -20,9 +20,9 @@
       }
     },
     "processing_stats": {
-      "processing_start": "2025-07-31T15:36:53.024488",
-      "processing_end": "2025-07-31T15:36:53.029768",
-      "processing_duration_seconds": 0.01,
+      "processing_start": "2025-07-31T15:59:38.898775",
+      "processing_end": "2025-07-31T15:59:38.900875",
+      "processing_duration_seconds": 0.0,
       "tables_processed": 15,
       "relationships_found": 0,
       "total_columns_processed": 320
@@ -70,710 +70,21 @@
         "media_library_file_category"
       ],
       "other": [
-        "business",
-        "fixtures",
-        "incident_comments",
         "incidents",
+        "incident_comments",
+        "fixtures",
+        "business",
+        "media_library",
         "incidents_locations",
         "incidents_parties",
         "incidents_vehicles",
-        "job_titles",
-        "media_library",
         "program",
-        "web_constants"
+        "web_constants",
+        "job_titles"
       ]
     }
   },
   "tables": {
-    "business": {
-      "name": "business",
-      "description": "Table 'business' contains 31 columns. Key columns include: id, old_id, old_business_type_id.",
-      "columns": [
-        {
-          "name": "id",
-          "type": "integer",
-          "nullable": false,
-          "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "old_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'old_id' of type BIGINT",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "title",
-          "type": "string",
-          "nullable": false,
-          "description": "Column 'title' of type VARCHAR(255) (required)",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "business_type",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'business_type' of type INTEGER",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "old_business_type_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'old_business_type_id' of type BIGINT",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "disposition",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'disposition' of type INTEGER",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "old_disposition_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'old_disposition_id' of type BIGINT",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "zone",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'zone' of type INTEGER",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "old_zone_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'old_zone_id' of type BIGINT",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "location",
-          "type": "string",
-          "nullable": true,
-          "description": "Column 'location' of type VARCHAR(255)",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "property_location",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'property_location' of type INTEGER",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "old_property_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'old_property_id' of type BIGINT",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "date_established",
-          "type": "datetime",
-          "nullable": true,
-          "description": "Column 'date_established' of type DATETIME",
-          "business_meaning": "temporal",
-          "sample_values": null
-        },
-        {
-          "name": "is_active",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'is_active' of type TINYINT with default value ''0''",
-          "business_meaning": "status_indicator",
-          "sample_values": null
-        },
-        {
-          "name": "upload_files",
-          "type": "json",
-          "nullable": true,
-          "description": "Column 'upload_files' of type JSON",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "category",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'category' of type INTEGER with default value ''2''",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "status",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'status' of type INTEGER with default value ''1''",
-          "business_meaning": "status_indicator",
-          "sample_values": null
-        },
-        {
-          "name": "is_checked",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'is_checked' of type TINYINT with default value ''0''",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "is_deleted",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'is_deleted' of type TINYINT with default value ''0''",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "created_by",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'created_by' of type INTEGER",
-          "business_meaning": "temporal",
-          "sample_values": null
-        },
-        {
-          "name": "old_created_by",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'old_created_by' of type BIGINT",
-          "business_meaning": "temporal",
-          "sample_values": null
-        },
-        {
-          "name": "updated_by",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'updated_by' of type INTEGER",
-          "business_meaning": "temporal",
-          "sample_values": null
-        },
-        {
-          "name": "old_updated_by",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'old_updated_by' of type BIGINT",
-          "business_meaning": "temporal",
-          "sample_values": null
-        },
-        {
-          "name": "role_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'role_id' of type INTEGER",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "old_role_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'old_role_id' of type BIGINT",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "createdAt",
-          "type": "datetime",
-          "nullable": true,
-          "description": "Column 'createdAt' of type DATETIME",
-          "business_meaning": "temporal",
-          "sample_values": null
-        },
-        {
-          "name": "updatedAt",
-          "type": "datetime",
-          "nullable": true,
-          "description": "Column 'updatedAt' of type DATETIME",
-          "business_meaning": "temporal",
-          "sample_values": null
-        },
-        {
-          "name": "program_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'program_id' of type INTEGER",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "old_program_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'old_program_id' of type BIGINT",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "latitude",
-          "type": "decimal",
-          "nullable": true,
-          "description": "Column 'latitude' of type DECIMAL(10, 6)",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "longitude",
-          "type": "decimal",
-          "nullable": true,
-          "description": "Column 'longitude' of type DECIMAL(10, 6)",
-          "business_meaning": "general_data",
-          "sample_values": null
-        }
-      ],
-      "primary_key": [
-        "id"
-      ],
-      "foreign_keys": [],
-      "indexes": [
-        {
-          "name": "idx_business_type",
-          "columns": [
-            "business_type"
-          ],
-          "unique": false,
-          "type": "standard"
-        },
-        {
-          "name": "idx_disposition",
-          "columns": [
-            "disposition"
-          ],
-          "unique": false,
-          "type": "standard"
-        },
-        {
-          "name": "idx_is_deleted",
-          "columns": [
-            "is_deleted"
-          ],
-          "unique": false,
-          "type": "standard"
-        },
-        {
-          "name": "idx_program_id",
-          "columns": [
-            "program_id"
-          ],
-          "unique": false,
-          "type": "standard"
-        },
-        {
-          "name": "idx_property_location",
-          "columns": [
-            "property_location"
-          ],
-          "unique": false,
-          "type": "standard"
-        },
-        {
-          "name": "idx_zone",
-          "columns": [
-            "zone"
-          ],
-          "unique": false,
-          "type": "standard"
-        },
-        {
-          "name": "old_id",
-          "columns": [
-            "old_id"
-          ],
-          "unique": false,
-          "type": "standard"
-        }
-      ],
-      "row_count": 0,
-      "sample_values": {},
-      "business_context": {
-        "likely_purpose": "unknown",
-        "domain": "general",
-        "entity_type": "unknown",
-        "confidence": 0.0
-      },
-      "common_queries": [
-        "SELECT * FROM business",
-        "SELECT COUNT(*) FROM business",
-        "SELECT * FROM business WHERE id = ?",
-        "SELECT * FROM business WHERE date_established >= ?",
-        "SELECT * FROM business ORDER BY date_established DESC"
-      ]
-    },
-    "fixtures": {
-      "name": "fixtures",
-      "description": "Table 'fixtures' contains 20 columns. Key columns include: id, old_id.",
-      "columns": [
-        {
-          "name": "id",
-          "type": "integer",
-          "nullable": false,
-          "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "old_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'old_id' of type BIGINT",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "fixtures_type",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'fixtures_type' of type INTEGER",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "old_fixtures_type",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'old_fixtures_type' of type BIGINT",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "title",
-          "type": "string",
-          "nullable": false,
-          "description": "Column 'title' of type VARCHAR(128) (required)",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "description",
-          "type": "string",
-          "nullable": true,
-          "description": "Column 'description' of type TEXT",
-          "business_meaning": "descriptive_text",
-          "sample_values": null
-        },
-        {
-          "name": "service_data_time",
-          "type": "datetime",
-          "nullable": true,
-          "description": "Column 'service_data_time' of type DATETIME",
-          "business_meaning": "temporal",
-          "sample_values": null
-        },
-        {
-          "name": "image",
-          "type": "json",
-          "nullable": true,
-          "description": "Column 'image' of type JSON",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "zone_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'zone_id' of type INTEGER",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "old_zone_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'old_zone_id' of type BIGINT",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "latitude",
-          "type": "decimal",
-          "nullable": false,
-          "description": "Column 'latitude' of type DECIMAL(10, 6) (required) with default value ''0.000000''",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "longitude",
-          "type": "decimal",
-          "nullable": false,
-          "description": "Column 'longitude' of type DECIMAL(10, 6) (required) with default value ''0.000000''",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "is_active",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'is_active' of type TINYINT with default value ''1''",
-          "business_meaning": "status_indicator",
-          "sample_values": null
-        },
-        {
-          "name": "is_checked",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'is_checked' of type TINYINT with default value ''0''",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "is_deleted",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'is_deleted' of type TINYINT with default value ''0''",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "createdAt",
-          "type": "datetime",
-          "nullable": true,
-          "description": "Column 'createdAt' of type DATETIME",
-          "business_meaning": "temporal",
-          "sample_values": null
-        },
-        {
-          "name": "updatedAt",
-          "type": "datetime",
-          "nullable": true,
-          "description": "Column 'updatedAt' of type DATETIME",
-          "business_meaning": "temporal",
-          "sample_values": null
-        },
-        {
-          "name": "program_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'program_id' of type INTEGER",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "old_program_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'old_program_id' of type BIGINT",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "address",
-          "type": "string",
-          "nullable": true,
-          "description": "Column 'address' of type VARCHAR(255)",
-          "business_meaning": "general_data",
-          "sample_values": null
-        }
-      ],
-      "primary_key": [
-        "id"
-      ],
-      "foreign_keys": [],
-      "indexes": [
-        {
-          "name": "fixture_type_idx",
-          "columns": [
-            "fixtures_type"
-          ],
-          "unique": false,
-          "type": "standard"
-        },
-        {
-          "name": "old_id",
-          "columns": [
-            "old_id"
-          ],
-          "unique": false,
-          "type": "standard"
-        },
-        {
-          "name": "program_id_idx",
-          "columns": [
-            "program_id"
-          ],
-          "unique": false,
-          "type": "standard"
-        },
-        {
-          "name": "zone_id_idx",
-          "columns": [
-            "zone_id"
-          ],
-          "unique": false,
-          "type": "standard"
-        }
-      ],
-      "row_count": 0,
-      "sample_values": {},
-      "business_context": {
-        "likely_purpose": "unknown",
-        "domain": "general",
-        "entity_type": "unknown",
-        "confidence": 0.0
-      },
-      "common_queries": [
-        "SELECT * FROM fixtures",
-        "SELECT COUNT(*) FROM fixtures",
-        "SELECT * FROM fixtures WHERE id = ?",
-        "SELECT * FROM fixtures WHERE service_data_time >= ?",
-        "SELECT * FROM fixtures ORDER BY service_data_time DESC"
-      ]
-    },
-    "incident_comments": {
-      "name": "incident_comments",
-      "description": "Table 'incident_comments' contains 13 columns. Key columns include: id, old_id, incident_id, old_incident_id.",
-      "columns": [
-        {
-          "name": "id",
-          "type": "integer",
-          "nullable": false,
-          "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "old_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'old_id' of type BIGINT",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "incident_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'incident_id' of type INTEGER",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "old_incident_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'old_incident_id' of type BIGINT",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "date_and_time",
-          "type": "datetime",
-          "nullable": true,
-          "description": "Column 'date_and_time' of type DATETIME",
-          "business_meaning": "temporal",
-          "sample_values": null
-        },
-        {
-          "name": "description",
-          "type": "string",
-          "nullable": false,
-          "description": "Column 'description' of type TEXT (required)",
-          "business_meaning": "descriptive_text",
-          "sample_values": null
-        },
-        {
-          "name": "is_deleted",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'is_deleted' of type TINYINT with default value ''0''",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "created_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'created_id' of type INTEGER",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "old_created_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'old_created_id' of type BIGINT",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "updated_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'updated_id' of type INTEGER",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "old_updated_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'old_updated_id' of type BIGINT",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "createdAt",
-          "type": "datetime",
-          "nullable": true,
-          "description": "Column 'createdAt' of type DATETIME",
-          "business_meaning": "temporal",
-          "sample_values": null
-        },
-        {
-          "name": "updatedAt",
-          "type": "datetime",
-          "nullable": true,
-          "description": "Column 'updatedAt' of type DATETIME",
-          "business_meaning": "temporal",
-          "sample_values": null
-        }
-      ],
-      "primary_key": [
-        "id"
-      ],
-      "foreign_keys": [],
-      "indexes": [
-        {
-          "name": "idx_old_id",
-          "columns": [
-            "old_id"
-          ],
-          "unique": false,
-          "type": "standard"
-        }
-      ],
-      "row_count": 0,
-      "sample_values": {},
-      "business_context": {
-        "likely_purpose": "unknown",
-        "domain": "general",
-        "entity_type": "unknown",
-        "confidence": 0.0
-      },
-      "common_queries": [
-        "SELECT * FROM incident_comments",
-        "SELECT COUNT(*) FROM incident_comments",
-        "SELECT * FROM incident_comments WHERE id = ?",
-        "SELECT * FROM incident_comments WHERE date_and_time >= ?",
-        "SELECT * FROM incident_comments ORDER BY date_and_time DESC"
-      ]
-    },
     "incidents": {
       "name": "incidents",
       "description": "Table 'incidents' contains 61 columns. Key columns include: id, old_id, incident_type, old_incident_type, outcome_id.",
@@ -1378,250 +689,6 @@
         "SELECT * FROM incidents ORDER BY data_and_time_of_incident DESC"
       ]
     },
-    "incidents_locations": {
-      "name": "incidents_locations",
-      "description": "Table 'incidents_locations' contains 10 columns. Key columns include: id, old_id, incident_id, old_incident_id.",
-      "columns": [
-        {
-          "name": "id",
-          "type": "integer",
-          "nullable": false,
-          "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "old_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'old_id' of type BIGINT",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "incident_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'incident_id' of type INTEGER",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "old_incident_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'old_incident_id' of type BIGINT",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "location",
-          "type": "string",
-          "nullable": true,
-          "description": "Column 'location' of type TEXT",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "latitude",
-          "type": "decimal",
-          "nullable": true,
-          "description": "Column 'latitude' of type DECIMAL(10, 6) with default value ''0.000000''",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "longitude",
-          "type": "decimal",
-          "nullable": true,
-          "description": "Column 'longitude' of type DECIMAL(10, 6) with default value ''0.000000''",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "is_deleted",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'is_deleted' of type TINYINT with default value ''0''",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "createdAt",
-          "type": "datetime",
-          "nullable": true,
-          "description": "Column 'createdAt' of type DATETIME",
-          "business_meaning": "temporal",
-          "sample_values": null
-        },
-        {
-          "name": "updatedAt",
-          "type": "datetime",
-          "nullable": true,
-          "description": "Column 'updatedAt' of type DATETIME",
-          "business_meaning": "temporal",
-          "sample_values": null
-        }
-      ],
-      "primary_key": [
-        "id"
-      ],
-      "foreign_keys": [],
-      "indexes": [],
-      "row_count": 0,
-      "sample_values": {},
-      "business_context": {
-        "likely_purpose": "unknown",
-        "domain": "general",
-        "entity_type": "unknown",
-        "confidence": 0.0
-      },
-      "common_queries": [
-        "SELECT * FROM incidents_locations",
-        "SELECT COUNT(*) FROM incidents_locations",
-        "SELECT * FROM incidents_locations WHERE id = ?",
-        "SELECT * FROM incidents_locations WHERE updatedAt >= ?",
-        "SELECT * FROM incidents_locations ORDER BY updatedAt DESC"
-      ]
-    },
-    "incidents_parties": {
-      "name": "incidents_parties",
-      "description": "Table 'incidents_parties' contains 14 columns. Key columns include: id, old_id, incident_id, old_incident_id.",
-      "columns": [
-        {
-          "name": "id",
-          "type": "integer",
-          "nullable": false,
-          "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "old_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'old_id' of type BIGINT",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "incident_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'incident_id' of type INTEGER",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "old_incident_id",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'old_incident_id' of type BIGINT",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "party_type",
-          "type": "string",
-          "nullable": true,
-          "description": "Column 'party_type' of type VARCHAR(255)",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "name",
-          "type": "string",
-          "nullable": true,
-          "description": "Column 'name' of type VARCHAR(255)",
-          "business_meaning": "name_reference",
-          "sample_values": null
-        },
-        {
-          "name": "business",
-          "type": "string",
-          "nullable": true,
-          "description": "Column 'business' of type VARCHAR(255)",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "street",
-          "type": "string",
-          "nullable": true,
-          "description": "Column 'street' of type VARCHAR(255)",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "street_name",
-          "type": "string",
-          "nullable": true,
-          "description": "Column 'street_name' of type VARCHAR(255)",
-          "business_meaning": "name_reference",
-          "sample_values": null
-        },
-        {
-          "name": "phone",
-          "type": "string",
-          "nullable": true,
-          "description": "Column 'phone' of type VARCHAR(255)",
-          "business_meaning": "contact_information",
-          "sample_values": null
-        },
-        {
-          "name": "email",
-          "type": "string",
-          "nullable": true,
-          "description": "Column 'email' of type VARCHAR(255)",
-          "business_meaning": "contact_information",
-          "sample_values": null
-        },
-        {
-          "name": "is_deleted",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'is_deleted' of type TINYINT with default value ''0''",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "createdAt",
-          "type": "datetime",
-          "nullable": true,
-          "description": "Column 'createdAt' of type DATETIME",
-          "business_meaning": "temporal",
-          "sample_values": null
-        },
-        {
-          "name": "updatedAt",
-          "type": "datetime",
-          "nullable": true,
-          "description": "Column 'updatedAt' of type DATETIME",
-          "business_meaning": "temporal",
-          "sample_values": null
-        }
-      ],
-      "primary_key": [
-        "id"
-      ],
-      "foreign_keys": [],
-      "indexes": [],
-      "row_count": 0,
-      "sample_values": {},
-      "business_context": {
-        "likely_purpose": "unknown",
-        "domain": "general",
-        "entity_type": "unknown",
-        "confidence": 0.0
-      },
-      "common_queries": [
-        "SELECT * FROM incidents_parties",
-        "SELECT COUNT(*) FROM incidents_parties",
-        "SELECT * FROM incidents_parties WHERE id = ?",
-        "SELECT * FROM incidents_parties WHERE updatedAt >= ?",
-        "SELECT * FROM incidents_parties ORDER BY updatedAt DESC"
-      ]
-    },
     "incidents_types": {
       "name": "incidents_types",
       "description": "Table 'incidents_types' contains 16 columns. Key columns include: id, old_id.",
@@ -1801,9 +868,9 @@
         "SELECT * FROM incidents_types ORDER BY updatedAt DESC"
       ]
     },
-    "incidents_vehicles": {
-      "name": "incidents_vehicles",
-      "description": "Table 'incidents_vehicles' contains 12 columns. Key columns include: id, old_id, incident_id, old_incident_id.",
+    "incident_comments": {
+      "name": "incident_comments",
+      "description": "Table 'incident_comments' contains 13 columns. Key columns include: id, old_id, incident_id, old_incident_id.",
       "columns": [
         {
           "name": "id",
@@ -1838,43 +905,19 @@
           "sample_values": null
         },
         {
-          "name": "year",
-          "type": "integer",
+          "name": "date_and_time",
+          "type": "datetime",
           "nullable": true,
-          "description": "Column 'year' of type INTEGER",
-          "business_meaning": "general_data",
+          "description": "Column 'date_and_time' of type DATETIME",
+          "business_meaning": "temporal",
           "sample_values": null
         },
         {
-          "name": "make",
+          "name": "description",
           "type": "string",
-          "nullable": true,
-          "description": "Column 'make' of type VARCHAR(255)",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "model",
-          "type": "string",
-          "nullable": true,
-          "description": "Column 'model' of type VARCHAR(255)",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "color",
-          "type": "string",
-          "nullable": true,
-          "description": "Column 'color' of type VARCHAR(255)",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "license",
-          "type": "string",
-          "nullable": true,
-          "description": "Column 'license' of type VARCHAR(255)",
-          "business_meaning": "general_data",
+          "nullable": false,
+          "description": "Column 'description' of type TEXT (required)",
+          "business_meaning": "descriptive_text",
           "sample_values": null
         },
         {
@@ -1886,10 +929,42 @@
           "sample_values": null
         },
         {
+          "name": "created_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'created_id' of type INTEGER",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "old_created_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'old_created_id' of type BIGINT",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "updated_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'updated_id' of type INTEGER",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "old_updated_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'old_updated_id' of type BIGINT",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
           "name": "createdAt",
           "type": "datetime",
           "nullable": true,
-          "description": "Column 'createdAt' of type DATETIME with default value 'CURRENT_TIMESTAMP'",
+          "description": "Column 'createdAt' of type DATETIME",
           "business_meaning": "temporal",
           "sample_values": null
         },
@@ -1897,7 +972,7 @@
           "name": "updatedAt",
           "type": "datetime",
           "nullable": true,
-          "description": "Column 'updatedAt' of type DATETIME with default value 'CURRENT_TIMESTAMP'",
+          "description": "Column 'updatedAt' of type DATETIME",
           "business_meaning": "temporal",
           "sample_values": null
         }
@@ -1906,7 +981,16 @@
         "id"
       ],
       "foreign_keys": [],
-      "indexes": [],
+      "indexes": [
+        {
+          "name": "idx_old_id",
+          "columns": [
+            "old_id"
+          ],
+          "unique": false,
+          "type": "standard"
+        }
+      ],
       "row_count": 0,
       "sample_values": {},
       "business_context": {
@@ -1916,16 +1000,16 @@
         "confidence": 0.0
       },
       "common_queries": [
-        "SELECT * FROM incidents_vehicles",
-        "SELECT COUNT(*) FROM incidents_vehicles",
-        "SELECT * FROM incidents_vehicles WHERE id = ?",
-        "SELECT * FROM incidents_vehicles WHERE updatedAt >= ?",
-        "SELECT * FROM incidents_vehicles ORDER BY updatedAt DESC"
+        "SELECT * FROM incident_comments",
+        "SELECT COUNT(*) FROM incident_comments",
+        "SELECT * FROM incident_comments WHERE id = ?",
+        "SELECT * FROM incident_comments WHERE date_and_time >= ?",
+        "SELECT * FROM incident_comments ORDER BY date_and_time DESC"
       ]
     },
-    "job_titles": {
-      "name": "job_titles",
-      "description": "Table 'job_titles' contains 13 columns. with approximately 674 records. Key columns include: id, old_id.",
+    "fixtures": {
+      "name": "fixtures",
+      "description": "Table 'fixtures' contains 20 columns. Key columns include: id, old_id.",
       "columns": [
         {
           "name": "id",
@@ -1944,11 +1028,99 @@
           "sample_values": null
         },
         {
-          "name": "name",
+          "name": "fixtures_type",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'fixtures_type' of type INTEGER",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "old_fixtures_type",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'old_fixtures_type' of type BIGINT",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "nullable": false,
+          "description": "Column 'title' of type VARCHAR(128) (required)",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "description",
           "type": "string",
           "nullable": true,
-          "description": "Column 'name' of type VARCHAR(255)",
-          "business_meaning": "name_reference",
+          "description": "Column 'description' of type TEXT",
+          "business_meaning": "descriptive_text",
+          "sample_values": null
+        },
+        {
+          "name": "service_data_time",
+          "type": "datetime",
+          "nullable": true,
+          "description": "Column 'service_data_time' of type DATETIME",
+          "business_meaning": "temporal",
+          "sample_values": null
+        },
+        {
+          "name": "image",
+          "type": "json",
+          "nullable": true,
+          "description": "Column 'image' of type JSON",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "zone_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'zone_id' of type INTEGER",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "old_zone_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'old_zone_id' of type BIGINT",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "latitude",
+          "type": "decimal",
+          "nullable": false,
+          "description": "Column 'latitude' of type DECIMAL(10, 6) (required) with default value ''0.000000''",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "longitude",
+          "type": "decimal",
+          "nullable": false,
+          "description": "Column 'longitude' of type DECIMAL(10, 6) (required) with default value ''0.000000''",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "is_active",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'is_active' of type TINYINT with default value ''1''",
+          "business_meaning": "status_indicator",
+          "sample_values": null
+        },
+        {
+          "name": "is_checked",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'is_checked' of type TINYINT with default value ''0''",
+          "business_meaning": "general_data",
           "sample_values": null
         },
         {
@@ -1956,14 +1128,6 @@
           "type": "integer",
           "nullable": true,
           "description": "Column 'is_deleted' of type TINYINT with default value ''0''",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "is_custom",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'is_custom' of type TINYINT with default value ''0''",
           "business_meaning": "general_data",
           "sample_values": null
         },
@@ -1984,11 +1148,238 @@
           "sample_values": null
         },
         {
-          "name": "old_created_id",
+          "name": "program_id",
           "type": "integer",
           "nullable": true,
-          "description": "Column 'old_created_id' of type INTEGER",
+          "description": "Column 'program_id' of type INTEGER",
           "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "old_program_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'old_program_id' of type BIGINT",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "address",
+          "type": "string",
+          "nullable": true,
+          "description": "Column 'address' of type VARCHAR(255)",
+          "business_meaning": "general_data",
+          "sample_values": null
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": [],
+      "indexes": [
+        {
+          "name": "fixture_type_idx",
+          "columns": [
+            "fixtures_type"
+          ],
+          "unique": false,
+          "type": "standard"
+        },
+        {
+          "name": "old_id",
+          "columns": [
+            "old_id"
+          ],
+          "unique": false,
+          "type": "standard"
+        },
+        {
+          "name": "program_id_idx",
+          "columns": [
+            "program_id"
+          ],
+          "unique": false,
+          "type": "standard"
+        },
+        {
+          "name": "zone_id_idx",
+          "columns": [
+            "zone_id"
+          ],
+          "unique": false,
+          "type": "standard"
+        }
+      ],
+      "row_count": 0,
+      "sample_values": {},
+      "business_context": {
+        "likely_purpose": "unknown",
+        "domain": "general",
+        "entity_type": "unknown",
+        "confidence": 0.0
+      },
+      "common_queries": [
+        "SELECT * FROM fixtures",
+        "SELECT COUNT(*) FROM fixtures",
+        "SELECT * FROM fixtures WHERE id = ?",
+        "SELECT * FROM fixtures WHERE service_data_time >= ?",
+        "SELECT * FROM fixtures ORDER BY service_data_time DESC"
+      ]
+    },
+    "business": {
+      "name": "business",
+      "description": "Table 'business' contains 31 columns. Key columns include: id, old_id, old_business_type_id.",
+      "columns": [
+        {
+          "name": "id",
+          "type": "integer",
+          "nullable": false,
+          "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "old_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'old_id' of type BIGINT",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "nullable": false,
+          "description": "Column 'title' of type VARCHAR(255) (required)",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "business_type",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'business_type' of type INTEGER",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "old_business_type_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'old_business_type_id' of type BIGINT",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "disposition",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'disposition' of type INTEGER",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "old_disposition_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'old_disposition_id' of type BIGINT",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "zone",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'zone' of type INTEGER",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "old_zone_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'old_zone_id' of type BIGINT",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "location",
+          "type": "string",
+          "nullable": true,
+          "description": "Column 'location' of type VARCHAR(255)",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "property_location",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'property_location' of type INTEGER",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "old_property_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'old_property_id' of type BIGINT",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "date_established",
+          "type": "datetime",
+          "nullable": true,
+          "description": "Column 'date_established' of type DATETIME",
+          "business_meaning": "temporal",
+          "sample_values": null
+        },
+        {
+          "name": "is_active",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'is_active' of type TINYINT with default value ''0''",
+          "business_meaning": "status_indicator",
+          "sample_values": null
+        },
+        {
+          "name": "upload_files",
+          "type": "json",
+          "nullable": true,
+          "description": "Column 'upload_files' of type JSON",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "category",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'category' of type INTEGER with default value ''2''",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "status",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'status' of type INTEGER with default value ''1''",
+          "business_meaning": "status_indicator",
+          "sample_values": null
+        },
+        {
+          "name": "is_checked",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'is_checked' of type TINYINT with default value ''0''",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "is_deleted",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'is_deleted' of type TINYINT with default value ''0''",
+          "business_meaning": "general_data",
           "sample_values": null
         },
         {
@@ -2000,35 +1391,91 @@
           "sample_values": null
         },
         {
-          "name": "old_modified_id",
+          "name": "old_created_by",
           "type": "integer",
           "nullable": true,
-          "description": "Column 'old_modified_id' of type INTEGER",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "modified_by",
-          "type": "integer",
-          "nullable": true,
-          "description": "Column 'modified_by' of type INTEGER",
+          "description": "Column 'old_created_by' of type BIGINT",
           "business_meaning": "temporal",
           "sample_values": null
         },
         {
-          "name": "alias",
-          "type": "string",
+          "name": "updated_by",
+          "type": "integer",
           "nullable": true,
-          "description": "Column 'alias' of type VARCHAR(50) with default value ''''",
+          "description": "Column 'updated_by' of type INTEGER",
+          "business_meaning": "temporal",
+          "sample_values": null
+        },
+        {
+          "name": "old_updated_by",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'old_updated_by' of type BIGINT",
+          "business_meaning": "temporal",
+          "sample_values": null
+        },
+        {
+          "name": "role_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'role_id' of type INTEGER",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "old_role_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'old_role_id' of type BIGINT",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "createdAt",
+          "type": "datetime",
+          "nullable": true,
+          "description": "Column 'createdAt' of type DATETIME",
+          "business_meaning": "temporal",
+          "sample_values": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "datetime",
+          "nullable": true,
+          "description": "Column 'updatedAt' of type DATETIME",
+          "business_meaning": "temporal",
+          "sample_values": null
+        },
+        {
+          "name": "program_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'program_id' of type INTEGER",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "old_program_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'old_program_id' of type BIGINT",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "latitude",
+          "type": "decimal",
+          "nullable": true,
+          "description": "Column 'latitude' of type DECIMAL(10, 6)",
           "business_meaning": "general_data",
           "sample_values": null
         },
         {
-          "name": "is_active",
-          "type": "integer",
+          "name": "longitude",
+          "type": "decimal",
           "nullable": true,
-          "description": "Column 'is_active' of type TINYINT with default value ''1''",
-          "business_meaning": "status_indicator",
+          "description": "Column 'longitude' of type DECIMAL(10, 6)",
+          "business_meaning": "general_data",
           "sample_values": null
         }
       ],
@@ -2038,68 +1485,64 @@
       "foreign_keys": [],
       "indexes": [
         {
-          "name": "idx_deleted",
+          "name": "idx_business_type",
+          "columns": [
+            "business_type"
+          ],
+          "unique": false,
+          "type": "standard"
+        },
+        {
+          "name": "idx_disposition",
+          "columns": [
+            "disposition"
+          ],
+          "unique": false,
+          "type": "standard"
+        },
+        {
+          "name": "idx_is_deleted",
           "columns": [
             "is_deleted"
           ],
           "unique": false,
           "type": "standard"
+        },
+        {
+          "name": "idx_program_id",
+          "columns": [
+            "program_id"
+          ],
+          "unique": false,
+          "type": "standard"
+        },
+        {
+          "name": "idx_property_location",
+          "columns": [
+            "property_location"
+          ],
+          "unique": false,
+          "type": "standard"
+        },
+        {
+          "name": "idx_zone",
+          "columns": [
+            "zone"
+          ],
+          "unique": false,
+          "type": "standard"
+        },
+        {
+          "name": "old_id",
+          "columns": [
+            "old_id"
+          ],
+          "unique": false,
+          "type": "standard"
         }
       ],
-      "row_count": 674,
-      "sample_values": {
-        "id": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "old_id": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "name": [
-          "Vice President",
-          "Regional Vice President",
-          "Regional Director",
-          "Project Manager",
-          "General Manager"
-        ],
-        "is_deleted": [
-          0
-        ],
-        "is_custom": [
-          0
-        ],
-        "createdAt": [
-          "2020-07-10 19:45:18"
-        ],
-        "updatedAt": [
-          "2020-07-10 19:45:18"
-        ],
-        "old_created_id": [
-          908
-        ],
-        "created_by": [],
-        "old_modified_id": [
-          908
-        ],
-        "modified_by": [],
-        "alias": [
-          "vice-president",
-          "regional-vice-president",
-          "regional-director",
-          "project-manager",
-          "general-manager"
-        ],
-        "is_active": [
-          1
-        ]
-      },
+      "row_count": 0,
+      "sample_values": {},
       "business_context": {
         "likely_purpose": "unknown",
         "domain": "general",
@@ -2107,11 +1550,11 @@
         "confidence": 0.0
       },
       "common_queries": [
-        "SELECT * FROM job_titles",
-        "SELECT COUNT(*) FROM job_titles",
-        "SELECT * FROM job_titles WHERE id = ?",
-        "SELECT * FROM job_titles WHERE updatedAt >= ?",
-        "SELECT * FROM job_titles ORDER BY updatedAt DESC"
+        "SELECT * FROM business",
+        "SELECT COUNT(*) FROM business",
+        "SELECT * FROM business WHERE id = ?",
+        "SELECT * FROM business WHERE date_established >= ?",
+        "SELECT * FROM business ORDER BY date_established DESC"
       ]
     },
     "media_library": {
@@ -2621,6 +2064,372 @@
         "SELECT * FROM media_library_file_category WHERE id = ?",
         "SELECT * FROM media_library_file_category WHERE updatedAt >= ?",
         "SELECT * FROM media_library_file_category ORDER BY updatedAt DESC"
+      ]
+    },
+    "incidents_locations": {
+      "name": "incidents_locations",
+      "description": "Table 'incidents_locations' contains 10 columns. Key columns include: id, old_id, incident_id, old_incident_id.",
+      "columns": [
+        {
+          "name": "id",
+          "type": "integer",
+          "nullable": false,
+          "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "old_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'old_id' of type BIGINT",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "incident_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'incident_id' of type INTEGER",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "old_incident_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'old_incident_id' of type BIGINT",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "location",
+          "type": "string",
+          "nullable": true,
+          "description": "Column 'location' of type TEXT",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "latitude",
+          "type": "decimal",
+          "nullable": true,
+          "description": "Column 'latitude' of type DECIMAL(10, 6) with default value ''0.000000''",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "longitude",
+          "type": "decimal",
+          "nullable": true,
+          "description": "Column 'longitude' of type DECIMAL(10, 6) with default value ''0.000000''",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "is_deleted",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'is_deleted' of type TINYINT with default value ''0''",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "createdAt",
+          "type": "datetime",
+          "nullable": true,
+          "description": "Column 'createdAt' of type DATETIME",
+          "business_meaning": "temporal",
+          "sample_values": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "datetime",
+          "nullable": true,
+          "description": "Column 'updatedAt' of type DATETIME",
+          "business_meaning": "temporal",
+          "sample_values": null
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": [],
+      "indexes": [],
+      "row_count": 0,
+      "sample_values": {},
+      "business_context": {
+        "likely_purpose": "unknown",
+        "domain": "general",
+        "entity_type": "unknown",
+        "confidence": 0.0
+      },
+      "common_queries": [
+        "SELECT * FROM incidents_locations",
+        "SELECT COUNT(*) FROM incidents_locations",
+        "SELECT * FROM incidents_locations WHERE id = ?",
+        "SELECT * FROM incidents_locations WHERE updatedAt >= ?",
+        "SELECT * FROM incidents_locations ORDER BY updatedAt DESC"
+      ]
+    },
+    "incidents_parties": {
+      "name": "incidents_parties",
+      "description": "Table 'incidents_parties' contains 14 columns. Key columns include: id, old_id, incident_id, old_incident_id.",
+      "columns": [
+        {
+          "name": "id",
+          "type": "integer",
+          "nullable": false,
+          "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "old_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'old_id' of type BIGINT",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "incident_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'incident_id' of type INTEGER",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "old_incident_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'old_incident_id' of type BIGINT",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "party_type",
+          "type": "string",
+          "nullable": true,
+          "description": "Column 'party_type' of type VARCHAR(255)",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "nullable": true,
+          "description": "Column 'name' of type VARCHAR(255)",
+          "business_meaning": "name_reference",
+          "sample_values": null
+        },
+        {
+          "name": "business",
+          "type": "string",
+          "nullable": true,
+          "description": "Column 'business' of type VARCHAR(255)",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "street",
+          "type": "string",
+          "nullable": true,
+          "description": "Column 'street' of type VARCHAR(255)",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "street_name",
+          "type": "string",
+          "nullable": true,
+          "description": "Column 'street_name' of type VARCHAR(255)",
+          "business_meaning": "name_reference",
+          "sample_values": null
+        },
+        {
+          "name": "phone",
+          "type": "string",
+          "nullable": true,
+          "description": "Column 'phone' of type VARCHAR(255)",
+          "business_meaning": "contact_information",
+          "sample_values": null
+        },
+        {
+          "name": "email",
+          "type": "string",
+          "nullable": true,
+          "description": "Column 'email' of type VARCHAR(255)",
+          "business_meaning": "contact_information",
+          "sample_values": null
+        },
+        {
+          "name": "is_deleted",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'is_deleted' of type TINYINT with default value ''0''",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "createdAt",
+          "type": "datetime",
+          "nullable": true,
+          "description": "Column 'createdAt' of type DATETIME",
+          "business_meaning": "temporal",
+          "sample_values": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "datetime",
+          "nullable": true,
+          "description": "Column 'updatedAt' of type DATETIME",
+          "business_meaning": "temporal",
+          "sample_values": null
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": [],
+      "indexes": [],
+      "row_count": 0,
+      "sample_values": {},
+      "business_context": {
+        "likely_purpose": "unknown",
+        "domain": "general",
+        "entity_type": "unknown",
+        "confidence": 0.0
+      },
+      "common_queries": [
+        "SELECT * FROM incidents_parties",
+        "SELECT COUNT(*) FROM incidents_parties",
+        "SELECT * FROM incidents_parties WHERE id = ?",
+        "SELECT * FROM incidents_parties WHERE updatedAt >= ?",
+        "SELECT * FROM incidents_parties ORDER BY updatedAt DESC"
+      ]
+    },
+    "incidents_vehicles": {
+      "name": "incidents_vehicles",
+      "description": "Table 'incidents_vehicles' contains 12 columns. Key columns include: id, old_id, incident_id, old_incident_id.",
+      "columns": [
+        {
+          "name": "id",
+          "type": "integer",
+          "nullable": false,
+          "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "old_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'old_id' of type BIGINT",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "incident_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'incident_id' of type INTEGER",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "old_incident_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'old_incident_id' of type BIGINT",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "year",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'year' of type INTEGER",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "make",
+          "type": "string",
+          "nullable": true,
+          "description": "Column 'make' of type VARCHAR(255)",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "model",
+          "type": "string",
+          "nullable": true,
+          "description": "Column 'model' of type VARCHAR(255)",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "color",
+          "type": "string",
+          "nullable": true,
+          "description": "Column 'color' of type VARCHAR(255)",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "license",
+          "type": "string",
+          "nullable": true,
+          "description": "Column 'license' of type VARCHAR(255)",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "is_deleted",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'is_deleted' of type TINYINT with default value ''0''",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "createdAt",
+          "type": "datetime",
+          "nullable": true,
+          "description": "Column 'createdAt' of type DATETIME with default value 'CURRENT_TIMESTAMP'",
+          "business_meaning": "temporal",
+          "sample_values": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "datetime",
+          "nullable": true,
+          "description": "Column 'updatedAt' of type DATETIME with default value 'CURRENT_TIMESTAMP'",
+          "business_meaning": "temporal",
+          "sample_values": null
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": [],
+      "indexes": [],
+      "row_count": 0,
+      "sample_values": {},
+      "business_context": {
+        "likely_purpose": "unknown",
+        "domain": "general",
+        "entity_type": "unknown",
+        "confidence": 0.0
+      },
+      "common_queries": [
+        "SELECT * FROM incidents_vehicles",
+        "SELECT COUNT(*) FROM incidents_vehicles",
+        "SELECT * FROM incidents_vehicles WHERE id = ?",
+        "SELECT * FROM incidents_vehicles WHERE updatedAt >= ?",
+        "SELECT * FROM incidents_vehicles ORDER BY updatedAt DESC"
       ]
     },
     "program": {
@@ -3214,6 +3023,128 @@
         "SELECT * FROM program ORDER BY time_zone DESC"
       ]
     },
+    "web_constants": {
+      "name": "web_constants",
+      "description": "Table 'web_constants' contains 6 columns. with approximately 38 records. Key columns include: id, key_name.",
+      "columns": [
+        {
+          "name": "id",
+          "type": "integer",
+          "nullable": false,
+          "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "module",
+          "type": "string",
+          "nullable": true,
+          "description": "Column 'module' of type VARCHAR(128)",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "key_name",
+          "type": "string",
+          "nullable": true,
+          "description": "Column 'key_name' of type VARCHAR(128)",
+          "business_meaning": "name_reference",
+          "sample_values": null
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "nullable": true,
+          "description": "Column 'value' of type VARCHAR(2000)",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "createdAt",
+          "type": "datetime",
+          "nullable": true,
+          "description": "Column 'createdAt' of type DATETIME",
+          "business_meaning": "temporal",
+          "sample_values": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "datetime",
+          "nullable": true,
+          "description": "Column 'updatedAt' of type DATETIME",
+          "business_meaning": "temporal",
+          "sample_values": null
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": [],
+      "indexes": [
+        {
+          "name": "key_name_idx",
+          "columns": [
+            "key_name"
+          ],
+          "unique": false,
+          "type": "standard"
+        },
+        {
+          "name": "module_idx",
+          "columns": [
+            "module"
+          ],
+          "unique": false,
+          "type": "standard"
+        }
+      ],
+      "row_count": 38,
+      "sample_values": {
+        "id": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "module": [
+          "ReportResponseTemplate"
+        ],
+        "key_name": [
+          "ticket",
+          "ticket_count",
+          "ticket_detail",
+          "entries_by_shift",
+          "inspections"
+        ],
+        "value": [
+          "{\"headers\":[{\"label\":\"Id\",\"isSort\":true,\"sortKey\":\"id\",\"value\":\"id\"},{\"label\":\"Title\",\"isSort\":true,\"sortKey\":\"title\",\"value\":\"title\"},{\"label\":\"Department\",\"isSort\":true,\"sortKey\":\"department\",\"value\":\"department\"},{\"label\":\"Cleaner\",\"isSort\":true,\"sortKey\":\"cleaner\",\"value\":\"cleaner\"},{\"label\":\"Address\",\"isSort\":true,\"sortKey\":\"address\",\"value\":\"address\"},{\"label\":\"Created\",\"isSort\":true,\"sortKey\":\"created\",\"value\":\"created\"},{\"label\":\"Created By\",\"isSort\":true,\"sortKey\":\"created_by\",\"value\":\"created_by\"},{\"label\":\"Completed\",\"isSort\":true,\"sortKey\":\"completed\",\"value\":\"completed\"},{\"label\":\"Aged\",\"isSort\":true,\"sortKey\":\"aged\",\"value\":\"aged\"},{\"label\":\"Area\",\"isSort\":true,\"sortKey\":\"area\",\"value\":\"area\"},{\"label\":\"Status\",\"isSort\":true,\"sortKey\":\"statuses\",\"value\":\"statuses\"},{\"label\":\"Description\",\"isSort\":false,\"sortKey\":\"description\",\"value\":\"description\"},{\"label\":\"Comments\",\"isSort\":false,\"sortKey\":\"add_info\",\"value\":\"add_info\"},{\"label\":\"Tasks\",\"isSort\":false,\"value\":\"tasks\"},{\"label\":\"Options\",\"isSort\":false,\"sortKey\":\"\",\"value\":\"\",\"options\":[{\"action\":\"view\",\"id\":\"id\",\"page\":\"/main/maintenance/view-request/\"}]}],\"sort_keys\":{\"id\":\"mr.id\",\"title\":\"mt.title\",\"department\":\"md.title\",\"cleaner\":\"cu.id\",\"address\":\"address\",\"created\":\"mr.createdAt\",\"created_by\":\"created_by\",\"completed\":\"mr.completedOn\",\"aged\":\"mr.aged\",\"area\":\"z.zone_name\",\"statuses\":\"statuses\"},\"export_row_id\":null}",
+          "{\"headers\":[{\"label\":\"Tickets Type\",\"isSort\":true,\"sortKey\":\"title\",\"value\":\"title\"},{\"label\":\"Count\",\"isSort\":true,\"sortKey\":\"count\",\"value\":\"count\"}],\"sort_keys\":{\"title\":\"mt.title\",\"count\":\"count\"},\"export_row_id\":null}",
+          "{\"headers\":[{\"label\":\"Request\",\"isSort\":true,\"sortKey\":\"request\",\"value\":\"title\"},{\"label\":\"Type\",\"isSort\":true,\"sortKey\":\"type\",\"value\":\"type\"},{\"label\":\"Comments\",\"isSort\":false,\"sortKey\":\"message_count\",\"value\":\"message_count\",\"hyperLink\":{\"id\":\"id\",\"page\":\"/main/maintenance/view-request/\"}},{\"label\":\"Tasks\",\"isSort\":false,\"value\":\"tasks\"},{\"label\":\"Status\",\"isSort\":true,\"sortKey\":\"statuses\",\"value\":\"statuses\"},{\"label\":\"Modified By\",\"isSort\":true,\"sortKey\":\"modified_by\",\"value\":\"modified_by\"},{\"label\":\"Modified Date\",\"isSort\":true,\"sortKey\":\"updated\",\"value\":\"updated\"},{\"label\":\"Created By\",\"isSort\":true,\"sortKey\":\"created_by\",\"value\":\"created_by\"},{\"label\":\"Created Date\",\"isSort\":true,\"sortKey\":\"created\",\"value\":\"created\"},{\"label\":\"Options\",\"isSort\":false,\"sortKey\":\"\",\"value\":\"\",\"options\":[{\"action\":\"view\",\"id\":\"id\",\"page\":\"/main/maintenance/view-request/\"},{\"action\":\"audit\",\"id\":\"id\",\"page\":\"/main/maintenance/audit-request/\"}]}],\"sort_keys\":{\"request\":\"mr.title\",\"type\":\"mt.title\",\"message_count\":\"message_count\",\"modified_by\":\"modified_by\",\"updated\":\"mr.updatedAt\",\"created_by\":\"created_by\",\"created\":\"mr.createdAt\"},\"export_row_id\":\"id\"}",
+          "{\"headers\":[{\"label\":\"Site Name\",\"isSort\":true,\"sortKey\":\"program_name\",\"value\":\"program_name\"},{\"label\":\"Total Site Stats\",\"isSort\":true,\"sortKey\":\"total_stats\",\"value\":\"total_stats\"},{\"label\":\"Total Site Inspections\",\"isSort\":true,\"sortKey\":\"total_inspections\",\"value\":\"total_inspections\"},{\"label\":\"Total Site Tickets\",\"isSort\":true,\"sortKey\":\"total_tickets\",\"value\":\"total_tickets\"},{\"label\":\"Total Site Entries\",\"isSort\":true,\"sortKey\":\"total_entries\",\"value\":\"total_entries\"},{\"label\":\"Total Shift Hours\",\"isSort\":true,\"sortKey\":\"total_shift_hour\",\"value\":\"total_shift_hour\"},{\"label\":\"Total Actual Hours\",\"isSort\":true,\"sortKey\":\"total_actual_shift_hour\",\"value\":\"total_actual_shift_hour\"}],\"sort_keys\":{\"program_name\":\"p.program_name\",\"total_stats\":\"total_stats\",\"total_inspections\":\"total_inspections\",\"total_tickets\":\"total_tickets\",\"total_entries\":\"total_entries\",\"total_shift_hour\":\"total_shift_hour\",\"total_actual_shift_hour\":\"total_actual_shift_hour\"}}",
+          "{\"headers\":[{\"label\":\"Created\",\"isSort\":true,\"sortKey\":\"created\",\"value\":\"created\"},{\"label\":\"Area\",\"isSort\":true,\"sortKey\":\"area\",\"value\":\"area\"},{\"label\":\"Inspection\",\"isSort\":true,\"sortKey\":\"inspection\",\"value\":\"inspection\"},{\"label\":\"Score\",\"isSort\":false,\"sortKey\":\"score\",\"value\":\"score\"},{\"label\":\"Inspector\",\"isSort\":true,\"sortKey\":\"inspector\",\"value\":\"inspector\"}],\"sort_keys\":{\"completed\":\"i.createdAt\",\"area\":\"area.zone_name\",\"inspection\":\"inspectionForm.name\"},\"export_row_id\":null}"
+        ],
+        "createdAt": [
+          "2024-12-30 07:45:34"
+        ],
+        "updatedAt": [
+          "2024-12-30 07:45:34"
+        ]
+      },
+      "business_context": {
+        "likely_purpose": "unknown",
+        "domain": "general",
+        "entity_type": "unknown",
+        "confidence": 0.0
+      },
+      "common_queries": [
+        "SELECT * FROM web_constants",
+        "SELECT COUNT(*) FROM web_constants",
+        "SELECT * FROM web_constants WHERE id = ?",
+        "SELECT * FROM web_constants WHERE updatedAt >= ?",
+        "SELECT * FROM web_constants ORDER BY updatedAt DESC"
+      ]
+    },
     "user": {
       "name": "user",
       "description": "Table 'user' contains 35 columns. with approximately 26 records. Key columns include: id, old_id.",
@@ -3673,6 +3604,197 @@
         "SELECT * FROM user ORDER BY start_date DESC"
       ]
     },
+    "job_titles": {
+      "name": "job_titles",
+      "description": "Table 'job_titles' contains 13 columns. with approximately 674 records. Key columns include: id, old_id.",
+      "columns": [
+        {
+          "name": "id",
+          "type": "integer",
+          "nullable": false,
+          "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "old_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'old_id' of type BIGINT",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "nullable": true,
+          "description": "Column 'name' of type VARCHAR(255)",
+          "business_meaning": "name_reference",
+          "sample_values": null
+        },
+        {
+          "name": "is_deleted",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'is_deleted' of type TINYINT with default value ''0''",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "is_custom",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'is_custom' of type TINYINT with default value ''0''",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "createdAt",
+          "type": "datetime",
+          "nullable": true,
+          "description": "Column 'createdAt' of type DATETIME",
+          "business_meaning": "temporal",
+          "sample_values": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "datetime",
+          "nullable": true,
+          "description": "Column 'updatedAt' of type DATETIME",
+          "business_meaning": "temporal",
+          "sample_values": null
+        },
+        {
+          "name": "old_created_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'old_created_id' of type INTEGER",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "created_by",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'created_by' of type INTEGER",
+          "business_meaning": "temporal",
+          "sample_values": null
+        },
+        {
+          "name": "old_modified_id",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'old_modified_id' of type INTEGER",
+          "business_meaning": "identifier",
+          "sample_values": null
+        },
+        {
+          "name": "modified_by",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'modified_by' of type INTEGER",
+          "business_meaning": "temporal",
+          "sample_values": null
+        },
+        {
+          "name": "alias",
+          "type": "string",
+          "nullable": true,
+          "description": "Column 'alias' of type VARCHAR(50) with default value ''''",
+          "business_meaning": "general_data",
+          "sample_values": null
+        },
+        {
+          "name": "is_active",
+          "type": "integer",
+          "nullable": true,
+          "description": "Column 'is_active' of type TINYINT with default value ''1''",
+          "business_meaning": "status_indicator",
+          "sample_values": null
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": [],
+      "indexes": [
+        {
+          "name": "idx_deleted",
+          "columns": [
+            "is_deleted"
+          ],
+          "unique": false,
+          "type": "standard"
+        }
+      ],
+      "row_count": 674,
+      "sample_values": {
+        "id": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "old_id": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "name": [
+          "Vice President",
+          "Regional Vice President",
+          "Regional Director",
+          "Project Manager",
+          "General Manager"
+        ],
+        "is_deleted": [
+          0
+        ],
+        "is_custom": [
+          0
+        ],
+        "createdAt": [
+          "2020-07-10 19:45:18"
+        ],
+        "updatedAt": [
+          "2020-07-10 19:45:18"
+        ],
+        "old_created_id": [
+          908
+        ],
+        "created_by": [],
+        "old_modified_id": [
+          908
+        ],
+        "modified_by": [],
+        "alias": [
+          "vice-president",
+          "regional-vice-president",
+          "regional-director",
+          "project-manager",
+          "general-manager"
+        ],
+        "is_active": [
+          1
+        ]
+      },
+      "business_context": {
+        "likely_purpose": "unknown",
+        "domain": "general",
+        "entity_type": "unknown",
+        "confidence": 0.0
+      },
+      "common_queries": [
+        "SELECT * FROM job_titles",
+        "SELECT COUNT(*) FROM job_titles",
+        "SELECT * FROM job_titles WHERE id = ?",
+        "SELECT * FROM job_titles WHERE updatedAt >= ?",
+        "SELECT * FROM job_titles ORDER BY updatedAt DESC"
+      ]
+    },
     "user_program_mapping": {
       "name": "user_program_mapping",
       "description": "Table 'user_program_mapping' contains 15 columns. with approximately 26 records. Key columns include: id, old_id, user_id, old_user_id, program_ids.",
@@ -3920,128 +4042,6 @@
         "SELECT * FROM user_program_mapping WHERE updatedAt >= ?",
         "SELECT * FROM user_program_mapping ORDER BY updatedAt DESC"
       ]
-    },
-    "web_constants": {
-      "name": "web_constants",
-      "description": "Table 'web_constants' contains 6 columns. with approximately 38 records. Key columns include: id, key_name.",
-      "columns": [
-        {
-          "name": "id",
-          "type": "integer",
-          "nullable": false,
-          "description": "Column 'id' of type INTEGER (required) (auto-incrementing)",
-          "business_meaning": "identifier",
-          "sample_values": null
-        },
-        {
-          "name": "module",
-          "type": "string",
-          "nullable": true,
-          "description": "Column 'module' of type VARCHAR(128)",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "key_name",
-          "type": "string",
-          "nullable": true,
-          "description": "Column 'key_name' of type VARCHAR(128)",
-          "business_meaning": "name_reference",
-          "sample_values": null
-        },
-        {
-          "name": "value",
-          "type": "string",
-          "nullable": true,
-          "description": "Column 'value' of type VARCHAR(2000)",
-          "business_meaning": "general_data",
-          "sample_values": null
-        },
-        {
-          "name": "createdAt",
-          "type": "datetime",
-          "nullable": true,
-          "description": "Column 'createdAt' of type DATETIME",
-          "business_meaning": "temporal",
-          "sample_values": null
-        },
-        {
-          "name": "updatedAt",
-          "type": "datetime",
-          "nullable": true,
-          "description": "Column 'updatedAt' of type DATETIME",
-          "business_meaning": "temporal",
-          "sample_values": null
-        }
-      ],
-      "primary_key": [
-        "id"
-      ],
-      "foreign_keys": [],
-      "indexes": [
-        {
-          "name": "key_name_idx",
-          "columns": [
-            "key_name"
-          ],
-          "unique": false,
-          "type": "standard"
-        },
-        {
-          "name": "module_idx",
-          "columns": [
-            "module"
-          ],
-          "unique": false,
-          "type": "standard"
-        }
-      ],
-      "row_count": 38,
-      "sample_values": {
-        "id": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "module": [
-          "ReportResponseTemplate"
-        ],
-        "key_name": [
-          "ticket",
-          "ticket_count",
-          "ticket_detail",
-          "entries_by_shift",
-          "inspections"
-        ],
-        "value": [
-          "{\"headers\":[{\"label\":\"Id\",\"isSort\":true,\"sortKey\":\"id\",\"value\":\"id\"},{\"label\":\"Title\",\"isSort\":true,\"sortKey\":\"title\",\"value\":\"title\"},{\"label\":\"Department\",\"isSort\":true,\"sortKey\":\"department\",\"value\":\"department\"},{\"label\":\"Cleaner\",\"isSort\":true,\"sortKey\":\"cleaner\",\"value\":\"cleaner\"},{\"label\":\"Address\",\"isSort\":true,\"sortKey\":\"address\",\"value\":\"address\"},{\"label\":\"Created\",\"isSort\":true,\"sortKey\":\"created\",\"value\":\"created\"},{\"label\":\"Created By\",\"isSort\":true,\"sortKey\":\"created_by\",\"value\":\"created_by\"},{\"label\":\"Completed\",\"isSort\":true,\"sortKey\":\"completed\",\"value\":\"completed\"},{\"label\":\"Aged\",\"isSort\":true,\"sortKey\":\"aged\",\"value\":\"aged\"},{\"label\":\"Area\",\"isSort\":true,\"sortKey\":\"area\",\"value\":\"area\"},{\"label\":\"Status\",\"isSort\":true,\"sortKey\":\"statuses\",\"value\":\"statuses\"},{\"label\":\"Description\",\"isSort\":false,\"sortKey\":\"description\",\"value\":\"description\"},{\"label\":\"Comments\",\"isSort\":false,\"sortKey\":\"add_info\",\"value\":\"add_info\"},{\"label\":\"Tasks\",\"isSort\":false,\"value\":\"tasks\"},{\"label\":\"Options\",\"isSort\":false,\"sortKey\":\"\",\"value\":\"\",\"options\":[{\"action\":\"view\",\"id\":\"id\",\"page\":\"/main/maintenance/view-request/\"}]}],\"sort_keys\":{\"id\":\"mr.id\",\"title\":\"mt.title\",\"department\":\"md.title\",\"cleaner\":\"cu.id\",\"address\":\"address\",\"created\":\"mr.createdAt\",\"created_by\":\"created_by\",\"completed\":\"mr.completedOn\",\"aged\":\"mr.aged\",\"area\":\"z.zone_name\",\"statuses\":\"statuses\"},\"export_row_id\":null}",
-          "{\"headers\":[{\"label\":\"Tickets Type\",\"isSort\":true,\"sortKey\":\"title\",\"value\":\"title\"},{\"label\":\"Count\",\"isSort\":true,\"sortKey\":\"count\",\"value\":\"count\"}],\"sort_keys\":{\"title\":\"mt.title\",\"count\":\"count\"},\"export_row_id\":null}",
-          "{\"headers\":[{\"label\":\"Request\",\"isSort\":true,\"sortKey\":\"request\",\"value\":\"title\"},{\"label\":\"Type\",\"isSort\":true,\"sortKey\":\"type\",\"value\":\"type\"},{\"label\":\"Comments\",\"isSort\":false,\"sortKey\":\"message_count\",\"value\":\"message_count\",\"hyperLink\":{\"id\":\"id\",\"page\":\"/main/maintenance/view-request/\"}},{\"label\":\"Tasks\",\"isSort\":false,\"value\":\"tasks\"},{\"label\":\"Status\",\"isSort\":true,\"sortKey\":\"statuses\",\"value\":\"statuses\"},{\"label\":\"Modified By\",\"isSort\":true,\"sortKey\":\"modified_by\",\"value\":\"modified_by\"},{\"label\":\"Modified Date\",\"isSort\":true,\"sortKey\":\"updated\",\"value\":\"updated\"},{\"label\":\"Created By\",\"isSort\":true,\"sortKey\":\"created_by\",\"value\":\"created_by\"},{\"label\":\"Created Date\",\"isSort\":true,\"sortKey\":\"created\",\"value\":\"created\"},{\"label\":\"Options\",\"isSort\":false,\"sortKey\":\"\",\"value\":\"\",\"options\":[{\"action\":\"view\",\"id\":\"id\",\"page\":\"/main/maintenance/view-request/\"},{\"action\":\"audit\",\"id\":\"id\",\"page\":\"/main/maintenance/audit-request/\"}]}],\"sort_keys\":{\"request\":\"mr.title\",\"type\":\"mt.title\",\"message_count\":\"message_count\",\"modified_by\":\"modified_by\",\"updated\":\"mr.updatedAt\",\"created_by\":\"created_by\",\"created\":\"mr.createdAt\"},\"export_row_id\":\"id\"}",
-          "{\"headers\":[{\"label\":\"Site Name\",\"isSort\":true,\"sortKey\":\"program_name\",\"value\":\"program_name\"},{\"label\":\"Total Site Stats\",\"isSort\":true,\"sortKey\":\"total_stats\",\"value\":\"total_stats\"},{\"label\":\"Total Site Inspections\",\"isSort\":true,\"sortKey\":\"total_inspections\",\"value\":\"total_inspections\"},{\"label\":\"Total Site Tickets\",\"isSort\":true,\"sortKey\":\"total_tickets\",\"value\":\"total_tickets\"},{\"label\":\"Total Site Entries\",\"isSort\":true,\"sortKey\":\"total_entries\",\"value\":\"total_entries\"},{\"label\":\"Total Shift Hours\",\"isSort\":true,\"sortKey\":\"total_shift_hour\",\"value\":\"total_shift_hour\"},{\"label\":\"Total Actual Hours\",\"isSort\":true,\"sortKey\":\"total_actual_shift_hour\",\"value\":\"total_actual_shift_hour\"}],\"sort_keys\":{\"program_name\":\"p.program_name\",\"total_stats\":\"total_stats\",\"total_inspections\":\"total_inspections\",\"total_tickets\":\"total_tickets\",\"total_entries\":\"total_entries\",\"total_shift_hour\":\"total_shift_hour\",\"total_actual_shift_hour\":\"total_actual_shift_hour\"}}",
-          "{\"headers\":[{\"label\":\"Created\",\"isSort\":true,\"sortKey\":\"created\",\"value\":\"created\"},{\"label\":\"Area\",\"isSort\":true,\"sortKey\":\"area\",\"value\":\"area\"},{\"label\":\"Inspection\",\"isSort\":true,\"sortKey\":\"inspection\",\"value\":\"inspection\"},{\"label\":\"Score\",\"isSort\":false,\"sortKey\":\"score\",\"value\":\"score\"},{\"label\":\"Inspector\",\"isSort\":true,\"sortKey\":\"inspector\",\"value\":\"inspector\"}],\"sort_keys\":{\"completed\":\"i.createdAt\",\"area\":\"area.zone_name\",\"inspection\":\"inspectionForm.name\"},\"export_row_id\":null}"
-        ],
-        "createdAt": [
-          "2024-12-30 07:45:34"
-        ],
-        "updatedAt": [
-          "2024-12-30 07:45:34"
-        ]
-      },
-      "business_context": {
-        "likely_purpose": "unknown",
-        "domain": "general",
-        "entity_type": "unknown",
-        "confidence": 0.0
-      },
-      "common_queries": [
-        "SELECT * FROM web_constants",
-        "SELECT COUNT(*) FROM web_constants",
-        "SELECT * FROM web_constants WHERE id = ?",
-        "SELECT * FROM web_constants WHERE updatedAt >= ?",
-        "SELECT * FROM web_constants ORDER BY updatedAt DESC"
-      ]
     }
   },
   "relationships": [],
@@ -4064,82 +4064,82 @@
         "column_name": "id",
         "appears_in_tables": 15,
         "tables": [
-          "business",
-          "fixtures",
-          "incident_comments",
           "incidents",
-          "incidents_locations",
-          "incidents_parties",
           "incidents_types",
-          "incidents_vehicles",
-          "job_titles",
+          "incident_comments",
+          "fixtures",
+          "business",
           "media_library",
           "media_library_file_category",
+          "incidents_locations",
+          "incidents_parties",
+          "incidents_vehicles",
           "program",
+          "web_constants",
           "user",
-          "user_program_mapping",
-          "web_constants"
+          "job_titles",
+          "user_program_mapping"
         ]
       },
       {
         "column_name": "createdAt",
         "appears_in_tables": 15,
         "tables": [
-          "business",
-          "fixtures",
-          "incident_comments",
           "incidents",
-          "incidents_locations",
-          "incidents_parties",
           "incidents_types",
-          "incidents_vehicles",
-          "job_titles",
+          "incident_comments",
+          "fixtures",
+          "business",
           "media_library",
           "media_library_file_category",
+          "incidents_locations",
+          "incidents_parties",
+          "incidents_vehicles",
           "program",
+          "web_constants",
           "user",
-          "user_program_mapping",
-          "web_constants"
+          "job_titles",
+          "user_program_mapping"
         ]
       },
       {
         "column_name": "updatedAt",
         "appears_in_tables": 15,
         "tables": [
-          "business",
-          "fixtures",
-          "incident_comments",
           "incidents",
-          "incidents_locations",
-          "incidents_parties",
           "incidents_types",
-          "incidents_vehicles",
-          "job_titles",
+          "incident_comments",
+          "fixtures",
+          "business",
           "media_library",
           "media_library_file_category",
+          "incidents_locations",
+          "incidents_parties",
+          "incidents_vehicles",
           "program",
+          "web_constants",
           "user",
-          "user_program_mapping",
-          "web_constants"
+          "job_titles",
+          "user_program_mapping"
         ]
       },
       {
         "column_name": "is_deleted",
         "appears_in_tables": 14,
         "tables": [
-          "business",
-          "fixtures",
-          "incident_comments",
           "incidents",
-          "incidents_locations",
-          "incidents_parties",
           "incidents_types",
-          "incidents_vehicles",
-          "job_titles",
+          "incident_comments",
+          "fixtures",
+          "business",
           "media_library",
           "media_library_file_category",
+          "incidents_locations",
+          "incidents_parties",
+          "incidents_vehicles",
           "program",
           "user",
+          "job_titles",
           "user_program_mapping"
         ]
       },
@@ -4147,18 +4147,18 @@
         "column_name": "old_id",
         "appears_in_tables": 13,
         "tables": [
-          "business",
-          "fixtures",
-          "incident_comments",
           "incidents",
+          "incidents_types",
+          "incident_comments",
+          "fixtures",
+          "business",
+          "media_library",
           "incidents_locations",
           "incidents_parties",
-          "incidents_types",
           "incidents_vehicles",
-          "job_titles",
-          "media_library",
           "program",
           "user",
+          "job_titles",
           "user_program_mapping"
         ]
       },
@@ -4166,59 +4166,59 @@
         "column_name": "is_active",
         "appears_in_tables": 8,
         "tables": [
-          "business",
-          "fixtures",
           "incidents",
           "incidents_types",
-          "job_titles",
+          "fixtures",
+          "business",
           "media_library",
           "program",
-          "user"
+          "user",
+          "job_titles"
         ]
       },
       {
         "column_name": "created_by",
         "appears_in_tables": 6,
         "tables": [
-          "business",
           "incidents",
-          "job_titles",
+          "business",
           "media_library",
           "program",
-          "user"
-        ]
-      },
-      {
-        "column_name": "title",
-        "appears_in_tables": 5,
-        "tables": [
-          "business",
-          "fixtures",
-          "incidents_types",
-          "media_library",
-          "media_library_file_category"
-        ]
-      },
-      {
-        "column_name": "updated_by",
-        "appears_in_tables": 5,
-        "tables": [
-          "business",
-          "incidents",
-          "media_library",
-          "program",
-          "user"
+          "user",
+          "job_titles"
         ]
       },
       {
         "column_name": "program_id",
         "appears_in_tables": 5,
         "tables": [
-          "business",
-          "fixtures",
           "incidents",
           "incidents_types",
+          "fixtures",
+          "business",
           "media_library"
+        ]
+      },
+      {
+        "column_name": "old_program_id",
+        "appears_in_tables": 5,
+        "tables": [
+          "incidents",
+          "incidents_types",
+          "fixtures",
+          "business",
+          "media_library"
+        ]
+      },
+      {
+        "column_name": "updated_by",
+        "appears_in_tables": 5,
+        "tables": [
+          "incidents",
+          "business",
+          "media_library",
+          "program",
+          "user"
         ]
       }
     ],
@@ -4235,6 +4235,10 @@
         "count": 46,
         "percentage": 14.37
       },
+      "other": {
+        "count": 3,
+        "percentage": 0.94
+      },
       "json": {
         "count": 22,
         "percentage": 6.88
@@ -4242,10 +4246,6 @@
       "decimal": {
         "count": 13,
         "percentage": 4.06
-      },
-      "other": {
-        "count": 3,
-        "percentage": 0.94
       }
     },
     "table_size_distribution": {

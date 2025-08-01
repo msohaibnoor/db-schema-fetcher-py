@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-MySQL Schema Fetcher - Main Application
+MySQL Schema Fetcher - Main Application with Report Type Filtering
 Extracts, processes, and maps database schema for AI/LLM consumption
 """
 
@@ -9,7 +9,7 @@ import argparse
 from pathlib import Path
 from typing import Optional
 
-from src.database.schema_extractor import schema_extractor
+from src.database.schema_extractor import schema_extractor, REPORT_TYPE_TABLES
 from src.processors.etl_processor import etl_processor
 from src.processors.schema_mapper import schema_mapper
 from src.utils.config import config
@@ -18,16 +18,15 @@ from src.utils.logger import schema_logger, console
 def main():
     """Main application entry point"""
     parser = argparse.ArgumentParser(
-        description="MySQL Schema Fetcher - Extract and process database schema for AI/LLM",
+        description="MySQL Schema Fetcher - Extract and process database schema for AI/LLM with report filtering",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  %(prog)s --extract                    # Extract schema only
-  %(prog)s --process                    # Process existing raw schema
-  %(prog)s --map                        # Create mappings from processed schema
-  %(prog)s --full                       # Run complete pipeline
-  %(prog)s --full --output-dir ./data   # Run with custom output directory
-  %(prog)s --report                     # Generate schema report
+  %(prog)s --extract --report-type incident_details    # Extract incident tables only
+  %(prog)s --process --report-type incident_details    # Process incident schema
+  %(prog)s --full --report-type incident_details       # Complete pipeline for incidents
+  %(prog)s --full --report-type all                    # Process all tables
+  %(prog)s --list-report-types                         # Show available report types
         """
     )
     
@@ -60,6 +59,20 @@ Examples:
         '--report', 
         action='store_true',
         help='Generate schema analysis report'
+    )
+    
+    parser.add_argument(
+        '--list-report-types',
+        action='store_true',
+        help='List available report types and their tables'
+    )
+    
+    # Report type selection
+    parser.add_argument(
+        '--report-type',
+        choices=list(REPORT_TYPE_TABLES.keys()),
+        default='incident_details',
+        help='Process specific report type tables only (default: incident_details)'
     )
     
     # Input/Output options
@@ -115,6 +128,11 @@ Examples:
     
     args = parser.parse_args()
     
+    # Handle list report types
+    if args.list_report_types:
+        list_report_types()
+        return 0
+    
     # Validate arguments
     if not any([args.extract, args.process, args.map, args.full, args.report]):
         parser.error("Must specify at least one operation: --extract, --process, --map, --full, or --report")
@@ -142,23 +160,28 @@ Examples:
     try:
         # Welcome message
         console.print("\n[bold blue]🗄️  MySQL Schema Fetcher v1.0.0[/bold blue]")
-        console.print(f"[dim]Output directory: {config.processing.output_dir}[/dim]\n")
+        console.print(f"[dim]Output directory: {config.processing.output_dir}[/dim]")
+        console.print(f"[dim]Report type: {args.report_type}[/dim]\n")
+        
+        # Show report type info
+        if args.report_type != "all":
+            show_report_type_info(args.report_type)
         
         # Execute requested operations
         if args.full:
-            run_full_pipeline()
+            run_full_pipeline(args.report_type)
         else:
             if args.extract:
-                run_extraction()
+                run_extraction(args.report_type)
             
             if args.process:
-                run_processing(args.raw_schema)
+                run_processing(args.raw_schema, report_type=args.report_type)
             
             if args.map:
-                run_mapping(args.processed_schema)
+                run_mapping(args.processed_schema, report_type=args.report_type)
             
             if args.report:
-                generate_reports()
+                generate_reports(args.report_type)
         
         # Final summary
         schema_logger.log_section("OPERATION COMPLETED SUCCESSFULLY")
@@ -177,40 +200,78 @@ Examples:
             traceback.print_exc()
         return 1
 
-def run_full_pipeline():
+def list_report_types():
+    """List available report types and their table mappings"""
+    console.print("\n[bold blue]📋 Available Report Types[/bold blue]\n")
+    
+    for report_type, tables in REPORT_TYPE_TABLES.items():
+        if report_type == "all":
+            console.print(f"[bold green]• {report_type}[/bold green]")
+            console.print("  [dim]Description: Process all database tables[/dim]")
+            console.print("  [dim]Tables: All available tables in database[/dim]\n")
+        else:
+            console.print(f"[bold green]• {report_type}[/bold green]")
+            console.print(f"  [dim]Description: {report_type.replace('_', ' ').title()} reporting tables[/dim]")
+            console.print(f"  [dim]Table count: {len(tables)}[/dim]")
+            console.print(f"  [dim]Tables: {', '.join(tables[:5])}{'...' if len(tables) > 5 else ''}[/dim]\n")
+
+def show_report_type_info(report_type: str):
+    """Show information about the selected report type"""
+    info = schema_extractor.get_report_type_info(report_type)
+    
+    if "error" in info:
+        console.print(f"[red]❌ {info['error']}[/red]")
+        return
+    
+    console.print(f"[bold cyan]🎯 Report Type: {report_type}[/bold cyan]")
+    console.print(f"[dim]Tables to process: {info['table_count']}[/dim]")
+    
+    if isinstance(info['tables'], list):
+        console.print(f"[dim]Target tables: {', '.join(info['tables'])[:100]}{'...' if len(', '.join(info['tables'])) > 100 else ''}[/dim]\n")
+    else:
+        console.print(f"[dim]Target tables: {info['tables']}[/dim]\n")
+
+def run_full_pipeline(report_type: str = "incident_details"):
     """Run the complete schema extraction and processing pipeline"""
     schema_logger.log_section("RUNNING FULL PIPELINE")
     
     # Step 1: Extract raw schema
-    console.print("[bold cyan]Step 1/3:[/bold cyan] Extracting database schema...")
-    raw_schema = run_extraction()
+    console.print(f"[bold cyan]Step 1/3:[/bold cyan] Extracting database schema for '{report_type}'...")
+    raw_schema = run_extraction(report_type)
     
     # Step 2: Process schema
-    console.print("\n[bold cyan]Step 2/3:[/bold cyan] Processing schema for AI/LLM...")
-    processed_schema = run_processing(schema_data=raw_schema)
+    console.print(f"\n[bold cyan]Step 2/3:[/bold cyan] Processing schema for AI/LLM...")
+    processed_schema = run_processing(schema_data=raw_schema, report_type=report_type)
     
     # Step 3: Create mappings
-    console.print("\n[bold cyan]Step 3/3:[/bold cyan] Creating natural language mappings...")
-    run_mapping(schema_data=processed_schema)
+    console.print(f"\n[bold cyan]Step 3/3:[/bold cyan] Creating natural language mappings...")
+    run_mapping(schema_data=processed_schema, report_type=report_type)
     
     # Generate reports
-    console.print("\n[bold cyan]Bonus:[/bold cyan] Generating analysis reports...")
-    generate_reports()
+    console.print(f"\n[bold cyan]Bonus:[/bold cyan] Generating analysis reports...")
+    generate_reports(report_type)
     
     return True
 
-def run_extraction():
+def run_extraction(report_type: str = "incident_details"):
     """Extract raw schema from database"""
     try:
-        # Extract schema
-        raw_schema = schema_extractor.extract_complete_schema()
+        # Extract schema with report type filter
+        raw_schema = schema_extractor.extract_complete_schema(report_type=report_type)
         
         # Save raw schema
         raw_path = schema_extractor.save_raw_schema()
         
         # Generate and save extraction report
         report = schema_extractor.generate_schema_report()
-        report_path = config.get_output_path("extraction_report.txt")
+        
+        # Include report type in filename
+        if report_type != "all":
+            report_filename = f"extraction_report_{report_type}.txt"
+        else:
+            report_filename = "extraction_report.txt"
+        
+        report_path = config.get_output_path(report_filename)
         
         with open(report_path, 'w', encoding='utf-8') as f:
             f.write(report)
@@ -223,7 +284,7 @@ def run_extraction():
         schema_logger.log_error(f"Schema extraction failed: {str(e)}")
         raise
 
-def run_processing(schema_path: Optional[Path] = None, schema_data: Optional[dict] = None):
+def run_processing(schema_path: Optional[Path] = None, schema_data: Optional[dict] = None, report_type: str = "incident_details"):
     """Process raw schema for AI/LLM consumption"""
     try:
         # Load or use provided schema
@@ -233,12 +294,26 @@ def run_processing(schema_path: Optional[Path] = None, schema_data: Optional[dic
             etl_processor.load_raw_schema(schema_path)
             processed_schema = etl_processor.process_schema()
         else:
-            # Try to load from default location
-            etl_processor.load_raw_schema()
-            processed_schema = etl_processor.process_schema()
+            # Try to load from default location with report type
+            if report_type != "all":
+                default_path = config.get_output_path(f"raw_schema_{report_type}.json")
+            else:
+                default_path = config.get_output_path("raw_schema.json")
+            
+            if default_path.exists():
+                etl_processor.load_raw_schema(default_path)
+                processed_schema = etl_processor.process_schema()
+            else:
+                raise FileNotFoundError(f"Raw schema file not found: {default_path}")
         
-        # Save processed schema
-        processed_path = etl_processor.save_processed_schema()
+        # Save processed schema with report type in filename
+        if report_type != "all":
+            processed_filename = f"processed_schema_{report_type}.json"
+        else:
+            processed_filename = "processed_schema.json"
+        
+        processed_path = config.get_output_path(processed_filename)
+        etl_processor.save_processed_schema(processed_path)
         
         return processed_schema
         
@@ -246,7 +321,7 @@ def run_processing(schema_path: Optional[Path] = None, schema_data: Optional[dic
         schema_logger.log_error(f"Schema processing failed: {str(e)}")
         raise
 
-def run_mapping(schema_path: Optional[Path] = None, schema_data: Optional[dict] = None):
+def run_mapping(schema_path: Optional[Path] = None, schema_data: Optional[dict] = None, report_type: str = "incident_details"):
     """Create natural language mappings"""
     try:
         # Load or use provided schema
@@ -256,16 +331,36 @@ def run_mapping(schema_path: Optional[Path] = None, schema_data: Optional[dict] 
             schema_mapper.load_processed_schema(schema_path)
             mappings = schema_mapper.create_mappings()
         else:
-            # Try to load from default location
-            schema_mapper.load_processed_schema()
-            mappings = schema_mapper.create_mappings()
+            # Try to load from default location with report type
+            if report_type != "all":
+                default_path = config.get_output_path(f"processed_schema_{report_type}.json")
+            else:
+                default_path = config.get_output_path("processed_schema.json")
+            
+            if default_path.exists():
+                schema_mapper.load_processed_schema(default_path)
+                mappings = schema_mapper.create_mappings()
+            else:
+                raise FileNotFoundError(f"Processed schema file not found: {default_path}")
         
-        # Save mappings
-        mappings_path = schema_mapper.save_mappings()
+        # Save mappings with report type in filename
+        if report_type != "all":
+            mappings_filename = f"schema_mappings_{report_type}.json"
+        else:
+            mappings_filename = "schema_mappings.json"
+        
+        mappings_path = config.get_output_path(mappings_filename)
+        schema_mapper.save_mappings(mappings_path)
         
         # Generate and save mapping summary
         summary = schema_mapper.generate_mapping_summary()
-        summary_path = config.get_output_path("mapping_summary.txt")
+        
+        if report_type != "all":
+            summary_filename = f"mapping_summary_{report_type}.txt"
+        else:
+            summary_filename = "mapping_summary.txt"
+        
+        summary_path = config.get_output_path(summary_filename)
         
         with open(summary_path, 'w', encoding='utf-8') as f:
             f.write(summary)
@@ -278,16 +373,34 @@ def run_mapping(schema_path: Optional[Path] = None, schema_data: Optional[dict] 
         schema_logger.log_error(f"Schema mapping failed: {str(e)}")
         raise
 
-def generate_reports():
+def generate_reports(report_type: str = "incident_details"):
     """Generate comprehensive analysis reports"""
     try:
         schema_logger.log_info("Generating comprehensive analysis reports...")
         
-        # Try to load existing data for reports
+        # Determine filenames based on report type
+        if report_type != "all":
+            raw_file = f"raw_schema_{report_type}.json"
+            processed_file = f"processed_schema_{report_type}.json"
+            mappings_file = f"schema_mappings_{report_type}.json"
+            extraction_report_file = f"extraction_report_{report_type}.txt"
+            mapping_summary_file = f"mapping_summary_{report_type}.txt"
+            combined_report_file = f"complete_analysis_{report_type}.txt"
+            inventory_file = f"file_inventory_{report_type}.txt"
+        else:
+            raw_file = "raw_schema.json"
+            processed_file = "processed_schema.json"
+            mappings_file = "schema_mappings.json"
+            extraction_report_file = "extraction_report.txt"
+            mapping_summary_file = "mapping_summary.txt"
+            combined_report_file = "complete_analysis.txt"
+            inventory_file = "file_inventory.txt"
+        
+        # Check which files exist
         files_exist = {
-            'raw': config.get_output_path("raw_schema.json").exists(),
-            'processed': config.get_output_path("processed_schema.json").exists(),
-            'mappings': config.get_output_path("schema_mappings.json").exists()
+            'raw': config.get_output_path(raw_file).exists(),
+            'processed': config.get_output_path(processed_file).exists(),
+            'mappings': config.get_output_path(mappings_file).exists()
         }
         
         reports_generated = []
@@ -297,11 +410,11 @@ def generate_reports():
             try:
                 if not schema_extractor.raw_schema:
                     import json
-                    with open(config.get_output_path("raw_schema.json"), 'r') as f:
+                    with open(config.get_output_path(raw_file), 'r') as f:
                         schema_extractor.raw_schema = json.load(f)
                 
                 report = schema_extractor.generate_schema_report()
-                report_path = config.get_output_path("extraction_report.txt")
+                report_path = config.get_output_path(extraction_report_file)
                 
                 with open(report_path, 'w', encoding='utf-8') as f:
                     f.write(report)
@@ -315,11 +428,11 @@ def generate_reports():
             try:
                 if not schema_mapper.mappings:
                     import json
-                    with open(config.get_output_path("schema_mappings.json"), 'r') as f:
+                    with open(config.get_output_path(mappings_file), 'r') as f:
                         schema_mapper.mappings = json.load(f)
                 
                 summary = schema_mapper.generate_mapping_summary()
-                summary_path = config.get_output_path("mapping_summary.txt")
+                summary_path = config.get_output_path(mapping_summary_file)
                 
                 with open(summary_path, 'w', encoding='utf-8') as f:
                     f.write(summary)
@@ -329,8 +442,8 @@ def generate_reports():
                 schema_logger.log_warning(f"Could not generate mapping summary: {str(e)}")
         
         # Generate combined analysis report
-        combined_report = generate_combined_report(files_exist)
-        combined_path = config.get_output_path("complete_analysis.txt")
+        combined_report = generate_combined_report(files_exist, report_type)
+        combined_path = config.get_output_path(combined_report_file)
         
         with open(combined_path, 'w', encoding='utf-8') as f:
             f.write(combined_report)
@@ -338,8 +451,8 @@ def generate_reports():
         reports_generated.append(str(combined_path))
         
         # Generate file inventory
-        inventory = generate_file_inventory()
-        inventory_path = config.get_output_path("file_inventory.txt")
+        inventory = generate_file_inventory(report_type)
+        inventory_path = config.get_output_path(inventory_file)
         
         with open(inventory_path, 'w', encoding='utf-8') as f:
             f.write(inventory)
@@ -354,23 +467,25 @@ def generate_reports():
         schema_logger.log_error(f"Report generation failed: {str(e)}")
         raise
 
-def generate_combined_report(files_exist: dict) -> str:
+def generate_combined_report(files_exist: dict, report_type: str) -> str:
     """Generate a combined analysis report"""
     from datetime import datetime
     
     report = []
     report.append("="*100)
-    report.append("MYSQL SCHEMA FETCHER - COMPLETE ANALYSIS REPORT")
+    report.append(f"MYSQL SCHEMA FETCHER - COMPLETE ANALYSIS REPORT ({report_type.upper()})")
     report.append("="*100)
     report.append(f"Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     report.append(f"Database: {config.database.database}")
     report.append(f"Host: {config.database.host}:{config.database.port}")
+    report.append(f"Report Type: {report_type}")
     report.append("")
     
     # Configuration summary
     report.append("CONFIGURATION SUMMARY:")
     report.append("-" * 50)
     report.append(f"Output Directory: {config.processing.output_dir}")
+    report.append(f"Report Type Filter: {report_type}")
     report.append(f"Include Sample Data: {config.processing.include_sample_data}")
     report.append(f"Sample Rows Limit: {config.processing.sample_rows_limit}")
     report.append(f"Include Foreign Keys: {config.processing.include_foreign_keys}")
@@ -384,6 +499,9 @@ def generate_combined_report(files_exist: dict) -> str:
     
     for file_path in output_dir.glob("*"):
         if file_path.is_file():
+            # Only show files related to this report type
+            if report_type != "all" and report_type not in file_path.name and "complete_analysis" not in file_path.name and "file_inventory" not in file_path.name:
+                continue
             file_size = file_path.stat().st_size
             report.append(f"  📄 {file_path.name} ({file_size:,} bytes)")
     
@@ -416,15 +534,15 @@ def generate_combined_report(files_exist: dict) -> str:
     report.append("-" * 50)
     
     if not files_exist['raw']:
-        report.append("1. Run schema extraction: python main.py --extract")
+        report.append(f"1. Run schema extraction: python main.py --extract --report-type {report_type}")
     elif not files_exist['processed']:
-        report.append("1. Process extracted schema: python main.py --process")
+        report.append(f"1. Process extracted schema: python main.py --process --report-type {report_type}")
     elif not files_exist['mappings']:
-        report.append("1. Create natural language mappings: python main.py --map")
+        report.append(f"1. Create natural language mappings: python main.py --map --report-type {report_type}")
     else:
         report.append("1. ✅ All processing steps completed!")
-        report.append("2. Use processed_schema.json for LLM/AI applications")
-        report.append("3. Use schema_mappings.json for natural language query processing")
+        report.append(f"2. Use processed_schema_{report_type}.json for LLM/AI applications")
+        report.append(f"3. Use schema_mappings_{report_type}.json for natural language query processing")
         report.append("4. Integrate with your chatbot/LLM pipeline")
     
     report.append("")
@@ -433,15 +551,16 @@ def generate_combined_report(files_exist: dict) -> str:
     
     return "\n".join(report)
 
-def generate_file_inventory() -> str:
+def generate_file_inventory(report_type: str) -> str:
     """Generate an inventory of all output files"""
     from datetime import datetime
     
     inventory = []
-    inventory.append("FILE INVENTORY - MySQL Schema Fetcher Output")
+    inventory.append(f"FILE INVENTORY - MySQL Schema Fetcher Output ({report_type.upper()})")
     inventory.append("="*60)
     inventory.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     inventory.append(f"Directory: {config.processing.output_dir}")
+    inventory.append(f"Report Type: {report_type}")
     inventory.append("")
     
     output_dir = config.processing.output_dir
@@ -458,6 +577,11 @@ def generate_file_inventory() -> str:
     
     for file_path in sorted(output_dir.glob("*")):
         if file_path.is_file():
+            # Only include files related to this report type
+            if report_type != "all":
+                if report_type not in file_path.name and not any(x in file_path.name for x in ["complete_analysis", "file_inventory"]):
+                    continue
+            
             file_info = {
                 "name": file_path.name,
                 "size": file_path.stat().st_size,
@@ -506,13 +630,13 @@ def generate_file_inventory() -> str:
     
     # File descriptions
     file_descriptions = {
-        "raw_schema.json": "Complete database schema extracted directly from MySQL",
-        "processed_schema.json": "Schema processed and optimized for AI/LLM consumption",
-        "schema_mappings.json": "Natural language mappings for query processing",
-        "extraction_report.txt": "Detailed report of the schema extraction process",
-        "mapping_summary.txt": "Summary of created natural language mappings",
-        "complete_analysis.txt": "Combined analysis report with recommendations",
-        "file_inventory.txt": "This file - inventory of all generated files",
+        f"raw_schema_{report_type}.json": f"Complete database schema for {report_type} report",
+        f"processed_schema_{report_type}.json": f"Schema processed and optimized for AI/LLM ({report_type})",
+        f"schema_mappings_{report_type}.json": f"Natural language mappings for {report_type} queries",
+        f"extraction_report_{report_type}.txt": f"Detailed report of the schema extraction process ({report_type})",
+        f"mapping_summary_{report_type}.txt": f"Summary of created natural language mappings ({report_type})",
+        f"complete_analysis_{report_type}.txt": f"Combined analysis report with recommendations ({report_type})",
+        f"file_inventory_{report_type}.txt": f"This file - inventory of all generated files ({report_type})",
         "schema_extraction.log": "Detailed logs from the extraction process"
     }
     

@@ -4,7 +4,7 @@
     "host": "localhost",
     "port": 3306,
     "charset": "utf8mb4",
-    "extraction_timestamp": "2025-07-31T15:36:52.802659",
+    "extraction_timestamp": "2025-07-31T15:36:26.632774",
     "total_tables": 317,
     "tables": [
       "add_notes",
@@ -4146,7 +4146,7 @@
     }
   },
   "extraction_metadata": {
-    "extraction_date": "2025-07-31T15:36:52.758571",
+    "extraction_date": "2025-07-31T15:36:26.586609",
     "config": {
       "database": {
         "host": "localhost",
@@ -4164,8 +4164,8 @@
     },
     "total_tables": 317,
     "total_columns": 320,
-    "extraction_duration_seconds": 0.25,
+    "extraction_duration_seconds": 0.26,
     "processed_tables": 15,
-    "extraction_end_date": "2025-07-31T15:36:53.005635"
+    "extraction_end_date": "2025-07-31T15:36:26.843201"
   }
 }

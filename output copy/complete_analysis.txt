@@ -1,7 +1,7 @@
 ====================================================================================================
 MYSQL SCHEMA FETCHER - COMPLETE ANALYSIS REPORT
 ====================================================================================================
-Generated on: 2025-07-31 15:36:53
+Generated on: 2025-07-31 15:32:20
 Database: uat_latest_june
 Host: localhost:3306
 
@@ -16,10 +16,12 @@ Include Indexes: True
 FILES GENERATED:
 --------------------------------------------------
   📄 schema_mappings.json (270,872 bytes)
-  📄 schema_extraction.log (3,801 bytes)
-  📄 mapping_summary.txt (2,114 bytes)
-  📄 processed_schema.json (130,189 bytes)
-  📄 raw_schema.json (112,907 bytes)
+  📄 file_inventory.txt (1,572 bytes)
+  📄 schema_extraction.log (83,289 bytes)
+  📄 mapping_summary.txt (2,134 bytes)
+  📄 processed_schema.json (130,188 bytes)
+  📄 complete_analysis.txt (1,492 bytes)
+  📄 raw_schema.json (112,906 bytes)
   📄 extraction_report.txt (2,442 bytes)
 
 PROCESSING SUMMARY:

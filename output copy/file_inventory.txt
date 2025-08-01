@@ -1,46 +1,50 @@
 FILE INVENTORY - MySQL Schema Fetcher Output
 ============================================================
-Generated: 2025-07-31 15:36:53
+Generated: 2025-07-31 15:32:20
 Directory: output
 
 SCHEMA DATA:
 ------------------------------
   📄 processed_schema.json
-     Size: 130,189 bytes
-     Modified: 2025-07-31 15:36
+     Size: 130,188 bytes
+     Modified: 2025-07-31 15:32
 
   📄 raw_schema.json
-     Size: 112,907 bytes
-     Modified: 2025-07-31 15:36
+     Size: 112,906 bytes
+     Modified: 2025-07-31 15:32
 
   📄 schema_mappings.json
      Size: 270,872 bytes
-     Modified: 2025-07-31 15:36
+     Modified: 2025-07-31 15:32
 
 REPORTS:
 ------------------------------
   📄 complete_analysis.txt
-     Size: 1,484 bytes
-     Modified: 2025-07-31 15:36
+     Size: 1,568 bytes
+     Modified: 2025-07-31 15:32
 
   📄 extraction_report.txt
      Size: 2,442 bytes
-     Modified: 2025-07-31 15:36
+     Modified: 2025-07-31 15:32
+
+  📄 file_inventory.txt
+     Size: 1,572 bytes
+     Modified: 2025-07-30 15:24
 
   📄 mapping_summary.txt
-     Size: 2,114 bytes
-     Modified: 2025-07-31 15:36
+     Size: 2,134 bytes
+     Modified: 2025-07-31 15:32
 
 LOGS:
 ------------------------------
   📄 schema_extraction.log
-     Size: 3,801 bytes
-     Modified: 2025-07-31 15:36
+     Size: 83,289 bytes
+     Modified: 2025-07-31 15:32
 
 SUMMARY:
 ------------------------------
-Total Files: 7
-Total Size: 523,809 bytes (0.50 MB)
+Total Files: 8
+Total Size: 604,971 bytes (0.58 MB)
 
 FILE DESCRIPTIONS:
 ------------------------------
@@ -49,6 +53,7 @@ raw_schema.json: Complete database schema extracted directly from MySQL
 schema_mappings.json: Natural language mappings for query processing
 complete_analysis.txt: Combined analysis report with recommendations
 extraction_report.txt: Detailed report of the schema extraction process
+file_inventory.txt: This file - inventory of all generated files
 mapping_summary.txt: Summary of created natural language mappings
 schema_extraction.log: Detailed logs from the extraction process
 
